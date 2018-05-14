@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<!-- saved from url=(0360)https://disqus.com/embed/comments/?base=default&f=toptal&t_i=java%2Fspring-boot-rest-api-error-handling&t_u=https%3A%2F%2Fwww.toptal.com%2Fjava%2Fspring-boot-rest-api-error-handling&t_d=Guide%20to%20Spring%20Boot%20REST%20API%20Error%20Handling&t_t=Guide%20to%20Spring%20Boot%20REST%20API%20Error%20Handling&s_o=default#version=3a153681e8d91dee2860bdf5f56e28f6 -->
+<html lang="en" dir="ltr" class=" js no-touch localstorage sessionstorage contenteditable"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        .alert--warning {
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #FFE070;
+            color: #A47703;
+        }
+
+        .alert--warning a,
+        .alert--warning a:hover,
+        .alert--warning strong {
+            color: #A47703;
+            font-weight: bold;
+        }
+
+        .alert--error p,
+        .alert--warning p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        </style>
+    
+    <style>
+        
+        html {
+            overflow: hidden;
+        }
+        
+
+        #error {
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        
+    </style>
+
+<script crossorigin="anonymous" id="bootstrap-script" data-app="lounge" src="./lounge.load.3a153681e8d91dee2860bdf5f56e28f6.js.Без названия"></script><meta http-equiv="Content-Security-Policy" content="script-src https:;"><link rel="stylesheet" href="./lounge.d0448456a5f42b8df8cea2098aa3acf3.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lounge/main" src="./lounge.bundle.44672f4cc4bed783e5e2f3cb12270277.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="remote/config" src="./config.js.Без названия"></script><style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ga" src="./ga.js.Без названия"></script></head>
+<body>
+    
+
+    
+    <div id="error" class="alert--error">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"forum":{"aetBannerConfirmation":null,"founder":"796450","twitterName":"","commentsLinkOne":"1 Comment","guidelines":null,"favicon":{"permalink":"https://disqus.com/api/forums/favicons/toptal.jpg","cache":"https://c.disquscdn.com/uploads/forums/232/983/favicon.png"},"commentsLinkZero":"0 Comments","disableDisqusBranding":false,"daysAlive":0,"createdAt":"2013-05-01T04:07:49.928552","category":"Business","aetBannerEnabled":false,"aetBannerTitle":null,"raw_guidelines":null,"colorScheme":"light","id":"toptal","installCompleted":true,"moderatorBadgeText":"","commentPolicyText":null,"aetEnabled":false,"channel":null,"sort":4,"description":"","newPolicy":true,"raw_description":"","language":"en","adsReviewStatus":2,"pk":"2320983","forumCategory":{"date_added":"2016-01-28T01:54:31","id":1,"name":"Business"},"permissions":{},"commentPolicyLink":null,"aetBannerDescription":null,"name":"Toptal","commentsLinkMultiple":"{num} Comments","settings":{"adsDRNativeEnabled":false,"disable3rdPartyTrackers":false,"adsVideoEnabled":false,"adsProductVideoEnabled":false,"adsPositionTopEnabled":false,"ssoRequired":false,"unapproveLinks":false,"adsEnabled":false,"adsProductLinksThumbnailsEnabled":false,"hasCustomAvatar":true,"organicDiscoveryEnabled":false,"allowMedia":true,"adsProductDisplayEnabled":false,"adsProductLinksEnabled":false,"linkAffiliationEnabled":false,"allowAnonPost":false,"adsProductStoriesEnabled":false,"adultContent":false,"allowAnonVotes":false,"mustVerify":true,"mustVerifyEmail":true,"audienceSyncEnabled":false,"mediaembedEnabled":true,"adsPositionBottomEnabled":false,"discoveryLocked":false,"validateAllPosts":false,"adsSettingsLocked":false,"isVIP":false,"adsPositionInthreadEnabled":false},"organizationId":314802,"typeface":"auto","url":"https://www.toptal.com/","daysThreadAlive":0,"avatar":{"small":{"permalink":"https://disqus.com/api/forums/avatars/toptal.jpg?size=32","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar32.jpg?1392962884"},"large":{"permalink":"https://disqus.com/api/forums/avatars/toptal.jpg?size=92","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884"}},"signedUrl":"https://disq.us/?url=https%3A%2F%2Fwww.toptal.com%2F&key=zej8deOjno676Drounx2Zg"}}</script>
+
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":31,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1523722429,"posts":[{"dislikes":0,"numReports":0,"likes":2,"message":"\u003cp>Great article with great examples\u003c/p>","id":"3486139364","isHighlighted":false,"author":{"username":"arturskrzydo","about":"","name":"Artur Skrzyd\u0142o","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2016-10-09T10:03:53","profileUrl":"https://disqus.com/by/arturskrzydo/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"225906480","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/arturskrzydo.jpg","cache":"https://c.disquscdn.com/uploads/users/22590/6480/avatar32.jpg?1517512250"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/arturskrzydo.jpg","cache":"https://c.disquscdn.com/uploads/users/22590/6480/avatar92.jpg?1517512250","large":{"permalink":"https://disqus.com/api/users/avatars/arturskrzydo.jpg","cache":"https://c.disquscdn.com/uploads/users/22590/6480/avatar92.jpg?1517512250"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-25T12:10:32","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Great article with great examples","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":2,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>this interview guide has a good breakdown of topics too about restapi \u003ca href=\"https://disq.us/url?url=https%3A%2F%2Fmonstertut.com%2Fspring-boot-interview%2F%3A1xPD4wbPOR0HkK6s79VsZa1jloQ&amp;cuid=2320983\" rel=\"nofollow noopener\" title=\"https://monstertut.com/spring-boot-interview/\">https://monstertut.com/spri...\u003c/a>\u003c/p>","id":"3519805719","isHighlighted":false,"author":{"username":"olan352","about":"","name":"Wayne Welch","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-04-07T10:47:47","profileUrl":"https://disqus.com/by/olan352/","url":"https://monstertut.com/udemy-coupon-and-discount-code/","location":"","isPrivate":false,"signedUrl":"https://disq.us/?url=https%3A%2F%2Fmonstertut.com%2Fudemy-coupon-and-discount-code%2F&key=ODxk-f9dLATWBhQwyXE2mA","isPrimary":true,"isAnonymous":false,"id":"102108698","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/olan352.jpg","cache":"https://c.disquscdn.com/uploads/users/10210/8698/avatar32.jpg?1396869313"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/olan352.jpg","cache":"https://c.disquscdn.com/uploads/users/10210/8698/avatar92.jpg?1396869313","large":{"permalink":"https://disqus.com/api/users/avatars/olan352.jpg","cache":"https://c.disquscdn.com/uploads/users/10210/8698/avatar92.jpg?1396869313"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-09-16T04:01:36","parent":3486139364,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"this interview guide has a good breakdown of topics too about restapi https://monstertut.com/spring-boot-interview/","canVote":false,"thread":"6086189678","forum":"toptal","depth":1,"points":1,"moderationLabels":["links"],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>Nice article Bruno!! Helped me a lot. :)\u003c/p>","id":"3712208801","isHighlighted":false,"author":{"username":"snehashishpanigrahi","about":"","name":"Snehashish Panigrahi","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2016-05-18T19:08:48","profileUrl":"https://disqus.com/by/snehashishpanigrahi/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"208521440","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/snehashishpanigrahi.jpg","cache":"https://c.disquscdn.com/uploads/users/20852/1440/avatar32.jpg?1518158272"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/snehashishpanigrahi.jpg","cache":"https://c.disquscdn.com/uploads/users/20852/1440/avatar92.jpg?1518158272","large":{"permalink":"https://disqus.com/api/users/avatars/snehashishpanigrahi.jpg","cache":"https://c.disquscdn.com/uploads/users/20852/1440/avatar92.jpg?1518158272"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2018-01-17T13:06:08","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Nice article Bruno!! Helped me a lot. :)","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":1,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>Thank you for this wonderful article. I really like it.\u003cbr>Unfortunately for me I have somthing like an unusual problem with exception handling. My equivalent to your \"birds\"-Method produces an image (either JPG, PNG or SVG, depending on the Accept header) and no Json data. Whenever I try this approach of error handling I always get a 406 response with empty body. This even happens if I add a second response header \"application/json\". Internally I get this exception: \"org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation\".\u003c/p>\u003cp>After some debuging I can only guess that after Spring Boot selected the return type of the response, this cannot be changed afterwards. For JPG and PNG I am currently using a byte array as return type. For SVG I am using a String.\u003c/p>\u003cp>Is there a way to force Spring Boot into using a Json output format whenever the Exception Handler is used, no matter which response type was determined before?\u003c/p>","id":"3698984078","isHighlighted":false,"author":{"username":"saschastrau","about":"","name":"Sascha Strau\u00df","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2016-07-08T05:09:51","profileUrl":"https://disqus.com/by/saschastrau/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"214362290","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/saschastrau.jpg","cache":"https://c.disquscdn.com/uploads/users/21436/2290/avatar32.jpg?1515496214"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/saschastrau.jpg","cache":"https://c.disquscdn.com/uploads/users/21436/2290/avatar92.jpg?1515496214","large":{"permalink":"https://disqus.com/api/users/avatars/saschastrau.jpg","cache":"https://c.disquscdn.com/uploads/users/21436/2290/avatar92.jpg?1515496214"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2018-01-09T11:10:12","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Thank you for this wonderful article. I really like it.\nUnfortunately for me I have somthing like an unusual problem with exception handling. My equivalent to your \"birds\"-Method produces an image (either JPG, PNG or SVG, depending on the Accept header) and no Json data. Whenever I try this approach of error handling I always get a 406 response with empty body. This even happens if I add a second response header \"application/json\". Internally I get this exception: \"org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation\".\n\nAfter some debuging I can only guess that after Spring Boot selected the return type of the response, this cannot be changed afterwards. For JPG and PNG I am currently using a byte array as return type. For SVG I am using a String.\n\nIs there a way to force Spring Boot into using a Json output format whenever the Exception Handler is used, no matter which response type was determined before?","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":1,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hello Sascha!! Thanks!\u003c/p>\u003cp>I use this code to set the default content type:\u003c/p>\u003cp>@Configuration\u003cbr>public class MvcConfiguration extends WebMvcConfigurerAdapter {\u003c/p>\u003cp>    @Override\u003cbr>    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {\u003cbr>        configurer.defaultContentType(MediaType.APPLICATION_JSON);\u003cbr>    }\u003c/p>\u003cp>}\u003c/p>","id":"3701332531","isHighlighted":false,"author":{"username":"disqus_t2iUiajEFC","about":"","name":"Bruno","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-11-25T16:30:47","profileUrl":"https://disqus.com/by/disqus_t2iUiajEFC/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"133177454","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar32.jpg?1517455895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2018-01-10T18:56:15","parent":3698984078,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hello Sascha!! Thanks!\n\nI use this code to set the default content type:\n\n\n@Configuration\npublic class MvcConfiguration extends WebMvcConfigurerAdapter {\n\n    @Override\n    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {\n        configurer.defaultContentType(MediaType.APPLICATION_JSON);\n    }\n\n}","canVote":false,"thread":"6086189678","forum":"toptal","depth":1,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>This is an amazing article. The level of detail in the explanation is just, brilliant. I am currently building API services for an SMS gateway product, and have to create a number of custom error messages for the clients. Your post shall hopefully make it very enjoyable and fun for me to implement this!\u003c/p>","id":"3517141815","isHighlighted":false,"author":{"username":"ottoman91","about":"","name":"ottoman91","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2016-06-11T16:10:42","profileUrl":"https://disqus.com/by/ottoman91/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"211262848","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar32.jpg?1505473396"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar92.jpg?1505473396","large":{"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar92.jpg?1505473396"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-09-14T13:37:34","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"This is an amazing article. The level of detail in the explanation is just, brilliant. I am currently building API services for an SMS gateway product, and have to create a number of custom error messages for the clients. Your post shall hopefully make it very enjoyable and fun for me to implement this!","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":1,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>one of the best article to understand Exception Handling with simple example\u003c/p>","id":"3489148214","isHighlighted":false,"author":{"username":"disqus_GbLOnIDiOz","about":"","name":"Naveen Kumar","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2013-07-15T13:28:07","profileUrl":"https://disqus.com/by/disqus_GbLOnIDiOz/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"62449708","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_GbLOnIDiOz.jpg","cache":"https://c.disquscdn.com/uploads/users/6244/9708/avatar32.jpg?1373894895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_GbLOnIDiOz.jpg","cache":"https://c.disquscdn.com/uploads/users/6244/9708/avatar92.jpg?1373894895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_GbLOnIDiOz.jpg","cache":"https://c.disquscdn.com/uploads/users/6244/9708/avatar92.jpg?1373894895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-27T13:01:34","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"one of the best article to understand Exception Handling with simple example","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":1,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>Great Article.\u003cbr>Love it.\u003cbr>Will be implementing it in upcoming projects\u003c/p>","id":"3485682172","isHighlighted":false,"author":{"username":"sushilgc","about":"","name":"sushil gc","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-08-01T12:52:30","profileUrl":"https://disqus.com/by/sushilgc/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"116620510","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/sushilgc.jpg","cache":"https://c.disquscdn.com/uploads/users/11662/510/avatar32.jpg?1503626601"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/sushilgc.jpg","cache":"https://c.disquscdn.com/uploads/users/11662/510/avatar92.jpg?1503626601","large":{"permalink":"https://disqus.com/api/users/avatars/sushilgc.jpg","cache":"https://c.disquscdn.com/uploads/users/11662/510/avatar92.jpg?1503626601"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-25T02:03:19","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Great Article.\nLove it.\nWill be implementing it in upcoming projects","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":1,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>Instead of using the @JsonFormat annotation, you could simply set the following property in your application.yml :\u003cbr>spring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS: false\u003cbr>This will serialize dates in the ISO 8601 format, which IMO is better than what you have because :\u003cbr>1) You don't pollute your data objects with annotations\u003cbr>2) You also have the time zone information (which is needed when the server and client are in different zones)\u003cbr>3) If needed, your javascript frontend could directly create a Date object instead of parsing the date yourself  : let date = new Date(response.timestamp);\u003c/p>","id":"3482700940","isHighlighted":false,"author":{"username":"jordandemeulenaere","about":"","name":"Jordan Demeulenaere","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-01-23T21:29:39","profileUrl":"https://disqus.com/by/jordandemeulenaere/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"91916402","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/jordandemeulenaere.jpg","cache":"https://c.disquscdn.com/uploads/users/9191/6402/avatar32.jpg?1510613019"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/jordandemeulenaere.jpg","cache":"https://c.disquscdn.com/uploads/users/9191/6402/avatar92.jpg?1510613019","large":{"permalink":"https://disqus.com/api/users/avatars/jordandemeulenaere.jpg","cache":"https://c.disquscdn.com/uploads/users/9191/6402/avatar92.jpg?1510613019"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-23T11:46:23","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Instead of using the @JsonFormat annotation, you could simply set the following property in your application.yml :\nspring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS: false\nThis will serialize dates in the ISO 8601 format, which IMO is better than what you have because :\n1) You don't pollute your data objects with annotations\n2) You also have the time zone information (which is needed when the server and client are in different zones)\n3) If needed, your javascript frontend could directly create a Date object instead of parsing the date yourself  : let date = new Date(response.timestamp);","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":1,"moderationLabels":[],"isEdited":true,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Great! Good tip Jordan. You are right, better to use the ISO format.\u003c/p>","id":"3482952666","isHighlighted":false,"author":{"username":"disqus_t2iUiajEFC","about":"","name":"Bruno","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-11-25T16:30:47","profileUrl":"https://disqus.com/by/disqus_t2iUiajEFC/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"133177454","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar32.jpg?1517455895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-23T14:43:54","parent":3482700940,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Great! Good tip Jordan. You are right, better to use the ISO format.","canVote":false,"thread":"6086189678","forum":"toptal","depth":1,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>This article is awesome, great job bro!\u003c/p>","id":"3481974262","isHighlighted":false,"author":{"username":"danielechevarriaiparraguirre","about":"","name":"Daniel Echevarria Iparraguirre","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2017-08-22T23:20:20","profileUrl":"https://disqus.com/by/danielechevarriaiparraguirre/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"262954624","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/danielechevarriaiparraguirre.jpg","cache":"https://c.disquscdn.com/uploads/users/26295/4624/avatar32.jpg?1503444030"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/danielechevarriaiparraguirre.jpg","cache":"https://c.disquscdn.com/uploads/users/26295/4624/avatar92.jpg?1503444030","large":{"permalink":"https://disqus.com/api/users/avatars/danielechevarriaiparraguirre.jpg","cache":"https://c.disquscdn.com/uploads/users/26295/4624/avatar92.jpg?1503444030"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-22T23:20:28","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"This article is awesome, great job bro!","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":1,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Thanks Daniel! Glad you liked it.\u003c/p>","id":"3482121930","isHighlighted":false,"author":{"username":"disqus_t2iUiajEFC","about":"","name":"Bruno","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-11-25T16:30:47","profileUrl":"https://disqus.com/by/disqus_t2iUiajEFC/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"133177454","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar32.jpg?1517455895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-23T01:19:58","parent":3481974262,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Thanks Daniel! Glad you liked it.","canVote":false,"thread":"6086189678","forum":"toptal","depth":1,"points":0,"moderationLabels":[],"isEdited":true,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Okay, I'm just gonna pretend I didn't see anything.\u003c/p>","id":"3733598658","isHighlighted":false,"author":{"username":"disqus_PUB81wkccb","about":"bitfarag\u00f3 k\u00e9t ker\u00e9ken","name":"Powerslave","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-08-03T12:42:45","profileUrl":"https://disqus.com/by/disqus_PUB81wkccb/","url":"http://www.ironmaiden.com/","location":"Traktorg\u00f6r\u00f6ngy\u00f6s","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.ironmaiden.com%2F&key=-RC2UBAGNns2_44bdhUApg","isPrimary":true,"isAnonymous":false,"id":"116833462","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_PUB81wkccb.jpg","cache":"https://c.disquscdn.com/uploads/users/11683/3462/avatar32.jpg?1438265160"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_PUB81wkccb.jpg","cache":"https://c.disquscdn.com/uploads/users/11683/3462/avatar92.jpg?1438265160","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_PUB81wkccb.jpg","cache":"https://c.disquscdn.com/uploads/users/11683/3462/avatar92.jpg?1438265160"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2018-01-30T15:28:22","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Okay, I'm just gonna pretend I didn't see anything.","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Great Article!\u003cbr>I have a question, \u00bfhow i can hide the debugMessage just in production?\u003c/p>\u003cp>for example, error in dev:\u003cbr>{\"apierror\":{\"status\":\"BAD_REQUEST\",\"timestamp\":\"07-12-2017 11:45:17\",\"message\":\"The parameter 'id' of value 'limit=1' could not be converted to type 'Long'\",\"debugMessage\":\"Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: \\\"limit=1\\\"\",\"subErrors\":null}}\u003c/p>\u003cp>error in prod\u003cbr>{\"apierror\":{\"status\":\"BAD_REQUEST\",\"timestamp\":\"07-12-2017 11:45:17\",\"message\":\"The parameter 'id' of value 'limit=1' could not be converted to type 'Long'\"}}\u003c/p>","id":"3650995598","isHighlighted":false,"author":{"username":"drogjjj","about":"","name":"drogjj","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2012-05-03T03:36:11","profileUrl":"https://disqus.com/by/drogjjj/","url":"http://drog.github.io/","location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fdrog.github.io%2F&key=pvz3w9opD-NmcM-aOXQ6Tw","isPrimary":true,"isAnonymous":false,"id":"25630291","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/drogjjj.jpg","cache":"https://c.disquscdn.com/uploads/users/2563/291/avatar32.jpg?1512658309"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/drogjjj.jpg","cache":"https://c.disquscdn.com/uploads/users/2563/291/avatar92.jpg?1512658309","large":{"permalink":"https://disqus.com/api/users/avatars/drogjjj.jpg","cache":"https://c.disquscdn.com/uploads/users/2563/291/avatar92.jpg?1512658309"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-12-07T14:51:48","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Great Article!\nI have a question, \u00bfhow i can hide the debugMessage just in production?\n\nfor example, error in dev:\n{\"apierror\":{\"status\":\"BAD_REQUEST\",\"timestamp\":\"07-12-2017 11:45:17\",\"message\":\"The parameter 'id' of value 'limit=1' could not be converted to type 'Long'\",\"debugMessage\":\"Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: \\\"limit=1\\\"\",\"subErrors\":null}}\n\nerror in prod\n{\"apierror\":{\"status\":\"BAD_REQUEST\",\"timestamp\":\"07-12-2017 11:45:17\",\"message\":\"The parameter 'id' of value 'limit=1' could not be converted to type 'Long'\"}}","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hello! Well, I think that a simple way to do it would be to do a check on method '\u003c/p>\u003cp>buildResponseEntity' of RestExceptionHandler class.\u003cbr>You can check which environment are you in and then set debugMessage to \"\".\u003c/p>","id":"3651405645","isHighlighted":false,"author":{"username":"disqus_t2iUiajEFC","about":"","name":"Bruno","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-11-25T16:30:47","profileUrl":"https://disqus.com/by/disqus_t2iUiajEFC/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"133177454","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar32.jpg?1517455895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-12-07T18:53:54","parent":3650995598,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hello! Well, I think that a simple way to do it would be to do a check on method '\n\nbuildResponseEntity' of RestExceptionHandler class.\nYou can check which environment are you in and then set debugMessage to \"\".","canVote":false,"thread":"6086189678","forum":"toptal","depth":1,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hi Bruno,\u003cbr>Great article, I've implement the same error handling for my api (spring-boot project) and I can reproduce a behaviour with your examples. \u003cbr>It's ok with known paths like /birds/2 =&gt; get custom error body, \u003cbr>but if I try with /unknownPath for example I get the default spring error :\u003cbr>{\"timestamp\":1510827829951,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/unknownPath\"}\u003cbr>Do you have an idea on how to manage this use case like others ?\u003cbr>In ResponseEntityexceptionHandler, there is javadoc saying\u003cbr>* \u003c/p>\u003cp>Note that in order for an {@code @ControllerAdvice} sub-class to be\u003cbr> * detected, {@link ExceptionHandlerExceptionResolver} must be configured.\u003c/p>\u003cp>But I don't know how if this is the problem and how to configure this.\u003cbr>Thanks\u003c/p>","id":"3618657028","isHighlighted":false,"author":{"username":"nicolasdallonneau","about":"","name":"Nico","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2017-11-16T10:30:54","profileUrl":"https://disqus.com/by/nicolasdallonneau/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"271377510","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/nicolasdallonneau.jpg","cache":"https://c.disquscdn.com/uploads/users/27137/7510/avatar32.jpg?1510935029"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/nicolasdallonneau.jpg","cache":"https://c.disquscdn.com/uploads/users/27137/7510/avatar92.jpg?1510935029","large":{"permalink":"https://disqus.com/api/users/avatars/nicolasdallonneau.jpg","cache":"https://c.disquscdn.com/uploads/users/27137/7510/avatar92.jpg?1510935029"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-11-16T10:33:33","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hi Bruno,\nGreat article, I've implement the same error handling for my api (spring-boot project) and I can reproduce a behaviour with your examples. \nIt's ok with known paths like /birds/2 => get custom error body, \nbut if I try with /unknownPath for example I get the default spring error :\n{\"timestamp\":1510827829951,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/unknownPath\"}\nDo you have an idea on how to manage this use case like others ?\nIn ResponseEntityexceptionHandler, there is javadoc saying\n* \u003cp>Note that in order for an {@code @ControllerAdvice} sub-class to be\n * detected, {@link ExceptionHandlerExceptionResolver} must be configured.\n\nBut I don't know how if this is the problem and how to configure this.\nThanks","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hello Nico! Take a look at the class ErrorMvcAutoConfiguration. It has a bean called\u003c/p>\u003cp>BasicErrorController that handles this scenarios. You'll probably have to do some customization on that one.\u003c/p>","id":"3620027551","isHighlighted":false,"author":{"username":"disqus_t2iUiajEFC","about":"","name":"Bruno","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-11-25T16:30:47","profileUrl":"https://disqus.com/by/disqus_t2iUiajEFC/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"133177454","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar32.jpg?1517455895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-11-17T03:31:27","parent":3618657028,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hello Nico! Take a look at the class ErrorMvcAutoConfiguration. It has a bean called \n\nBasicErrorController that handles this scenarios. You'll probably have to do some customization on that one.","canVote":false,"thread":"6086189678","forum":"toptal","depth":1,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Thanks it works !\u003c/p>\u003cp>I have to add followings in my springBoot \u003ca href=\"http://disq.us/url?url=http%3A%2F%2Fapplication.properties%3AgiE5Jru8Qdc2XQJ4neHgVKdTT1g&amp;cuid=2320983\" rel=\"nofollow noopener\" title=\"application.properties\">application.properties\u003c/a> :\u003cbr>spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration\u003cbr>spring.mvc.throw-exception-if-no-handler-found=true\u003cbr>spring.resources.add-mappings=false\u003c/p>\u003cp>Now it's look like I can manage all exceptions and get the same error resource for response\u003c/p>","id":"3620657972","isHighlighted":false,"author":{"username":"nicolasdallonneau","about":"","name":"Nico","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2017-11-16T10:30:54","profileUrl":"https://disqus.com/by/nicolasdallonneau/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"271377510","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/nicolasdallonneau.jpg","cache":"https://c.disquscdn.com/uploads/users/27137/7510/avatar32.jpg?1510935029"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/nicolasdallonneau.jpg","cache":"https://c.disquscdn.com/uploads/users/27137/7510/avatar92.jpg?1510935029","large":{"permalink":"https://disqus.com/api/users/avatars/nicolasdallonneau.jpg","cache":"https://c.disquscdn.com/uploads/users/27137/7510/avatar92.jpg?1510935029"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-11-17T15:29:44","parent":3620027551,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Thanks it works ! \n\nI have to add followings in my springBoot application.properties :\nspring.autoconfigure.exclude=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration\nspring.mvc.throw-exception-if-no-handler-found=true\nspring.resources.add-mappings=false\n\nNow it's look like I can manage all exceptions and get the same error resource for response","canVote":false,"thread":"6086189678","forum":"toptal","depth":2,"points":0,"moderationLabels":["links"],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Using JERSY(@path attribute), not able to handle exceptions. Not using @requestmapping and RestExceptionHandler not handling this. Can you please help on this.\u003c/p>","id":"3540648933","isHighlighted":false,"author":{"username":"disqus_isPXMyqXS9","about":"","name":"Sakthivel P","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2017-09-28T14:54:36","profileUrl":"https://disqus.com/by/disqus_isPXMyqXS9/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"266575754","avatar":{"small":{"permalink":"https://c.disquscdn.com/uploads/forums/232/983/avatar32.jpg?1392962884","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar32.jpg?1392962884"},"large":{"permalink":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884"},"permalink":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884"}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-09-28T14:55:08","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Using JERSY(@path attribute), not able to handle exceptions. Not using @requestmapping and RestExceptionHandler not handling this. Can you please help on this.","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>I'm not sure if you can do that. Because @RequestMapping is a Spring MVC annotation as well as the @ControllerAdvice and @ExceptionHandler. So if you are handling the REST requests directly on Jersey it should not handle the exceptions. Can't you use @RequestMapping?\u003c/p>","id":"3540750409","isHighlighted":false,"author":{"username":"disqus_t2iUiajEFC","about":"","name":"Bruno","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-11-25T16:30:47","profileUrl":"https://disqus.com/by/disqus_t2iUiajEFC/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"133177454","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar32.jpg?1517455895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-09-28T15:52:19","parent":3540648933,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"I'm not sure if you can do that. Because @RequestMapping is a Spring MVC annotation as well as the @ControllerAdvice and @ExceptionHandler. So if you are handling the REST requests directly on Jersey it should not handle the exceptions. Can't you use @RequestMapping?","canVote":false,"thread":"6086189678","forum":"toptal","depth":1,"points":0,"moderationLabels":[],"isEdited":true,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>hi Bruno I have a query. I am trying to override the handleMissingServletRequestParameter to return the error in the custom JSON format that you have stated in the tutorial. However, the ApiError object is not being returned. Instead, on Postman, I can see the 500 Internal Service Error being displayed at the tab, but nothing is being displayed in the body. Rather, the ApiError object is only being displayed for custom exceptions that I have handled. Any guidance as to what I might be doing wrong in this case? Thanks.\u003c/p>","id":"3518029270","isHighlighted":false,"author":{"username":"ottoman91","about":"","name":"ottoman91","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2016-06-11T16:10:42","profileUrl":"https://disqus.com/by/ottoman91/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"211262848","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar32.jpg?1505473396"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar92.jpg?1505473396","large":{"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar92.jpg?1505473396"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-09-14T23:43:51","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"hi Bruno I have a query. I am trying to override the handleMissingServletRequestParameter to return the error in the custom JSON format that you have stated in the tutorial. However, the ApiError object is not being returned. Instead, on Postman, I can see the 500 Internal Service Error being displayed at the tab, but nothing is being displayed in the body. Rather, the ApiError object is only being displayed for custom exceptions that I have handled. Any guidance as to what I might be doing wrong in this case? Thanks.","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hello! So you were able to return the  ApiError for custom exceptions but somehow for the handleMissingServletRequestParameter overriden method it is not working? Can you please show me the code for the overriden method so I can take a look? Thanks for liking the article. Cheers.\u003c/p>","id":"3518125462","isHighlighted":false,"author":{"username":"disqus_t2iUiajEFC","about":"","name":"Bruno","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-11-25T16:30:47","profileUrl":"https://disqus.com/by/disqus_t2iUiajEFC/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"133177454","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar32.jpg?1517455895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-09-15T01:17:27","parent":3518029270,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hello! So you were able to return the  ApiError for custom exceptions but somehow for the handleMissingServletRequestParameter overriden method it is not working? Can you please show me the code for the overriden method so I can take a look? Thanks for liking the article. Cheers.","canVote":false,"thread":"6086189678","forum":"toptal","depth":1,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>HI Bruno. Sure. \u003cbr>    @Override\u003cbr>    protected ResponseEntity&lt;object&gt; handleMissingServletRequestParameter(\u003cbr>            MissingServletRequestParameterException ex, HttpHeaders headers,\u003cbr>            HttpStatus status, WebRequest request) { \u003cbr>        ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST);\u003cbr>        String error = ex.getParameterName() + \" parameter is missing\";\u003cbr>        apiError.setMessage(error); \u003cbr>        apiError.setDebugMessage(ex.getLocalizedMessage());\u003cbr>        return buildResponseEntity(apiError);\u003cbr>    }\u003c/p>","id":"3518511361","isHighlighted":false,"author":{"username":"ottoman91","about":"","name":"ottoman91","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2016-06-11T16:10:42","profileUrl":"https://disqus.com/by/ottoman91/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"211262848","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar32.jpg?1505473396"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar92.jpg?1505473396","large":{"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar92.jpg?1505473396"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-09-15T09:51:30","parent":3518125462,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"HI Bruno. Sure. \n    @Override\n    protected ResponseEntity\u003cObject> handleMissingServletRequestParameter(\n            MissingServletRequestParameterException ex, HttpHeaders headers,\n            HttpStatus status, WebRequest request) { \n        ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST);\n        String error = ex.getParameterName() + \" parameter is missing\";\n        apiError.setMessage(error); \n        apiError.setDebugMessage(ex.getLocalizedMessage());\n        return buildResponseEntity(apiError);\n    }","canVote":false,"thread":"6086189678","forum":"toptal","depth":2,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Also, Bruno, I am creating my project on top of this SMS Gateway application. \u003ca href=\"https://disq.us/url?url=https%3A%2F%2Fgithub.com%2FopenMF%2Fmessage-gateway%2Ftree%2Fmaster%2Fsrc%2Fmain%2Fjava%2Forg%2Ffineract%2Fmessagegateway%2Fexception%3A72nyVwspVaVgqI3XBg_N9j5KxAM&amp;cuid=2320983\" rel=\"nofollow noopener\" title=\"https://github.com/openMF/message-gateway/tree/master/src/main/java/org/fineract/messagegateway/exception\">https://github.com/openMF/m...\u003c/a>. I am thinking that whether the default error handlers are not being overriden because of some exceptions that have previously been declared? If you could assist me in how to diagnose this, that would be great. Thanks!\u003c/p>","id":"3518568276","isHighlighted":false,"author":{"username":"ottoman91","about":"","name":"ottoman91","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2016-06-11T16:10:42","profileUrl":"https://disqus.com/by/ottoman91/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"211262848","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar32.jpg?1505473396"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar92.jpg?1505473396","large":{"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar92.jpg?1505473396"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-09-15T10:59:18","parent":3518511361,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Also, Bruno, I am creating my project on top of this SMS Gateway application. https://github.com/openMF/message-gateway/tree/master/src/main/java/org/fineract/messagegateway/exception. I am thinking that whether the default error handlers are not being overriden because of some exceptions that have previously been declared? If you could assist me in how to diagnose this, that would be great. Thanks!","canVote":false,"thread":"6086189678","forum":"toptal","depth":3,"points":0,"moderationLabels":["links"],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>i also tried another iteration of the handleMissingServletRequestParamater, as highlighted below, but even that is not working.     \u003cbr>   @Override\u003cbr>    protected ResponseEntity&lt;object&gt; handleMissingServletRequestParameter(\u003cbr>            MissingServletRequestParameterException ex, HttpHeaders headers,\u003cbr>            HttpStatus status, WebRequest request) {\u003cbr>        String error = ex.getParameterName() + \" parameter is missing\";\u003cbr>        return buildResponseEntity(new ApiError(BAD_REQUEST, error, ex));\u003cbr>    }\u003c/p>\u003cp>Also, I am attaching the screenshot of when I submit the incomplete query via postman. As you can see, the Status is displayed in the upper right corner of the lower box, but the body display is blank. \u003ca href=\"https://uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png\" rel=\"nofollow noopener\" title=\"https://uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png\">https://uploads.disquscdn.c...\u003c/a>\u003c/p>","id":"3518571642","isHighlighted":false,"author":{"username":"ottoman91","about":"","name":"ottoman91","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2016-06-11T16:10:42","profileUrl":"https://disqus.com/by/ottoman91/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"211262848","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar32.jpg?1505473396"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar92.jpg?1505473396","large":{"permalink":"https://disqus.com/api/users/avatars/ottoman91.jpg","cache":"https://c.disquscdn.com/uploads/users/21126/2848/avatar92.jpg?1505473396"}}},"media":[{"providerName":"Disquscdn","resolvedUrl":"https://uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png","thumbnailUrl":"//uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png","htmlHeight":null,"id":31058250,"thumbnailWidth":978,"title":"","htmlWidth":null,"mediaType":"2","html":"","location":"https://uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png","type":"5","metadata":{"create_method":"preview","thumbnail":"//uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png"},"urlRedirect":"https://uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png","description":"","post":"3518571642","thumbnailURL":"//uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png","thread":"6086189678","forum":"toptal","url":"https://uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png","resolvedUrlRedirect":"https://uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png","thumbnailHeight":698}],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-09-15T11:03:15","parent":3518568276,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"i also tried another iteration of the handleMissingServletRequestParamater, as highlighted below, but even that is not working.     \n   @Override\n    protected ResponseEntity\u003cObject> handleMissingServletRequestParameter(\n            MissingServletRequestParameterException ex, HttpHeaders headers,\n            HttpStatus status, WebRequest request) {\n        String error = ex.getParameterName() + \" parameter is missing\";\n        return buildResponseEntity(new ApiError(BAD_REQUEST, error, ex));\n    } \n\nAlso, I am attaching the screenshot of when I submit the incomplete query via postman. As you can see, the Status is displayed in the upper right corner of the lower box, but the body display is blank. https://uploads.disquscdn.com/images/a1b8ce0c5853fe82c933e6f82a4f791bd429bcceb6438296aca4228af54c4186.png","canVote":false,"thread":"6086189678","forum":"toptal","depth":4,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hello \u003ca data-dsq-mention=\"ottoman91:disqus\" href=\"https://disqus.com/by/ottoman91/\" rel=\"nofollow noopener\" title=\"https://disqus.com/by/ottoman91/\">ottoman91\u003c/a> . I've updated the sample code (\u003ca href=\"https://disq.us/url?url=https%3A%2F%2Fgithub.com%2Fbrunocleite%2Fspring-boot-exception-handling%29%3A79vc5B9amxgPd5j_1QH_YUylM78&amp;cuid=2320983\" rel=\"nofollow noopener\" title=\"https://github.com/brunocleite/spring-boot-exception-handling)\">https://github.com/brunocle...\u003c/a> with an example. Just have to call `http://localhost:8080/birds/params` without params.\u003c/p>\u003cp>The `handleMissingServletRequestParameter` method is called when a RequestParam is missing. You can try putting a breakpoint on `handleException(Exception ex, WebRequest request)` method of `ResponseEntityExceptionHandler` class to see if is it catching the exception and make sure that there isn't another exception being called before that one.\u003c/p>","id":"3522399873","isHighlighted":false,"author":{"username":"disqus_t2iUiajEFC","about":"","name":"Bruno","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-11-25T16:30:47","profileUrl":"https://disqus.com/by/disqus_t2iUiajEFC/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"133177454","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar32.jpg?1517455895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-09-18T01:43:04","parent":3518571642,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hello @ottoman91:disqus . I've updated the sample code (https://github.com/brunocleite/spring-boot-exception-handling) with an example. Just have to call `http://localhost:8080/birds/params` without params.\n\nThe `handleMissingServletRequestParameter` method is called when a RequestParam is missing. You can try putting a breakpoint on `handleException(Exception ex, WebRequest request)` method of `ResponseEntityExceptionHandler` class to see if is it catching the exception and make sure that there isn't another exception being called before that one.","canVote":false,"thread":"6086189678","forum":"toptal","depth":5,"points":0,"moderationLabels":["links"],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Great article Bruno!\u003c/p>","id":"3485272295","isHighlighted":false,"author":{"username":"luizrobertolethangrodolpho","about":"","name":"Luiz Roberto Lethang Rodolpho","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2015-05-01T18:15:08","profileUrl":"https://disqus.com/by/luizrobertolethangrodolpho/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"155939594","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/luizrobertolethangrodolpho.jpg","cache":"https://c.disquscdn.com/uploads/users/15593/9594/avatar32.jpg?1503606413"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/luizrobertolethangrodolpho.jpg","cache":"https://c.disquscdn.com/uploads/users/15593/9594/avatar92.jpg?1503606413","large":{"permalink":"https://disqus.com/api/users/avatars/luizrobertolethangrodolpho.jpg","cache":"https://c.disquscdn.com/uploads/users/15593/9594/avatar92.jpg?1503606413"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-24T20:26:52","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Great article Bruno!","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Thanks bro!\u003c/p>","id":"3486193264","isHighlighted":false,"author":{"username":"disqus_t2iUiajEFC","about":"","name":"Bruno","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-11-25T16:30:47","profileUrl":"https://disqus.com/by/disqus_t2iUiajEFC/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"133177454","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar32.jpg?1517455895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-25T12:53:32","parent":3485272295,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Thanks bro!","canVote":false,"thread":"6086189678","forum":"toptal","depth":1,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hi Bruno\u003cbr>Thanks for the nice article. I have a question on how to log the error in RestExceptionHandler to identify which API call cause the error. I think the logger.exception can be added to print the ApiError details however I am not sure how to identify the API request url to map which exception caused by which API call for production debugging.\u003cbr>Do you have any thought?\u003c/p>","id":"3485126406","isHighlighted":false,"author":{"username":"sujittripathy","about":"","name":"Sujit Tripathy","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2016-09-27T23:11:26","profileUrl":"https://disqus.com/by/sujittripathy/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"224606187","avatar":{"small":{"permalink":"https://c.disquscdn.com/uploads/forums/232/983/avatar32.jpg?1392962884","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar32.jpg?1392962884"},"large":{"permalink":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884"},"permalink":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884"}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-24T19:00:29","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hi Bruno\nThanks for the nice article. I have a question on how to log the error in RestExceptionHandler to identify which API call cause the error. I think the logger.exception can be added to print the ApiError details however I am not sure how to identify the API request url to map which exception caused by which API call for production debugging.\nDo you have any thought?","canVote":false,"thread":"6086189678","forum":"toptal","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hey Sujit! Yes, I've tested here and was able to get the path and HTTP method by casting the WebRequest to ServletWebRequest\u003cbr>\u003c/p>\u003cpre>\u003ccode>\u003cbr>ServletWebRequest servletWebRequest = (ServletWebRequest) request;\u003cbr>log.error(\"{} to {}\", servletWebRequest.getHttpMethod(), servletWebRequest.getRequest().getServletPath());\u003cbr>\u003c/code>\u003c/pre>\u003cp>\u003cbr>I've updated the Github code. Please check the method 'handleHttpMessageNotReadable' from RestExceptionHandler.\u003c/p>","id":"3485182101","isHighlighted":false,"author":{"username":"disqus_t2iUiajEFC","about":"","name":"Bruno","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-11-25T16:30:47","profileUrl":"https://disqus.com/by/disqus_t2iUiajEFC/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"133177454","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar32.jpg?1517455895"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_t2iUiajEFC.jpg","cache":"https://c.disquscdn.com/uploads/users/13317/7454/avatar92.jpg?1517455895"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-24T19:32:57","parent":3485126406,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hey Sujit! Yes, I've tested here and was able to get the path and HTTP method by casting the WebRequest to ServletWebRequest\n\u003cpre>\u003ccode>\nServletWebRequest servletWebRequest = (ServletWebRequest) request;\nlog.error(\"{} to {}\", servletWebRequest.getHttpMethod(), servletWebRequest.getRequest().getServletPath());\n\u003c/code>\u003c/pre>\nI've updated the Github code. Please check the method 'handleHttpMessageNotReadable' from RestExceptionHandler.","canVote":false,"thread":"6086189678","forum":"toptal","depth":1,"points":0,"moderationLabels":[],"isEdited":true,"sb":false},{"dislikes":0,"numReports":0,"likes":21,"message":"\u003cp>Great! Thanks Bruno.\u003c/p>","id":"3485250037","isHighlighted":false,"author":{"username":"sujittripathy","about":"","name":"Sujit Tripathy","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2016-09-27T23:11:26","profileUrl":"https://disqus.com/by/sujittripathy/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"224606187","avatar":{"small":{"permalink":"https://c.disquscdn.com/uploads/forums/232/983/avatar32.jpg?1392962884","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar32.jpg?1392962884"},"large":{"permalink":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884"},"permalink":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884","cache":"https://c.disquscdn.com/uploads/forums/232/983/avatar92.jpg?1392962884"}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-08-24T20:13:11","parent":3485182101,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Great! Thanks Bruno.","canVote":false,"thread":"6086189678","forum":"toptal","depth":2,"points":21,"moderationLabels":[],"isEdited":false,"sb":false}],"thread":{"feed":"https://toptal.disqus.com/spring_boot_rest_api_error_handling/latest.rss","author":"796450","dislikes":0,"likes":8,"message":"","isSpam":false,"createdAt":"2017-08-22T12:03:21","category":"2355943","clean_title":"Spring Boot REST API Error Handling","id":"6086189678","signedLink":"https://disq.us/?url=https%3A%2F%2Fwww.toptal.com%2Fjava%2Fspring-boot-rest-api-error-handling&key=PV6wgDenir-8ZJ6vXE3s-A","isDeleted":false,"hasStreaming":false,"raw_message":"","isClosed":false,"link":"https://www.toptal.com/java/spring-boot-rest-api-error-handling","slug":"spring_boot_rest_api_error_handling","forum":"toptal","identifiers":["java/spring-boot-rest-api-error-handling"],"posts":31,"moderators":[796450,229146535,179887240,28124521,238086439,63764034,87664568,121965560,101374904,252811705,117571230],"validateAllPosts":false,"title":"Spring Boot REST API Error Handling","highlightedPost":null}},"order":"popular"}</script>
+
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"https://c.disquscdn.com/next/current/embed"
+}</script>
+
+        
+        <script>!function () {
+            var d = document;
+            var toH = d.head.appendChild.bind(d.head);
+
+            var v = window.location.href.match(/[#&?]version=([0-9a-f]{32})/);
+            var src = 'https://c.disquscdn.com/next/embed/lounge.load';
+            if (v)
+                src += '.' + v[1];
+            src += '.js';
+
+            var s = d.createElement('script');
+            s.crossOrigin = 'anonymous';
+            s.id = 'bootstrap-script';
+            s.setAttribute('data-app', 'lounge');
+            s.src = src;
+            toH(s);
+
+            var m = d.createElement('meta');
+            m.setAttribute('http-equiv', 'Content-Security-Policy');
+            m.setAttribute('content', "script-src https:;");
+            toH(m);
+        }();</script>
+    
+
+
+<script src="./common.bundle.037f55c32651d22255e90738c195e946.js.Без названия"></script></body></html>

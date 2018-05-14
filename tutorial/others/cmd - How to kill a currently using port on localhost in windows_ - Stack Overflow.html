@@ -1,0 +1,2360 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows -->
+<html itemscope="" itemtype="http://schema.org/QAPage" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title>cmd - How to kill a currently using port on localhost in windows? - Stack Overflow</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+        <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+        <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="https://stackoverflow.com/opensearch.xml">
+
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows">
+        <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:domain" content="stackoverflow.com">
+        <meta name="twitter:title" property="og:title" itemprop="title name" content="How to kill a currently using port on localhost in windows?">
+        <meta name="twitter:description" property="og:description" itemprop="description" content="How to remove current process/application which is already assigned to a port ?
+(Example:- localhost:8080)">
+        <script src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/osd.js.Без названия"></script><script src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/pubads_impl_rendering_194.js.Без названия"></script><script src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/rules-p-c1rF4kxgLUzNc.js.Без названия" async=""></script><script async="" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/quant.js.Без названия"></script><script async="" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/beacon.js.Без названия"></script><script async="" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/analytics.js.Без названия"></script><script src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/jquery.min.js.Без названия"></script>
+        <script src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/stub.en.js.Без названия"></script>
+    
+    <link rel="stylesheet" type="text/css" href="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/stacks.css">
+        <link rel="stylesheet" type="text/css" href="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/primary.css">
+    
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;How to kill a currently using port on localhost in windows?&#39;" href="https://stackoverflow.com/feeds/question/39632667">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:39632667});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '39632667');
+                // TODO: There's a CR for replacing this with inline info on the question for moderators
+                // https://trello.com/c/ynDHhvrB/158-cr-move-the-mod-info-out-of-the-margin-and-into-the-post-estimate-needed
+                // Before we roll out the sidebar everywhere (or at least shortly after that?), we should implement it.
+                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+        
+        
+        
+        
+        
+        
+                <script>
+        StackExchange.init({"locale":"en","serverTime":1523813168,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"childUrl":"https://meta.stackoverflow.com","enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"9e340491bba006a9564ceb93f0b06b2a9658d38aef67a5aa9a4189e1dd753400","tid":"b57632e3-0171-48d6-8886-16cb28dcf010","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4}}, {"site":{"allowImageUploads":true,"commentHighlightingWithCSS":true,"enableUserHovercards":true,"styleCode":true,"enableImgurHttps":true,"forceHttpsImages":true},"userMessaging":{},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"paths":{},"markdown":{"asteriskIntraWordEmphasis":true},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"slack":{"sidebarAdDismissCookie":"slack-sidebar-ad"}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"7879f22520e8","js/moderator.en.js":"2c6ef6da9df9","js/full-anon.en.js":"a5cca6d848a4","js/full.en.js":"ec4a194216ea","js/wmd.en.js":"597ab852591f","js/third-party/jquery.autocomplete.min.js":"bdb258e949a8","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2a46ccd0c25d","js/help.en.js":"dbd4f489eff2","js/tageditor.en.js":"89ad6b26a067","js/tageditornew.en.js":"8feec6b5b80f","js/inline-tag-editing.en.js":"e7aa31e8eba1","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"dd0c04669d8a","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"30287310aa20","js/explore-qlist.en.js":"726bf7958c2a","js/events.en.js":"a73c8c880202","js/keyboard-shortcuts.en.js":"153d0c18fb5e","js/external-editor.en.js":"f29e00f5e6bb","js/adops.en.js":"22a9bd59b1e9","js/external-editor.en.js":"f29e00f5e6bb","js/snippet-javascript.en.js":"4ceca4bd1d0a","js/snippet-javascript-codemirror.en.js":"439bd4420480"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    <noscript id="noscript-css">&lt;style&gt;body,.top-bar{margin-top:1.9em}&lt;/style&gt;</noscript>
+    <script async="" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/full-anon.en.js.Без названия"></script><style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style><link rel="stylesheet" href="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/clc.min.css" type="text/css"><link rel="preload" href="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/integrator.js.Без названия" as="script"><script type="text/javascript" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/integrator.js.Без названия"></script><script src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/pubads_impl_194.js.Без названия" async=""></script><script async="" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/snippet-javascript.en.js.Без названия"></script><script async="" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/post-validation.en.js.Без названия"></script><script async="" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/external-editor.en.js.Без названия"></script></head>
+        <body class="question-page new-topbar">
+        <script async="" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/185901-159836282584097.js.Без названия"></script>
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<header class="top-bar js-top-bar _fixed _scrolling">
+    <div class="-container">
+        <div class="-main">
+                                <a href="https://stackoverflow.com/" class="-logo js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:8})">
+                        <span class="-img">Stack Overflow</span>
+                    </a>
+
+
+                <nav class="navigation" role="navigation" aria-label="site navigation">
+                    <ol class="-list">
+        <li class="-item _current">
+            <a id="nav-questions" href="https://stackoverflow.com/questions" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+        </li>
+        <li class="-item">
+            <a id="nav-jobs" href="https://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Developer Jobs</a>
+        </li>
+        <li class="-item">
+            <a id="nav-tags" href="https://stackoverflow.com/tags" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+        </li>
+        <li class="-item">
+            <a id="nav-users" href="https://stackoverflow.com/users" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+        </li>
+                    </ol>
+                </nav>
+
+        </div>
+
+            <form id="search" action="https://stackoverflow.com/search" method="get" class="searchbar" autocomplete="off" role="search">
+                    <input name="q" type="text" placeholder="Search…" value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field">
+                    <button type="submit" aria-label="Search..." class="btn-topbar-primary js-search-submit"><svg aria-hidden="true" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.86 11.32L18 16.5 16.5 18l-5.18-5.14v-.35a7 7 0 1 1 1.19-1.19h.35zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"></path></svg></button>
+            </form>
+
+        
+
+
+
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="https://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li class="grid">
+                            <div class="fl1">
+            <a href="https://stackoverflow.com/" class="current-site-link site-link js-gps-track grid gs8 gsx" data-id="1" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="favicon favicon-stackoverflow site-icon grid--cell" title="Stack Overflow"></div>
+        <span class="grid--cell fl1">
+            Stack Overflow
+        </span>
+    </a>
+
+    </div>
+    <div class="related-links">
+            <a href="https://stackoverflow.com/help" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:14 })">help</a>
+                    <a href="https://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+                    </li>
+                    <li class="related-site grid">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                            <a href="https://meta.stackoverflow.com/" class="site-link js-gps-track grid gs8 gsx" data-id="552" data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="favicon favicon-stackoverflowmeta site-icon grid--cell" title="Meta Stack Overflow"></div>
+        <span class="grid--cell fl1">
+            Meta Stack Overflow
+        </span>
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f39632667%2fhow-to-kill-a-currently-using-port-on-localhost-in-windows" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="https://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="https://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="https://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="https://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="https://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+        </div>
+        <ol class="-list">
+    <li class="-item">
+        <a href="https://stackexchange.com/users/?tab=inbox" class="-link js-inbox-button" title="Recent inbox messages">
+            <svg aria-hidden="true" class="svg-icon iconInbox" width="20" height="18" viewBox="0 0 20 18"><path d="M15.19 1H4.63c-.85 0-1.6.54-1.85 1.35L0 10.79V15c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2v-4.21l-2.87-8.44A2 2 0 0 0 15.19 1zm-.28 10l-2 2h-6l-2-2H1.96L4.4 3.68A1 1 0 0 1 5.35 3h9.12a1 1 0 0 1 .95.68L17.86 11h-2.95z"></path></svg>
+            <span class="indicator-badge js-unread-count _important" style="display: none;"></span>
+        </a>
+    </li>
+    <li class="-item">
+        <a href="https://stackexchange.com/users/?tab=reputation" class="-link js-achievements-button" title="Recent achievements: reputation, badges, and privileges earned" data-unread-class="_highlighted-positive">
+            <svg aria-hidden="true" class="svg-icon iconAchievements" width="18" height="18" viewBox="0 0 18 18"><path d="M15 2V1H3v1H0v4c0 1.6 1.4 3 3 3v1c.4 1.5 3 2.6 5 3v2H5s-1 1.5-1 2h10c0-.4-1-2-1-2h-3v-2c2-.4 4.6-1.5 5-3V9c1.6-.2 3-1.4 3-3V2h-3zM3 7c-.5 0-1-.5-1-1V4h1v3zm8.4 2.5L9 8 6.6 9.4l1-2.7L5 5h3l1-2.7L10 5h2.8l-2.3 1.8 1 2.7h-.1zM16 6c0 .5-.5 1-1 1V4h1v2z"></path></svg>
+            <span class="indicator-badge js-unread-count _positive" style="display: none;"></span>
+        </a>
+    </li>
+
+    <li class="-item"><a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" class="-link js-help-button" title="Help Center and other resources">
+        <svg aria-hidden="true" class="svg-icon iconHelp" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1a8 8 0 1 0 0 16A8 8 0 0 0 9 1zm.81 12.13c-.02.71-.55 1.15-1.24 1.13-.66-.02-1.17-.49-1.15-1.2.02-.72.56-1.18 1.22-1.16.7.03 1.2.51 1.17 1.23zM11.77 8a5.8 5.8 0 0 1-1.02.91l-.53.37c-.26.2-.42.43-.5.69a4 4 0 0 0-.09.75c0 .05-.03.16-.18.16H7.88c-.16 0-.18-.1-.18-.15.03-.66.12-1.21.4-1.66a5.29 5.29 0 0 1 1.43-1.22c.16-.12.28-.25.38-.39a1.34 1.34 0 0 0 .02-1.71c-.24-.31-.51-.46-1.03-.46-.51 0-.8.26-1.02.6-.21.33-.18.73-.18 1.1H5.75c0-1.38.35-2.25 1.1-2.76.52-.35 1.17-.5 1.93-.5 1 0 1.79.18 2.49.71.64.5.98 1.18.98 2.12 0 .57-.2 1.05-.48 1.44z"></path></svg>
+    </a></li>
+
+    <li class="-item">
+        <a href="https://stackexchange.com/" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 173 Stack Exchange sites">
+            <svg aria-hidden="true" class="svg-icon iconStackExchange" width="18" height="18" viewBox="0 0 18 18"><path d="M1 13c0 1.1.9 2 2 2h8v3l3-3h1a2 2 0 0 0 2-2v-2H1v2zM15 1H3a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2zM1 6h16v4H1V6z"></path></svg>
+        </a>
+    </li>
+        </ol>
+    </nav>
+            <div class="-ctas">
+                        <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f39632667%2fhow-to-kill-a-currently-using-port-on-localhost-in-windows" class="login-link btn-clear" rel="nofollow">Log In</a>
+                        <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent" class="login-link btn-topbar-primary" rel="nofollow" data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Navigation&quot;,&quot;Header&quot;,null,null]">Sign Up</a>
+
+            </div>
+</div>
+
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+        StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+
+    
+
+
+    <div class="container _full ">
+                        
+        <div id="content" class="snippet-hidden">
+
+
+            
+
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+
+
+
+
+
+
+<div class="s-hero hero-container _fixed js-dismissable-hero" data-campaign-name="stk">
+    <div class="-container g-row jc-sp-between ai-center">
+        <div class="g-col6">
+            <p class="-title"><strong>Join Stack Overflow</strong> to learn, share knowledge, and build your career.</p>
+        </div>
+
+        <div class="s-signup _hero g-col6">
+            <div id="openid-buttons" class="-social">
+                <a class="btn-outlined -white _medium _block" href="https://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f39632667%2fhow-to-kill-a-currently-using-port-on-localhost-in-windows" rel="nofollow" data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Navigation&quot;,&quot;Question Hero&quot;,null,null]">Email Sign Up</a>
+                <span class="-or">or sign in with</span>
+                    <div class="major-provider btn _block _medium _google" data-provider="google" data-oauthserver="https://accounts.google.com/o/oauth2/auth" data-oauthversion="2.0" data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Started - Google&quot;,&quot;Question Hero&quot;,null,null]">
+<svg aria-hidden="true" class="svg-icon native iconGoogle" width="18" height="18" viewBox="0 0 18 18"><g><path d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18z" fill="#4285F4"></path><path d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17z" fill="#34A853"></path><path d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18l2.67-2.07z" fill="#FBBC05"></path><path d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3z" fill="#EA4335"></path></g></svg>                                                Google
+                    </div>
+                    <div class="major-provider btn _block _medium _facebook" data-provider="facebook" data-oauthserver="https://www.facebook.com/v2.0/dialog/oauth" data-oauthversion="2.0" data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Started - Facebook&quot;,&quot;Question Hero&quot;,null,null]">
+                        <svg aria-hidden="true" class="svg-icon iconFacebook" width="18" height="18" viewBox="0 0 18 18"><path d="M1.88 1C1.4 1 1 1.4 1 1.88v14.24c0 .48.4.88.88.88h7.67v-6.2H7.46V8.4h2.09V6.61c0-2.07 1.26-3.2 3.1-3.2.88 0 1.64.07 1.87.1v2.16h-1.29c-1 0-1.19.48-1.19 1.18V8.4h2.39l-.31 2.42h-2.08V17h4.08c.48 0 .88-.4.88-.88V1.88c0-.48-.4-.88-.88-.88H1.88z" fill="#3C5A96"></path></svg>                        Facebook
+                    </div>
+                                    <a id="close" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" class="js-dismiss js-hero-mini-disabled -dismiss" title="dismiss"><svg aria-hidden="true" class="svg-icon iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9z"></path></svg></a>
+            </div>
+
+            <form id="login-form" action="https://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f39632667%2fhow-to-kill-a-currently-using-port-on-localhost-in-windows" method="POST">
+
+                <input type="hidden" name="fkey" value="9e340491bba006a9564ceb93f0b06b2a9658d38aef67a5aa9a4189e1dd753400">
+
+                <input type="hidden" name="ssrc" value="">
+
+                <input type="hidden" id="oauth_version" name="oauth_version" value="">
+                <input type="hidden" id="oauth_server" name="oauth_server" value="">
+
+                <div id="se-login-fields">
+                    <input type="hidden" name="legalLinksShown" value="0">
+                </div>
+            </form>
+            <script>
+                StackExchange.ready(function () {
+                    StackExchange.InlineAuth.init();
+                })
+            </script>
+        </div>
+    </div>
+</div><script>
+    StackExchange.ready(function () {
+
+        StackExchange.Hero.init("stk", "a");
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+
+        $('.js-dismissable-hero #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+              });
+
+            StackExchange.Hero.dismiss();
+
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $(".js-dismissable-hero").fadeOut("fast", function () {
+                        $(".js-dismissable-hero").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+</script>    <div class="inner-content clearfix">
+        <div id="question-header">
+                    <h1 itemprop="name"><a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows" class="question-hyperlink">How to kill a currently using port on localhost in windows?</a></h1>
+
+            
+<div class="pl8 aside-cta" role="navigation" aria-label="ask new question">
+        <a href="https://stackoverflow.com/questions/ask" class="ws-nowrap btn-outlined">Ask Question</a>
+</div>
+
+        </div>
+            <div id="mainbar" role="main" aria-label="question and answers">
+
+            
+
+<div class="question" data-questionid="39632667" id="question">
+
+    <style>#question .everyonelovesstackoverflow:empty{height:90px;width:728px;box-sizing:border-box;}</style>
+    <div id="dfp-tlb" class="everyonelovesstackoverflow" data-google-query-id="CM7JlLbmvNoCFY8EGQod2e4Hdg" data-clc-prefilled="true" data-clc-ready="true"><div id="google_ads_iframe_/248424177/stackoverflow.com/lb/question-pages_0__container__" style="border: 0pt none; display: inline-block; width: 728px; height: 90px;"><iframe frameborder="0" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/container.html" id="google_ads_iframe_/248424177/stackoverflow.com/lb/question-pages_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>    
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="39632667">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">92</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#">favorite</a>
+        <div class="favoritecount"><b>62</b></div>
+
+
+</div>
+
+            </div>
+
+            
+<div class="postcell post-layout--right">
+    <div class="post-text" itemprop="text">
+
+<p>How to remove current process/application which is already assigned to a port ?
+(Example:- localhost:8080)</p>
+    </div>
+    <div class="post-taglist">
+        <a href="https://stackoverflow.com/questions/tagged/windows" class="post-tag js-gps-track" title="show questions tagged &#39;windows&#39;" rel="tag">windows</a> <a href="https://stackoverflow.com/questions/tagged/cmd" class="post-tag js-gps-track" title="show questions tagged &#39;cmd&#39;" rel="tag">cmd</a> <a href="https://stackoverflow.com/questions/tagged/localhost" class="post-tag js-gps-track" title="show questions tagged &#39;localhost&#39;" rel="tag">localhost</a> <a href="https://stackoverflow.com/questions/tagged/port" class="post-tag js-gps-track" title="show questions tagged &#39;port&#39;" rel="tag">port</a> <a href="https://stackoverflow.com/questions/tagged/command-prompt" class="post-tag js-gps-track" title="show questions tagged &#39;command-prompt&#39;" rel="tag">command-prompt</a> 
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="https://stackoverflow.com/q/39632667" title="short permalink to this question" class="short-link" id="link-post-39632667">share</a><span class="lsep">|</span><a href="https://stackoverflow.com/posts/39632667/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </div>
+
+    <div class="post-signature grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="https://stackoverflow.com/posts/39632667/revisions" title="show all edits to this post">edited <span title="2016-09-26 11:48:12Z" class="relativetime">Sep 26 '16 at 11:48</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </div>
+    <div class="post-signature owner grid--cell fl0">
+        <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2016-09-22 07:19:51Z" class="relativetime">Sep 22 '16 at 7:19</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/3626371/kavinduwije"><div class="gravatar-wrapper-32"><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/MZv17.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/3626371/kavinduwije">KavinduWije</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,135</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+
+                
+    <div class="post-layout--right">
+	    <div id="comments-39632667" class="comments js-comments-container  dno">
+            <ul class="comments-list js-comments-list" data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+            </ul>
+	    </div>
+
+        <div id="comments-link-39632667" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" onclick=""></a>
+        </div>         
+    </div>        </div>
+</div>
+
+            <div id="answers">
+
+                <a name="tab-top"></a>
+                <div id="answers-header">
+                    <div class="subheader answers-subheader">
+                        <h2 data-answercount="4">
+                                4 Answers
+                                <span style="display:none;" itemprop="answerCount">4</span>
+                        </h2>
+                        <div>
+                            
+<div id="tabs">
+        <a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere " href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+    </div>
+                        </div>
+                    </div>
+
+
+<div class="question-status" id="mfnes-container">
+    <div class="g-row">
+        <div class="-content g-col">
+            <p style="font-size: 120%">
+                Не нашли ответ? <a id="mfnes-link" class="js-dismiss mfnes-link" href="http://ru.stackoverflow.com/questions/ask?fromen=25cbf1b01287a">Задайте вопрос на Stack Overflow на русском.</a>
+            </p>
+        </div>
+        <div class="-actions g-col1">
+            <a id="mfnes-dismiss" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" class="js-dismiss">✕</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document)
+        .ready(function () {
+            var notification = $('#mfnes-container'),
+                link = notification.find('#mfnes-link'),
+                dismiss = notification.find('#mfnes-dismiss');
+            dismiss.on('click',
+                function () {
+                    notification.slideUp();
+                    $.ajax("/mfnes/dismiss/39632667/ru/1");
+                    return false;
+                });
+            link.on('click',
+                function () {
+                    $.ajax("/mfnes/click/39632667/ru/1");
+                });
+        });
+</script>                </div>
+
+
+
+
+  
+<a name="39633428"></a>
+<div id="answer-39633428" class="answer accepted-answer" data-answerid="39633428" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="39633428">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">255</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p><strong>Step 1</strong> </p>
+
+<p>Run command-line as an Administrator. Then run the below mention command.
+type your port number in <strong>yourPortNumber</strong></p>
+
+<blockquote>
+  <p>netstat -ano | findstr :<strong>yourPortNumber</strong></p>
+</blockquote>
+
+<p><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/lEpCZ.png" alt=""></p>
+
+<p>Red coloured circled area shows the PID (process identifier)</p>
+
+<p><strong>Step 2</strong></p>
+
+<p>Then you execute this command after identify the PID. </p>
+
+<blockquote>
+  <p>taskkill /PID <strong>typeyourPIDhere</strong> /F</p>
+</blockquote>
+
+<p><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/8k64x.png" alt=""></p>
+
+<p>P.S. Run the first command again to check if process is still available or not. You'll get empty line if process is successfully ended.</p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="https://stackoverflow.com/a/39633428" title="short permalink to this answer" class="short-link" id="link-post-39633428">share</a><span class="lsep">|</span><a href="https://stackoverflow.com/posts/39633428/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </div>
+    <div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="https://stackoverflow.com/posts/39633428/revisions" title="show all edits to this post">edited <span title="2017-06-14 09:10:02Z" class="relativetime">Jun 14 '17 at 9:10</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/77764/kromster"><div class="gravatar-wrapper-32"><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/K9VA7.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/77764/kromster">Kromster</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">4,569</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="45 silver badges"><span class="badge2"></span><span class="badgecount">45</span></span><span title="81 bronze badges"><span class="badge3"></span><span class="badgecount">81</span></span>
+        </div>
+    </div>
+</div>    </div>
+            
+
+
+    <div class="post-signature owner grid--cell fl0">
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2016-09-22 07:59:14Z" class="relativetime">Sep 22 '16 at 7:59</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/3626371/kavinduwije"><div class="gravatar-wrapper-32"><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/MZv17.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/3626371/kavinduwije">KavinduWije</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,135</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-39633428" class="comments js-comments-container ">
+            <ul class="comments-list js-comments-list" data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <li id="comment-76743850" class="comment js-comment " data-comment-id="76743850">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">not working. still process is display</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/3046149/hardik-mandankaa" title="456 reputation" class="comment-user">Hardik Mandankaa</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment76743850_39633428"><span title="2017-07-03 10:07:06Z" class="relativetime-clean">Jul 3 '17 at 10:07</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-78010063" class="comment js-comment " data-comment-id="78010063">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Working perfectly. In my case, Tomcat was running in port 8080 and I needed to launch my Spring app again.  <a href="http://i.imgur.com/aVwSYvR.png" rel="nofollow noreferrer">i.imgur.com/aVwSYvR.png</a>  Thank you so much.</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/6875688/hugo-l-m" title="301 reputation" class="comment-user">Hugo L.M</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment78010063_39633428"><span title="2017-08-05 18:10:47Z" class="relativetime-clean">Aug 5 '17 at 18:10</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-79686342" class="comment js-comment " data-comment-id="79686342">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@HardikMandankaa Is it the <i>same</i> process? Some software may be set up to relaunch the listening process if it is killed.</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/2096401/tripehound" title="1,313 reputation" class="comment-user">TripeHound</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment79686342_39633428"><span title="2017-09-22 11:26:30Z" class="relativetime-clean">Sep 22 '17 at 11:26</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-81381337" class="comment js-comment " data-comment-id="81381337">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">THANK You Very Musch</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/5226331/crowni" title="589 reputation" class="comment-user">Crowni</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment81381337_39633428"><span title="2017-11-10 05:06:00Z" class="relativetime-clean">Nov 10 '17 at 5:06</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-84624770" class="comment js-comment " data-comment-id="84624770">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I had to enter escape characters when running taskkill: <code>taskkill //PID 12552 //F</code></span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/8882906/robert" title="94 reputation" class="comment-user">Robert</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment84624770_39633428"><span title="2018-02-15 15:26:15Z" class="relativetime-clean">Feb 15 at 15:26</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+        </div>
+    </li>
+            </ul>
+	    </div>
+
+        <div id="comments-link-39633428" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+<div id="dfp-mlb" class="everyonelovesstackoverflow" data-google-query-id="CM_JlLbmvNoCFY8EGQod2e4Hdg" data-clc-prefilled="true" data-clc-ready="true"><div id="google_ads_iframe_/248424177/stackoverflow.com/mlb/question-pages_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/248424177/stackoverflow.com/mlb/question-pages_0" title="3rd party ad content" name="google_ads_iframe_/248424177/stackoverflow.com/mlb/question-pages_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/saved_resource.html"></iframe></div></div>
+  
+<a name="46342611"></a>
+<div id="answer-46342611" class="answer" data-answerid="46342611" itemscope="" itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="46342611">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">35</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p><em>Step 1 (same is in accepted <a href="https://stackoverflow.com/a/39633428/5292302">answer</a> written by <a href="https://stackoverflow.com/users/3626371/kavinduwije">KavinduWije</a>):</em></p>
+
+<blockquote>
+<pre><code>netstat -ano | findstr :yourPortNumber
+</code></pre>
+</blockquote>
+
+<p><em>Change in Step 2 to:</em></p>
+
+<pre><code>tskill typeyourPIDhere 
+</code></pre>
+
+<p>This since <code>taskkill</code> is not working in some git bash command</p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="https://stackoverflow.com/a/46342611" title="short permalink to this answer" class="short-link" id="link-post-46342611">share</a><span class="lsep">|</span><a href="https://stackoverflow.com/posts/46342611/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </div>
+    <div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="https://stackoverflow.com/posts/46342611/revisions" title="show all edits to this post">edited <span title="2017-09-22 10:42:17Z" class="relativetime">Sep 22 '17 at 10:42</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/5292302/petter-friberg"><div class="gravatar-wrapper-32"><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/3b61b00d5bcb378f99eadff312544514" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/5292302/petter-friberg">Petter Friberg</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 14,113" dir="ltr">14.1k</span><span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span><span title="31 silver badges"><span class="badge2"></span><span class="badgecount">31</span></span><span title="58 bronze badges"><span class="badge3"></span><span class="badgecount">58</span></span>
+        </div>
+    </div>
+</div>    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2017-09-21 11:20:45Z" class="relativetime">Sep 21 '17 at 11:20</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/3313526/afsarkhan10182"><div class="gravatar-wrapper-32"><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/5Cy7P.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/3313526/afsarkhan10182">afsarkhan10182</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">388</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-46342611" class="comments js-comments-container ">
+            <ul class="comments-list js-comments-list" data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <li id="comment-80094203" class="comment js-comment " data-comment-id="80094203">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">didnt find it for me</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/185605/tzvi-gregory-kaidanov" title="1,881 reputation" class="comment-user">Tzvi Gregory Kaidanov</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment80094203_46342611"><span title="2017-10-04 16:57:21Z" class="relativetime-clean">Oct 4 '17 at 16:57</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-80119183" class="comment js-comment " data-comment-id="80119183">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@TzviGregoryKaidanov what issue you are facing?</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/3313526/afsarkhan10182" title="388 reputation" class="comment-user">afsarkhan10182</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment80119183_46342611"><span title="2017-10-05 10:17:48Z" class="relativetime-clean">Oct 5 '17 at 10:17</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-80120260" class="comment js-comment " data-comment-id="80120260">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I am having trouble debugging Ionic app When cordova wrapper starts it seems it remains an open port even if i finish the debug, and the next time i can't start debugging.  Here is a described issue opened for cordova tools by me on the matter. <a href="https://github.com/Microsoft/vscode-cordova/issues/323#issuecomment-3341634561" rel="nofollow noreferrer">github.com/Microsoft/vscode-cordova/issues/…</a></span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/185605/tzvi-gregory-kaidanov" title="1,881 reputation" class="comment-user">Tzvi Gregory Kaidanov</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment80120260_46342611"><span title="2017-10-05 10:46:08Z" class="relativetime-clean">Oct 5 '17 at 10:46</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-83592111" class="comment js-comment " data-comment-id="83592111">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">thanks , it worked by changing taskkill to tskill</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/3163225/md-shoaib-alam" title="62 reputation" class="comment-user">Md Shoaib Alam</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment83592111_46342611"><span title="2018-01-17 14:42:51Z" class="relativetime-clean">Jan 17 at 14:42</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+            </ul>
+	    </div>
+
+        <div id="comments-link-46342611" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+
+  
+<a name="46268284"></a>
+<div id="answer-46268284" class="answer" data-answerid="46268284" itemscope="" itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="46268284">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">15</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p><strong>If you are using GitBash</strong></p>
+
+<p><em>Step one:</em></p>
+
+<pre><code>netstat -ano | findstr :8080
+</code></pre>
+
+<p><em>Step two:</em> </p>
+
+<pre><code>taskkill //PID typeyourPIDhere //F 
+</code></pre>
+
+<p>(double slashes are needed and <code>//F</code> forcefully terminates the process)</p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="https://stackoverflow.com/a/46268284" title="short permalink to this answer" class="short-link" id="link-post-46268284">share</a><span class="lsep">|</span><a href="https://stackoverflow.com/posts/46268284/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </div>
+    <div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="https://stackoverflow.com/posts/46268284/revisions" title="show all edits to this post">edited <span title="2017-09-21 14:48:37Z" class="relativetime">Sep 21 '17 at 14:48</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/5292302/petter-friberg"><div class="gravatar-wrapper-32"><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/3b61b00d5bcb378f99eadff312544514" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/5292302/petter-friberg">Petter Friberg</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 14,113" dir="ltr">14.1k</span><span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span><span title="31 silver badges"><span class="badge2"></span><span class="badgecount">31</span></span><span title="58 bronze badges"><span class="badge3"></span><span class="badgecount">58</span></span>
+        </div>
+    </div>
+</div>    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2017-09-17 19:55:49Z" class="relativetime">Sep 17 '17 at 19:55</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/6416917/ara-yaghsizian"><div class="gravatar-wrapper-32"><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/picture" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/6416917/ara-yaghsizian">Ara Yaghsizian</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">159</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-46268284" class="comments js-comments-container ">
+            <ul class="comments-list js-comments-list" data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <li id="comment-84540559" class="comment js-comment " data-comment-id="84540559">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">double slashed didnt work for me</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/404438/kylexy1357" title="180 reputation" class="comment-user">kylexy1357</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment84540559_46268284"><span title="2018-02-13 15:06:52Z" class="relativetime-clean">Feb 13 at 15:06</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-84624933" class="comment js-comment " data-comment-id="84624933">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@kylexy1357 try with a single slash. The "double slash" is an escape character that precedes the /, which is not needed for some shells</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/8882906/robert" title="94 reputation" class="comment-user">Robert</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment84624933_46268284"><span title="2018-02-15 15:30:43Z" class="relativetime-clean">Feb 15 at 15:30</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+            </ul>
+	    </div>
+
+        <div id="comments-link-46268284" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+
+  
+<a name="47717839"></a>
+<div id="answer-47717839" class="answer" data-answerid="47717839" itemscope="" itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="47717839">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>In <strong>Windows PowerShell</strong> version 1 or later to stop a process on port 3000 type:</p>
+
+<blockquote>
+  <p>Stop-Process (,(netstat -ano | findstr :3000).split() | foreach {$<em>[$</em>.length-1]}) -Force</p>
+</blockquote>
+
+<hr>
+
+<p>As suggested by @morganpdx here`s a more PowerShell-ish, better version:</p>
+
+<blockquote>
+  <p>Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess -Force</p>
+</blockquote>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="https://stackoverflow.com/a/47717839" title="short permalink to this answer" class="short-link" id="link-post-47717839">share</a><span class="lsep">|</span><a href="https://stackoverflow.com/posts/47717839/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </div>
+    <div class="post-signature grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="https://stackoverflow.com/posts/47717839/revisions" title="show all edits to this post">edited <span title="2018-01-18 07:40:29Z" class="relativetime">Jan 18 at 7:40</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2017-12-08 15:54:51Z" class="relativetime">Dec 8 '17 at 15:54</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/4354462/todorm"><div class="gravatar-wrapper-32"><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/bb338639018db127a93b3eb786102ff4" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/4354462/todorm">todorm</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">49</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-47717839" class="comments js-comments-container ">
+            <ul class="comments-list js-comments-list" data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <li id="comment-83372831" class="comment js-comment " data-comment-id="83372831">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy"><code>'Stop-Process' is not recognized as an internal or external command,</code></span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/1114926/green" title="6,198 reputation" class="comment-user">Green</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment83372831_47717839"><span title="2018-01-10 20:56:29Z" class="relativetime-clean">Jan 10 at 20:56</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-83384386" class="comment js-comment " data-comment-id="83384386">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I find that this works: <code>Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess -Force</code></span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/443837/morganpdx" title="1,111 reputation" class="comment-user">morganpdx</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment83384386_47717839"><span title="2018-01-11 07:25:31Z" class="relativetime-clean">Jan 11 at 7:25</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-83617257" class="comment js-comment " data-comment-id="83617257">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@Green You need to run the command in Windows PowerShell</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/4354462/todorm" title="49 reputation" class="comment-user">todorm</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#comment83617257_47717839"><span title="2018-01-18 07:32:37Z" class="relativetime-clean">Jan 18 at 7:32</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+            </ul>
+	    </div>
+
+        <div id="comments-link-47717839" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+                                    <a name="new-answer"></a>
+                        <form id="post-form" action="https://stackoverflow.com/questions/39632667/answer/submit" method="post" class="post-form">
+                            <input type="hidden" id="post-id" value="39632667">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="https://www.google.by/">
+                            <h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                StackExchange.prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                showLowRepImageUploadWarning: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;"> 
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="9e340491bba006a9564ceb93f0b06b2a9658d38aef67a5aa9a4189e1dd753400">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+
+                            <div style="position: relative;">
+                                
+                                            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="https://stackoverflow.com/users/login?ssrc=question_page&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f39632667%2fhow-to-kill-a-currently-using-port-on-localhost-in-windows%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login" data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Started - Google&quot;,&quot;New Post&quot;,null,null]">
+                            <svg aria-hidden="true" class="svg-icon native iconGoogle" width="18" height="18" viewBox="0 0 18 18"><g><path d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18z" fill="#4285F4"></path><path d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17z" fill="#34A853"></path><path d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18l2.67-2.07z" fill="#FBBC05"></path><path d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3z" fill="#EA4335"></path></g></svg> Sign up using Google
+                        </div>
+                        <div class="preferred-login facebook-login" data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Started - Facebook&quot;,&quot;New Post&quot;,null,null]">
+                            <svg aria-hidden="true" class="svg-icon iconFacebook" width="18" height="18" viewBox="0 0 18 18"><path d="M1.88 1C1.4 1 1 1.4 1 1.88v14.24c0 .48.4.88.88.88h7.67v-6.2H7.46V8.4h2.09V6.61c0-2.07 1.26-3.2 3.1-3.2.88 0 1.64.07 1.87.1v2.16h-1.29c-1 0-1.19.48-1.19 1.18V8.4h2.39l-.31 2.42h-2.08V17h4.08c.48 0 .88-.4.88-.88V1.88c0-.48-.4-.88-.88-.88H1.88z" fill="#3C5A96"></path></svg> Sign up using Facebook
+                        </div>
+                        <div class="preferred-login stackexchange-login" data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Navigation&quot;,&quot;New Post&quot;,null,null]">
+                            <svg aria-hidden="true" class="svg-icon native iconLogoGlyphXSm" width="18" height="18" viewBox="0 0 18 18"><g><path fill="#BCBBBB" d="M14 16v-5h2v7H2v-7h2v5z"></path><path d="M5 15v-2h8v2H5zM12.09.72l4.5 6.06-1.2.9-4.51-6.06 1.21-.9zM8.34 4.3l.97-1.16 5.8 4.83-.96 1.16-5.8-4.83zm-1.9 3.36l.64-1.37 6.85 3.19-.63 1.37-6.85-3.2zM5.4 11.39l.38-1.67 7.42 1.48-.22 1.46-7.58-1.27z" fill="#F48024"></path></g></svg> Sign up using Email and Password
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'https%3a%2f%2fstackoverflow.com%2fquestions%2f39632667%2fhow-to-kill-a-currently-using-port-on-localhost-in-windows%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+
+                            </div>
+
+                                                            <div class="form-submit cbt">
+                                        <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+                                    <a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" class="btn-clear discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="https://stackexchange.com/legal/privacy-policy" name="privacy" target="_blank">privacy policy</a> and <a href="https://stackexchange.com/legal/terms-of-service" name="tos" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">                                </div>
+                        </form>
+
+
+
+                        <h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?                            Browse other questions tagged <a href="https://stackoverflow.com/questions/tagged/windows" class="post-tag" title="show questions tagged &#39;windows&#39;" rel="tag">windows</a> <a href="https://stackoverflow.com/questions/tagged/cmd" class="post-tag" title="show questions tagged &#39;cmd&#39;" rel="tag">cmd</a> <a href="https://stackoverflow.com/questions/tagged/localhost" class="post-tag" title="show questions tagged &#39;localhost&#39;" rel="tag">localhost</a> <a href="https://stackoverflow.com/questions/tagged/port" class="post-tag" title="show questions tagged &#39;port&#39;" rel="tag">port</a> <a href="https://stackoverflow.com/questions/tagged/command-prompt" class="post-tag" title="show questions tagged &#39;command-prompt&#39;" rel="tag">command-prompt</a>  or <a href="https://stackoverflow.com/questions/ask">ask your own question</a>.                        </h2>
+            </div>
+        </div>
+                <div id="sidebar" class="show-votes" role="complementary" aria-label="sidebar">
+                            <div class="module question-stats">
+                    <table id="qinfo">
+                        <tbody><tr>
+                            <td>
+                                <p class="label-key">asked</p>
+                            </td>
+                            <td style="padding-left: 10px">
+                                <p class="label-key" title="2016-09-22 07:19:51Z"><b>1 year, 6 months ago</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="label-key">viewed</p>
+                            </td>
+
+                            <td style="padding-left: 10px">
+                                <p class="label-key">
+                                    <b>149,515 times</b>
+                                </p>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td>
+                                    <p class="label-key">active</p>
+                                </td>
+                                <td style="padding-left: 10px">
+                                    <p class="label-key"><b><a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows?lastactivity" class="lastactivity-link" title="2018-01-18 07:40:29Z">2 months ago</a></b></p>
+                                </td>
+                            </tr>
+                    </tbody></table>
+                </div>
+            
+            
+<div id="dfp-tsb" class="everyonelovesstackoverflow" data-google-query-id="CNDJlLbmvNoCFY8EGQod2e4Hdg" data-clc-prefilled="true" data-clc-ready="true"><div id="google_ads_iframe_/248424177/stackoverflow.com/sb/question-pages_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/container(1).html" id="google_ads_iframe_/248424177/stackoverflow.com/sb/question-pages_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+            <div id="hireme" class="orange tagged tex2jax_ignore x-rem clc-jobs-multi"><a class="top " href="https://stackoverflow.com/jobs/remote-developer-jobs" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=AW0Akv8KHbKx-_Wi1UglH25ZQgICEJv-8hIdlY777Dq1NWsB8U7cUMhRABoAjLAAAIA_AQEAAhsCk6YI9OwKq9wTBhoAZMB7o5M5JhoNPxsC-bsIoJwKvOESChoAZMD5dJs5u2cdPwBvdSGbkXbbefiS&amp;cr=10440&amp;ct=1&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2Fremote-developer-jobs%3Fmed=clc&amp;sig=3cRvlKLamkG_YQ"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"><g fill="#FFF"><path d="M33.35 25.265H11.955c-3.036.182-5.642-2.15-5.823-5.211-.18-3.06 2.133-5.69 5.168-5.871.323-4.711 3.746-8.615 8.343-9.514 4.597-.9 9.22 1.43 11.266 5.677a7.54 7.54 0 0 1 7.96 2.15 7.694 7.694 0 0 1 1.313 8.204 7.58 7.58 0 0 1-6.887 4.565h.055z" opacity=".3"></path><path d="M39.181 18.453a7.301 7.301 0 0 0-1.245-7.784 7.148 7.148 0 0 0-7.546-2.04.392.392 0 0 1-.477-.205c-1.948-4.128-6.418-6.405-10.868-5.536-4.45.87-7.755 4.664-8.035 9.229a.393.393 0 0 1-.368.368c-2.819.169-4.968 2.611-4.8 5.456.168 2.844 2.59 5.011 5.43 4.841h21.381a7.188 7.188 0 0 0 6.528-4.33zm-.66-8.309a8.087 8.087 0 0 1 1.38 8.624 7.973 7.973 0 0 1-7.244 4.8h-21.36c-3.253.194-6.045-2.305-6.239-5.581-.186-3.16 2.113-5.892 5.194-6.256.44-4.77 3.95-8.698 8.643-9.614 4.692-.916 9.404 1.407 11.578 5.667 2.9-.81 6.019.095 8.048 2.36z"></path><path d="M18.948 5.75l.614-.151a.393.393 0 0 0-.188-.763l-.613.151a.393.393 0 0 0 .187.763zm-4.977 5.15a7.252 7.252 0 0 1 2.807-4.083.393.393 0 0 0-.456-.64 8.038 8.038 0 0 0-3.11 4.525.393.393 0 0 0 .759.198zm14.841 18.6v7.659a2.346 2.346 0 0 1-2.335 2.357h-9.695a2.346 2.346 0 0 1-2.335-2.357V29.5a.393.393 0 1 0-.785 0v7.659c0 1.735 1.396 3.143 3.12 3.143h9.695c1.724 0 3.12-1.408 3.12-3.143V29.5a.393.393 0 1 0-.785 0z"></path><path d="M16.904 29.431v-6.256a.393.393 0 1 0-.785 0v6.256a.393.393 0 1 0 .785 0zm9.419 0v-6.256a.393.393 0 1 0-.785 0v6.256a.393.393 0 1 0 .785 0zm-4.7 8.052c-.978 0-1.77-.798-1.77-1.782 0-.983.792-1.781 1.77-1.781s1.77.798 1.77 1.781c0 .984-.792 1.782-1.77 1.782zm0-.786a.99.99 0 0 0 .985-.996.99.99 0 0 0-.985-.996.99.99 0 0 0-.985.996c0 .55.441.996.985.996z"></path><path d="M11.955 29.631h19.322a.393.393 0 0 0 0-.786H11.955a.393.393 0 0 0 0 .786zm28.295 8.455h-2.073c-1.723 0-3.12 1.408-3.12 3.143v1.375a2.346 2.346 0 0 1-2.334 2.357h-8.346a2.346 2.346 0 0 1-2.335-2.357v-2.75a.393.393 0 1 0-.784 0v2.75c0 1.735 1.396 3.143 3.12 3.143h8.345c1.723 0 3.12-1.408 3.12-3.143v-1.375a2.346 2.346 0 0 1 2.334-2.357h2.073a.393.393 0 0 0 0-.786z"></path></g></svg><span>Work from anywhere</span></a><div class="middle"><ul class="jobs"><li class="clc-dismissable"><div class="job-wrap"><a class="job" title="Angular Developers - Help Change the Energy Market at Switchcraft. Click to learn more." href="https://stackoverflow.com/jobs/159127/angular-developers-help-change-the-energy-market-switchcraft" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=AW0Akv8KHbKx-_Wi1UglH25ZQgICEJv-8hIdlY777Dq1NWsB8U7cUMhRABoAjLAAAIA_AQEAAhsCk6YI9OwKq9wTBhoAZMB7o5M5JhoNPxsC-bsIoJwKvOESChoAZMD5dJs5u2cdPwBvdSGbkXbbefiS&amp;cr=323115&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F159127%2Fangular-developers-help-change-the-energy-market-switchcraft%3Fmed=clc&amp;sig=Csy4K9oWPng8KQ"><div class="title">Angular Developers - Help Change the Energy Market</div><div><span class="company">Switchcraft</span><span class="location"><svg viewBox="0 0 12 12"><path d="M6 5.7c.4 0 .7-.1.9-.4.3-.3.4-.6.4-.9 0-.4-.1-.7-.4-.9-.2-.3-.5-.4-.9-.4s-.7.1-.9.4c-.3.2-.4.5-.4.9s.1.7.4.9c.2.3.5.4.9.4zm0-5c1 0 1.9.4 2.6 1.1.7.7 1.1 1.6 1.1 2.6 0 .5-.1 1.1-.4 1.8s-.5 1.3-.9 1.9c-.4.5-.7 1.1-1.1 1.6-.4.5-.7.9-.9 1.2l-.4.4c-.1-.1-.2-.3-.4-.5s-.5-.6-.9-1.2c-.4-.5-.8-1-1.1-1.6s-.7-1.1-.9-1.8c-.3-.7-.4-1.3-.4-1.8 0-1 .4-1.9 1.1-2.6S5 .7 6 .7z"></path></svg><span>No office location</span></span></div><div class="opts"><span class="opt salary"><span>£50k - £60k</span></span><span class="opt remote"><svg viewBox="0 0 12 12"><path d="M6 9.8L3.9 7.7c1.3-.9 3-.9 4.2 0L6 9.8zm3-3a4.81 4.81 0 0 0-6 0L2.2 6c2.2-1.8 5.5-1.8 7.7 0l-.9.8zm1.7-1.7a7.27 7.27 0 0 0-9.4 0l-.9-.8c3.2-2.8 7.9-2.8 11.1 0l-.8.8z"></path></svg><span>Remote</span></span></div><span class="post-tag">html</span><span class="post-tag">css</span><div></div></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=AW0Akv8KHbKx-_Wi1UglH25ZQgICEJv-8hIdlY777Dq1NWsB8U7cUMhRABoAjLAAAIA_AQEAAhsCk6YI9OwKq9wTBhoAZMB7o5M5JhoNPxsC-bsIoJwKvOESChoAZMD5dJs5u2cdPwBvdSGbkXbbefiS&amp;cr=323115&amp;ct=-1&amp;sig=hSXGDI2958dgxg" data-clc-meta-target="-1"><svg viewBox="0 0 13.6 13.6"><path d="M11.4 2.3C8.9-.2 4.8-.2 2.3 2.3s-2.5 6.6 0 9.1 6.6 2.5 9.1 0 2.5-6.6 0-9.1zM8.6 9.5L6.8 7.7 5 9.5l-.9-.9 1.8-1.8L4.1 5l.9-.9 1.8 1.8 1.8-1.8.9.9-1.8 1.8 1.8 1.8-.9.9z"></path></svg><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="clc-dismissable"><div class="job-wrap"><a class="job" title="Senior Frontend Software Developer (React) at Dimanex. Click to learn more." href="https://stackoverflow.com/jobs/163683/senior-frontend-software-developer-react-dimanex" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=AW0Akv8KHbKx-_Wi1UglH25ZQgICEJv-8hIdlY777Dq1NWsB8U7cUMhRABoAjLAAAIA_AQEAAhsCk6YI9OwKq9wTBhoAZMB7o5M5JhoNPxsC-bsIoJwKvOESChoAZMD5dJs5u2cdPwBvdSGbkXbbefiS&amp;cr=307388&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F163683%2Fsenior-frontend-software-developer-react-dimanex%3Fmed=clc&amp;sig=fOC659UTnu0fkQ"><div class="title">Senior Frontend Software Developer (React)</div><div><span class="company">Dimanex</span><span class="location"><svg viewBox="0 0 12 12"><path d="M6 5.7c.4 0 .7-.1.9-.4.3-.3.4-.6.4-.9 0-.4-.1-.7-.4-.9-.2-.3-.5-.4-.9-.4s-.7.1-.9.4c-.3.2-.4.5-.4.9s.1.7.4.9c.2.3.5.4.9.4zm0-5c1 0 1.9.4 2.6 1.1.7.7 1.1 1.6 1.1 2.6 0 .5-.1 1.1-.4 1.8s-.5 1.3-.9 1.9c-.4.5-.7 1.1-1.1 1.6-.4.5-.7.9-.9 1.2l-.4.4c-.1-.1-.2-.3-.4-.5s-.5-.6-.9-1.2c-.4-.5-.8-1-1.1-1.6s-.7-1.1-.9-1.8c-.3-.7-.4-1.3-.4-1.8 0-1 .4-1.9 1.1-2.6S5 .7 6 .7z"></path></svg><span>Amsterdam, Netherlands</span></span></div><div class="opts"><span class="opt salary"><span>€50k - €60k</span></span><span class="opt remote"><svg viewBox="0 0 12 12"><path d="M6 9.8L3.9 7.7c1.3-.9 3-.9 4.2 0L6 9.8zm3-3a4.81 4.81 0 0 0-6 0L2.2 6c2.2-1.8 5.5-1.8 7.7 0l-.9.8zm1.7-1.7a7.27 7.27 0 0 0-9.4 0l-.9-.8c3.2-2.8 7.9-2.8 11.1 0l-.8.8z"></path></svg><span>Remote</span></span></div><span class="post-tag">javascript</span><span class="post-tag">twitter-bootstrap</span><div></div></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=AW0Akv8KHbKx-_Wi1UglH25ZQgICEJv-8hIdlY777Dq1NWsB8U7cUMhRABoAjLAAAIA_AQEAAhsCk6YI9OwKq9wTBhoAZMB7o5M5JhoNPxsC-bsIoJwKvOESChoAZMD5dJs5u2cdPwBvdSGbkXbbefiS&amp;cr=307388&amp;ct=-1&amp;sig=o8P3V6nWJ1honw" data-clc-meta-target="-1"><svg viewBox="0 0 13.6 13.6"><path d="M11.4 2.3C8.9-.2 4.8-.2 2.3 2.3s-2.5 6.6 0 9.1 6.6 2.5 9.1 0 2.5-6.6 0-9.1zM8.6 9.5L6.8 7.7 5 9.5l-.9-.9 1.8-1.8L4.1 5l.9-.9 1.8 1.8 1.8-1.8.9.9-1.8 1.8 1.8 1.8-.9.9z"></path></svg><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="x-rem-footer"><p>Work remotely - from home or wherever you choose.</p><a class="x-rem-cta" href="https://stackoverflow.com/jobs/remote-developer-jobs" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=AW0Akv8KHbKx-_Wi1UglH25ZQgICEJv-8hIdlY777Dq1NWsB8U7cUMhRABoAjLAAAIA_AQEAAhsCk6YI9OwKq9wTBhoAZMB7o5M5JhoNPxsC-bsIoJwKvOESChoAZMD5dJs5u2cdPwBvdSGbkXbbefiS&amp;cr=10440&amp;ct=2&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2Fremote-developer-jobs%3Fmed=clc&amp;sig=WhmebRK96CqrMA">Browse remote jobs</a></li></ul></div><img src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/impression.gif" class="impression" style="display: none;"></div>
+<script>;try{(function(a){function b(a){return document.getElementById(a)}function c(a){return a='string'==typeof a?b(a):a,!!a&&'none'===getComputedStyle(a).display}function d(a){return!c(a)}function e(a){return!!a}function f(a){var b=a.style;b.height=b.maxHeight=b.minHeight='auto',b.display='none',[].forEach.call(a.children,f)}function g(){try{return!new Function('return async()=>{};')}catch(a){return!0}}function h(){'function'==typeof clc.load?clc.load():q.push(function(a){return a.load()})}function i(){if(r.allowed&&new RegExp(r.allowed).test(location.hostname)&&!c('hireme')){var a=r.wv;if(document.hidden&&a){var b=function(){document.hidden||(i(),document.removeEventListener('visibilitychange',b))};return void document.addEventListener('visibilitychange',b)}r.al&&h();var d=g()?r.lib.replace(/(\.min)?\.js(\?v=[0-9a-fA-F]+)?$/,'.ie$1.js$2'):r.lib,e=document.createElement('script');e.async=!0,e.src=d,document.body.appendChild(e)}}function j(){return Object.keys(v.ids)}function k(a){var b=v.ids[a],c=v.slots[b];'function'==typeof c&&(c=c(a));return{path:'/'+s+'/'+u+'/'+b+'/'+t,sizes:c,zone:b}}function l(){var a=document.createElement('div');a.className='adsbox',a.id='clc-abd',a.style.position='absolute',a.style.pointerEvents='none',a.innerHTML='&nbsp;',document.body.appendChild(a)}function m(a){var b=a.serviceName,c=a.slot,d=a.lineItemId;try{var e=c.getSlotElementId(),g=[];e||g.push('id=0');var h=document.getElementById(e);if(!e||h?h.hasAttribute('data-clc-stalled')&&g.push('st=1'):g.push('el=0'),0!==g.length)return void w(g.join('&'));-1===r.dh.indexOf(d)?h.setAttribute('data-clc-prefilled','true'):f(h),h.setAttribute('data-clc-ready','true')}catch(a){var i=document.querySelector('#dfp-tsb, #dfp-isb, #clc-tsb');i&&i.setAttribute('data-clc-ready','true'),w('e=1')}}function n(a){if(!!clc.collapse){if(clc.collapse.leaderboards&&('lb'===a||'mlb'===a))return!0;if(clc.collapse.mobile&&/^mobile\//.test(a))return!0}else if(clc.collapse_leaderboards&&('lb'===a||'mlb'===a))return!0;return!1}function o(a,b){'dfp-isb'===a&&b.setTargeting('Sidebar',['Inline']),'dfp-tsb'===a&&b.setTargeting('Sidebar',['Right']);var c=k(a),d=c.path,e=c.sizes,f=c.zone,g=googletag.defineSlot(d,e,a);n(f)&&g.setCollapseEmptyDiv(!0,!0),g.addService(b),!1}function p(a){return function(){l();var b=googletag.pubads();b.enableSingleRequest(),b.addEventListener('slotRenderEnded',m),!dfp_targeting||Object.keys(dfp_targeting).forEach(function(a){b.setTargeting(a,dfp_targeting[a])}),a.forEach(function(a){return o(a,b)}),googletag.enableServices(),a.forEach(function(a){googletag.display(a)})}}var r=function(a){for(var b=[],c=1;c<arguments.length;c++)b[c-1]=arguments[c];for(var d,e=0,f=b;e<f.length;e++)for(var g in d=f[e],d)a[g]=d[g];return a}({"lib":"https://cdn.sstatic.net/clc/clc.min.js?v=068ea1243358","style":"https://cdn.sstatic.net/clc/styles/clc.min.css?v=8a0a093a431f","u":"https://clc.stackoverflow.com/markup.js","wa":true,"kt":2000,"tto":true,"h":"clc.stackoverflow.com","allowed":"^(((talent\\.)?stackoverflow)|(blog\\.codinghorror)|(serverfault|askubuntu)|([^\\.]+\\.stackexchange))\\.com$","wv":true,"al":false,"dh":[4385506061,4386578282,4386579572]},a.options||{}),q=a.cmd||[],s='248424177',t=/^\/tags\//.test(location.pathname)||/^\/questions\/tagged\//.test(location.pathname)?'tag-pages':'question-pages',u=location.hostname;var v={slots:{lb:[[728,90]],mlb:[[728,90]],sb:function(a){return'dfp-tsb'===a?[[300,250],[300,600]]:[[300,250]]},"tag-sponsorship":[[730,135]],mobile:[[320,50],[300,250]]},ids:{"dfp-tlb":'lb',"dfp-mlb":'mlb',"dfp-tsb":'sb',"dfp-isb":'sb',"dfp-tag":'tag-sponsorship',"dfp-mob":'mobile',"clc-tlb":'lb',"clc-mlb":'mlb',"clc-tsb":'sb'}},w=function(a){new Image().src='https://'+r.h+'/stalled.gif?'+a};i(),a.autoload=h,a.cmd=q,a.options=r,a.loadDisplayAds=function(a){a=a&&0<a.length?a:j();var g=a.map(b).filter(e).filter(function(a){return /^\s*$/.test(a.innerHTML)}).filter(d).map(function(a){return a.id});if(a.map(b).filter(e).filter(c).forEach(f),0!==g.length){googletag='undefined'==typeof googletag?{}:googletag,googletag.cmd=googletag.cmd||[],googletag.cmd.push(p(g));var h=document.createElement('script');h.async=!0,h.src='https://www.googletagservices.com/tag/js/gpt.js',document.body.appendChild(h)}}})(this.clc=this.clc||{})}catch(a){window.console.error(a)}</script>            <script>
+                window.clc_request='AhaGDfr1otUIAAAAABu_XAICAAAAAgAAAAArAAAAfHdpbmRvd3N8Y21kfGxvY2FsaG9zdHxwb3J0fGNvbW1hbmQtcHJvbXB0fAD9jpF_CIe_t8MH';                    clc.autoload();
+                var dfp_targeting={Registered:['false'],'so-tag':['windows','cmd','localhost','port','command-prompt']};                                    clc.loadDisplayAds();
+
+            </script>
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="https://stackoverflow.com/q/8688949?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">95</div>
+	</a>
+	<a href="https://stackoverflow.com/questions/8688949/how-to-close-tcp-and-udp-ports-via-windows-command-line?noredirect=1&amp;lq=1" class="question-hyperlink">How to close TCP and UDP ports via windows command line</a>
+</div>
+<div class="spacer">
+	<a href="https://stackoverflow.com/q/46000358?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="https://stackoverflow.com/questions/46000358/cannot-stop-zookeeper-in-windows?noredirect=1&amp;lq=1" class="question-hyperlink">Cannot stop ZooKeeper in Windows</a>
+</div>
+<div class="spacer">
+	<a href="https://stackoverflow.com/q/43752480?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">-5</div>
+	</a>
+	<a href="https://stackoverflow.com/questions/43752480/apk-failing-to-install?noredirect=1&amp;lq=1" class="question-hyperlink">APK failing to install</a>
+</div>
+<div class="spacer">
+	<a href="https://stackoverflow.com/q/48720322?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="https://stackoverflow.com/questions/48720322/eclipse-closed-automatically?noredirect=1&amp;lq=1" class="question-hyperlink">Eclipse closed automatically</a>
+</div>
+<div class="spacer">
+	<a href="https://stackoverflow.com/q/48593794?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="https://stackoverflow.com/questions/48593794/node-js-port-connection?noredirect=1&amp;lq=1" class="question-hyperlink">Node.js port connection</a>
+</div>			</div>
+</div>
+
+                <div class="module sidebar-related">
+                    <h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/26551?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">864</div></a><a href="https://stackoverflow.com/questions/26551/how-do-i-pass-command-line-parameters-to-a-batch-file?rq=1" class="question-hyperlink">How do I pass command line parameters to a batch file?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/48198?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1364</div></a><a href="https://stackoverflow.com/questions/48198/how-can-you-find-out-which-process-is-listening-on-a-port-on-windows?rq=1" class="question-hyperlink">How can you find out which process is listening on a port on Windows?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/152457?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes large">695</div></a><a href="https://stackoverflow.com/questions/152457/what-is-the-difference-between-a-port-and-a-socket?rq=1" class="question-hyperlink">What is the difference between a port and a socket?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/304319?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1808</div></a><a href="https://stackoverflow.com/questions/304319/is-there-an-equivalent-of-which-on-the-windows-command-line?rq=1" class="question-hyperlink">Is there an equivalent of 'which' on the Windows command line?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/888533?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">395</div></a><a href="https://stackoverflow.com/questions/888533/how-can-i-update-the-current-line-in-a-c-sharp-windows-console-app?rq=1" class="question-hyperlink">How can I update the current line in a C# Windows Console App?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/1261975?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">629</div></a><a href="https://stackoverflow.com/questions/1261975/addressing-localhost-from-a-virtualbox-virtual-machine?rq=1" class="question-hyperlink">Addressing localhost from a virtualbox virtual machine</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/1430141?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">262</div></a><a href="https://stackoverflow.com/questions/1430141/port-80-is-being-used-by-system-pid-4-what-is-that?rq=1" class="question-hyperlink">Port 80 is being used by SYSTEM (PID 4), what is that?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/1960750?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">150</div></a><a href="https://stackoverflow.com/questions/1960750/how-to-find-which-program-is-using-port-80-in-windows?rq=1" class="question-hyperlink">How to find which program is using port 80 in Windows?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/4750806?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">2143</div></a><a href="https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows?rq=1" class="question-hyperlink">How do I install pip on Windows?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/11583562?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">337</div></a><a href="https://stackoverflow.com/questions/11583562/how-to-kill-a-process-running-on-particular-port-in-linux?rq=1" class="question-hyperlink">How to kill a process running on particular port in Linux?</a></div>
+                    </div>
+                </div>
+
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="https://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/109532/plausible-reason-for-women-not-to-be-allowed-outside-settlements" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Plausible reason for women not to be allowed outside settlements?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-softwareengineering" title="Software Engineering Stack Exchange"></div><a href="https://softwareengineering.stackexchange.com/questions/369154/why-do-we-need-so-many-classes-in-design-patterns" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why do we need so many classes in design patterns?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="https://mathematica.stackexchange.com/questions/171165/what-is-wrong-with-my-use-of-summation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is wrong with my use of Summation?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="https://mathoverflow.net/questions/297872/who-wins-two-player-sudoku" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:504 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Who wins two player sudoku?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/13133/how-to-tell-driving-instructor-that-i-want-to-change-instructors" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to tell driving instructor that I want to change instructors?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="https://codegolf.stackexchange.com/questions/162324/circle-intersection-area" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Circle intersection area
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-retrocomputing" title="Retrocomputing Stack Exchange"></div><a href="https://retrocomputing.stackexchange.com/questions/6240/why-does-nobody-attempt-to-build-charles-babbages-analytical-engine" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:648 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why does nobody attempt to build Charles Babbage's Analytical Engine?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-biology" title="Biology Stack Exchange"></div><a href="https://biology.stackexchange.com/questions/72388/biological-siblings-possible-with-9-months-age-difference" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:375 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Biological siblings possible with &lt;9 months age difference?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="https://movies.stackexchange.com/questions/88024/why-did-lucius-interrupt-bruce-during-their-sonar-submarine-discussion" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why did Lucius interrupt Bruce during their Sonar/Submarine discussion?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/13071/how-to-politely-deal-with-white-people-wanting-to-talk-to-me-about-racism-race-i" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to politely deal with white people wanting to talk to me about racism/race issues
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-chess" title="Chess Stack Exchange"></div><a href="https://chess.stackexchange.com/questions/21368/is-preventing-an-opponent-from-castling-considered-an-advantage" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:435 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is preventing an opponent from castling considered an advantage?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="https://codereview.stackexchange.com/questions/192097/get-last-word-of-the-string" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Get last word of the string
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="https://skeptics.stackexchange.com/questions/41073/did-al-ghazali-lead-to-decline-of-science-in-islam-as-neil-tyson-claims" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Did al-Ghazali lead to decline of science in Islam as Neil Tyson claims?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="https://stackoverflow.com/questions/49839049/defining-strict-application-myself-does-not-result-in-the-same-performance" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Defining strict application ($!) myself does not result in the same performance
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-photo" title="Photography Stack Exchange"></div><a href="https://photo.stackexchange.com/questions/97910/what-can-i-do-to-get-models-to-take-my-small-camera-more-seriously" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:61 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What can I do to get models to take my small camera more seriously?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/109016/how-to-build-a-trap-to-last-the-ages" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to build a trap to last the ages?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="https://rpg.stackexchange.com/questions/120513/dd-5e-initiative-modifier-by-armors" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    D&amp;D 5e Initiative modifier by armors
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="https://physics.stackexchange.com/questions/399463/sun-is-giving-us-a-low-entropy-not-energy" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Sun is giving us a low entropy not energy
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="https://english.stackexchange.com/questions/441774/im-looking-for-a-word-to-describe-an-identity-which-can-be-filled-by-more-than" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I'm looking for a word to describe an identity which can be filled by more than one individual
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="https://mathematica.stackexchange.com/questions/171174/how-to-draw-cantor-function-in-mathematica" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to draw Cantor function in mathematica
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-literature" title="Literature Stack Exchange"></div><a href="https://literature.stackexchange.com/questions/6355/how-can-the-inscription-on-auryn-be-interpreted" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:668 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can the inscription on AURYN be interpreted?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="https://music.stackexchange.com/questions/69953/does-vm7-in-minor-key-function-as-dominant" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does Vm7 in minor key function as dominant?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-politics" title="Politics Stack Exchange"></div><a href="https://politics.stackexchange.com/questions/30314/is-fox-news-correct-that-mueller-shouldnt-be-going-after-a-campaign-finance-vio" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:475 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is Fox News correct that Mueller shouldn't be going after a campaign finance violation?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="https://math.stackexchange.com/questions/2738115/the-assumption-in-proof-by-induction" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    The "assumption" in proof by induction
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+
+<div id="feed-link">
+    <a href="https://stackoverflow.com/feeds/question/39632667" title="feed of this question and its answers">
+        <svg aria-hidden="true" class="svg-icon fc-orange-400 iconRss" width="18" height="18" viewBox="0 0 18 18"><path d="M1 3c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3zm14.5 12C15.5 8.1 9.9 2.5 3 2.5V5a10 10 0 0 1 10 10h2.5zm-5 0A7.5 7.5 0 0 0 3 7.5V10a5 5 0 0 1 5 5h2.5zm-5 0A2.5 2.5 0 0 0 3 12.5V15h2.5z"></path></svg>
+        question feed
+    </a>
+</div>
+        </div>
+    </div>
+<script>StackExchange.ready(function(){$.get('/posts/39632667/ivc/e6d9');});</script>
+<noscript>&lt;div&gt;&lt;img src="/posts/39632667/ivc/e6d9" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;</noscript><div style="display:none" id="prettify-lang"></div></div>
+
+
+        </div>
+    </div><script async="" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/clc.min.js.Без названия"></script><script async="" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/gpt.js.Без названия"></script>
+
+    <footer id="footer" class="site-footer js-footer" role="contentinfo">
+        <div class="site-footer--container">
+                <div class="site-footer--logo">
+
+                    <a href="https://stackoverflow.com/"><svg aria-hidden="true" class="svg-icon native iconLogoGlyphMd" width="32" height="37" viewBox="0 0 32 37"><g><path fill="#BCBBBB" d="M26 33v-9h4v13H0V24h4v9z"></path><path d="M23.1 25.99l.68-2.95-16.1-3.35L7 23l16.1 2.99zM9.1 15.2l15 7 1.4-3-15-7-1.4 3zm4.2-7.4L26 18.4l2.1-2.5L15.4 5.3l-2.1 2.5zM21.5 0l-2.7 2 9.9 13.3 2.7-2L21.5 0zM7 30h16v-3H7v3z" fill="#F48024"></path></g></svg></a>
+                </div>
+            
+            <nav class="site-footer--nav">
+                    <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                        <h5 class="-title"><a href="https://stackoverflow.com/" class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 15})">Stack Overflow</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="https://stackoverflow.com/questions" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 16})">Questions</a></li>
+                                <li class="-item"><a href="https://stackoverflow.com/jobs" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 17})">Jobs</a></li>
+                                <li class="-item"><a href="https://stackoverflow.com/jobs/directory/developer-jobs" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 11})">Developer Jobs Directory</a></li>
+                                     <li class="-item"><a href="https://stackoverflow.com/jobs/salary" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 28})">Salary Calculator</a></li>
+                                                            <li class="-item"><a href="https://stackoverflow.com/help" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 3 })">Help</a></li>
+                                <li class="-item"><a onclick="StackExchange.switchMobile(&quot;on&quot;)" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 12 })">Mobile</a></li>
+                        </ul>
+                    </div>
+                    <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                        <h5 class="-title"><a href="https://www.stackoverflowbusiness.com/" class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 19 })">Products</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="https://stackoverflow.com/teams" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 29 })">Teams</a></li>
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com/talent" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 20 })">Talent</a></li>
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com/advertise" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 21 })">Ads</a></li>
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com/enterprise" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 22 })">Enterprise</a></li>
+                        </ul>
+                    </div>
+                <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                    <h5 class="-title"><a class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">Company</a></h5>
+                    <ul class="-list">
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">About</a></li>
+                                                <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 27 })" href="https://stackoverflow.com/company/press">Press</a></li>
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 9 })" href="https://stackoverflow.com/company/work-here">Work Here</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 7 })" href="https://stackexchange.com/legal">Legal</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 8 })" href="https://stackexchange.com/legal/privacy-policy">Privacy Policy</a></li>
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 13 })" href="https://stackoverflow.com/company/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer--col site-footer--categories-nav site-footer--col__visible">
+                    <a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" class="site-footer--back js-footer-back"><svg aria-hidden="true" class="svg-icon iconArrowLeftAlt" width="18" height="18" viewBox="0 0 18 18"><path d="M10.58 16L12 14.59 6.4 9 12 3.41 10.57 2l-7 7z"></path></svg></a>
+                    <div>
+                        <h5 class="-title"><a href="https://stackexchange.com/">Stack Exchange<br> Network</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Technology">Technology</a></li>
+                            <li class="-item"><a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Life / Arts">Life / Arts</a></li>
+                            <li class="-item"><a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Culture / Recreation">Culture / Recreation</a></li>
+                            <li class="-item"><a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Science">Science</a></li>
+                            <li class="-item"><a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Other">Other</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="site-footer--categories">
+                    <div class="site-footer--col site-footer--category js-footer-col" data-name="Technology">
+        <ul class="-list">
+                <li class="-item"><a href="https://stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                <li class="-item"><a href="https://serverfault.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="system and network administrators">Server Fault</a></li>
+                <li class="-item"><a href="https://superuser.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="computer enthusiasts and power users">Super User</a></li>
+                <li class="-item"><a href="https://webapps.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="power users of web applications">Web Applications</a></li>
+                <li class="-item"><a href="https://askubuntu.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                <li class="-item"><a href="https://webmasters.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="pro webmasters">Webmasters</a></li>
+                <li class="-item"><a href="https://gamedev.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and independent game developers">Game Development</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://tex.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                <li class="-item"><a href="https://softwareengineering.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professionals, academics, and students working within the systems development life cycle">Software Engineering</a></li>
+                <li class="-item"><a href="https://unix.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                <li class="-item"><a href="https://apple.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                <li class="-item"><a href="https://wordpress.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="WordPress developers and administrators">WordPress Development</a></li>
+                <li class="-item"><a href="https://gis.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                <li class="-item"><a href="https://electronics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://android.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                <li class="-item"><a href="https://security.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="information security professionals">Information Security</a></li>
+                <li class="-item"><a href="https://dba.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                <li class="-item"><a href="https://drupal.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Drupal developers and administrators">Drupal Answers</a></li>
+                <li class="-item"><a href="https://sharepoint.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="SharePoint enthusiasts">SharePoint</a></li>
+                <li class="-item"><a href="https://ux.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="user experience researchers and experts">User Experience</a></li>
+                <li class="-item"><a href="https://mathematica.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Wolfram Mathematica">Mathematica</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://salesforce.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                <li class="-item"><a href="https://expressionengine.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                <li class="-item"><a href="https://pt.stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programadores profissionais e entusiastas">Stack Overflow em Português</a></li>
+                <li class="-item"><a href="https://blender.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who use Blender to create 3D graphics, animations, or games">Blender</a></li>
+                <li class="-item"><a href="https://networkengineering.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="network engineers">Network Engineering</a></li>
+                <li class="-item"><a href="https://crypto.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                <li class="-item"><a href="https://codereview.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="peer programmer code reviews">Code Review</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://magento.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of the Magento e-Commerce platform">Magento</a></li>
+                <li class="-item"><a href="https://softwarerecs.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people seeking specific software recommendations">Software Recommendations</a></li>
+                <li class="-item"><a href="https://dsp.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                <li class="-item"><a href="https://emacs.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those using, extending or developing Emacs">Emacs</a></li>
+                <li class="-item"><a href="https://raspberrypi.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                <li class="-item"><a href="https://ru.stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="программистов">Stack Overflow на русском</a></li>
+                <li class="-item"><a href="https://codegolf.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://es.stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programadores y profesionales de la informática">Stack Overflow en español</a></li>
+                <li class="-item"><a href="https://ethereum.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Ethereum, the decentralized application platform and smart contract enabled blockchain">Ethereum</a></li>
+                <li class="-item"><a href="https://datascience.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Data science professionals, Machine Learning specialists, and those interested in learning more about the field">Data Science</a></li>
+                <li class="-item"><a href="https://arduino.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="developers of open-source hardware and software that is compatible with Arduino">Arduino</a></li>
+                <li class="-item"><a href="https://bitcoin.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Bitcoin crypto-currency enthusiasts">Bitcoin</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#technology" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (29)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts">
+        <ul class="-list">
+                <li class="-item"><a href="https://photo.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                <li class="-item"><a href="https://scifi.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                <li class="-item"><a href="https://graphicdesign.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                <li class="-item"><a href="https://movies.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                <li class="-item"><a href="https://music.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                <li class="-item"><a href="https://worldbuilding.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="writers/artists using science, geography and culture to construct imaginary worlds and settings">Worldbuilding</a></li>
+                <li class="-item"><a href="https://cooking.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts"><ul class="-list">
+                <li class="-item"><a href="https://diy.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="contractors and serious DIYers">Home Improvement</a></li>
+                <li class="-item"><a href="https://money.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                <li class="-item"><a href="https://academia.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="academics and those enrolled in higher education">Academia</a></li>
+                <li class="-item"><a href="https://law.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="legal professionals, students, and others with experience or interest in law">Law</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#lifearts" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (15)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation">
+        <ul class="-list">
+                <li class="-item"><a href="https://english.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                <li class="-item"><a href="https://skeptics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="scientific skepticism">Skeptics</a></li>
+                <li class="-item"><a href="https://judaism.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                <li class="-item"><a href="https://travel.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="road warriors and seasoned travelers">Travel</a></li>
+                <li class="-item"><a href="https://christianity.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                <li class="-item"><a href="https://ell.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="speakers of other languages learning English">English Language Learners</a></li>
+                <li class="-item"><a href="https://japanese.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation"><ul class="-list">
+                <li class="-item"><a href="https://gaming.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                <li class="-item"><a href="https://bicycles.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                <li class="-item"><a href="https://rpg.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                <li class="-item"><a href="https://anime.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="anime and manga fans">Anime &amp; Manga</a></li>
+                <li class="-item"><a href="https://puzzling.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those who create, solve, and study puzzles">Puzzling</a></li>
+                <li class="-item"><a href="https://mechanics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#culturerecreation" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (33)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Science">
+        <ul class="-list">
+                <li class="-item"><a href="https://mathoverflow.net/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional mathematicians">MathOverflow</a></li>
+                <li class="-item"><a href="https://math.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                <li class="-item"><a href="https://stats.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                <li class="-item"><a href="https://cstheory.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                <li class="-item"><a href="https://physics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="active researchers, academics and students of physics">Physics</a></li>
+                <li class="-item"><a href="https://chemistry.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="scientists, academics, teachers and students">Chemistry</a></li>
+                <li class="-item"><a href="https://biology.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="biology researchers, academics, and students">Biology</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Science"><ul class="-list">
+                <li class="-item"><a href="https://cs.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                <li class="-item"><a href="https://philosophy.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#science" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (10)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Other">
+        <ul class="-list">
+                <li class="-item"><a href="https://meta.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                <li class="-item"><a href="https://stackapps.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                <li class="-item"><a href="https://api.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programmatic interaction with Stack Exchange sites">API</a></li>
+                <li class="-item"><a href="https://data.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="querying Stack Exchange data using SQL">Data</a></li>
+                <li class="-item"><a href="https://area51.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                    </ul>
+    </div>
+                </div>
+            </nav>
+            <div class="site-footer--copyright fs-fine">
+                <ul class="-list">
+                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link:4 })" href="https://stackoverflow.blog/?blb=1">Blog</a></li>
+                    <li class="-item"><a href="https://www.facebook.com/officialstackoverflow/" class="-link">Facebook</a></li>
+                    <li class="-item"><a href="https://twitter.com/stackoverflow" class="-link">Twitter</a></li>
+                    <li class="-item"><a href="https://linkedin.com/company/stack-overflow" class="-link">LinkedIn</a></li>
+                </ul>
+
+                <p class="mt-auto mb24">
+site design / logo © 2018 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a>
+                            with <a href="https://stackoverflow.blog/2009/06/25/attribution-required/" rel="license">attribution required</a>.
+                    <span id="svnrev">rev&nbsp;2018.4.13.29864</span>
+                </p>
+            </div>
+        </div>
+
+            </footer>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled
+            &lt;img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;
+        &lt;/div&gt;
+    </noscript>
+
+<script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            StackExchange.ready(function () {
+
+                var trackingCodes = [
+                    'UA-108242619-1'
+                ];
+
+
+                StackExchange.ga.init({
+                    sendTitles: true,
+                    tracker: window.ga,
+                    trackingCodes: trackingCodes
+                });
+
+
+
+                    StackExchange.ga.setDimension('dimension2', '|windows|cmd|localhost|port|command-prompt|');
+
+                    StackExchange.ga.setDimension('dimension3', 'Questions/Show');
+
+                StackExchange.ga.trackPageView();
+            });
+            
+/**/
+            
+            var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+            (function() {
+                var ssl = 'https:' == document.location.protocol,
+                    s = document.getElementsByTagName('script')[0],
+                    qc = document.createElement('script');
+                 qc.async = true;
+                    qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                    s.parentNode.insertBefore(qc, s);
+                    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+/**/
+                 var sc = document.createElement('script');
+                    sc.async = true;
+                    sc.src = (ssl ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js';
+                    s.parentNode.insertBefore(sc, s);
+                    _comscore.push({ c1: "2", c2: "17440561" });
+            })();
+            
+
+</script>
+            
+    
+    
+<div class="adsbox" id="clc-abd" style="position: absolute; pointer-events: none;">&nbsp;</div><script src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/markup.js.Без названия" async=""></script><iframe id="google_osd_static_frame_1475307573060" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./cmd - How to kill a currently using port on localhost in windows_ - Stack Overflow_files/saved_resource(1).html"></iframe></body></html>

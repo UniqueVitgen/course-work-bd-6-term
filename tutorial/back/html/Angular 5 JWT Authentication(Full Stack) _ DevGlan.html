@@ -1,0 +1,1351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0065)http://www.devglan.com/spring-security/angular-jwt-authentication -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <script async="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/analytics.js.Без названия"></script><script src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/ca-pub-2256439533750580.js.Без названия"></script><script async="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/adsbygoogle.js.Без названия"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-2256439533750580",
+            enable_page_level_ads: true
+        });
+    </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular 5 JWT Authentication(Full Stack) | DevGlan</title>
+    <meta name="robots" content="index follow">
+    <meta name="keywords" content="angular 5 JWT authentication,spring boot security,REST API">
+    <meta name="description" content="The tutorial is about creating a full stack app using angular5 JWT authentication with spring boot security in the server as token provider and HTTPInterceptor implementation. Access of REST API is given to HTTP request having auth token in the header.">
+    <meta name="author" content="DevGlan">
+    <link rel="canonical" href="http://www.devglan.com/spring-security/angular-jwt-authentication">
+    <link rel="publisher" href="https://plus.google.com/+DhirajRay1">
+    <meta itemprop="name" content="Angular 5 JWT Authentication(Full Stack) | DevGlan">
+    <meta itemprop="description" content="The tutorial is about creating a full stack app using angular5 JWT authentication with spring boot security in the server as token provider and HTTPInterceptor implementation. Access of REST API is given to HTTP request having auth token in the header.">
+    <meta itemprop="image" content="http://www.devglan.com/style/img/logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Angular 5 JWT Authentication(Full Stack) | DevGlan">
+    <meta property="og:description" content="The tutorial is about creating a full stack app using angular5 JWT authentication with spring boot security in the server as token provider and HTTPInterceptor implementation. Access of REST API is given to HTTP request having auth token in the header.">
+    <meta property="og:url" content="http://www.devglan.com/spring-security/angular-jwt-authentication">
+    <meta property="og:site_name" content="devglan">
+    <meta property="og:image" content="http://www.devglan.com/style/img/logo.png">
+    <meta property="article:publisher" content="https://www.facebook.com/devglanjava/">
+    <meta property="article:section" content="Java">
+    <meta property="fb:admins" content="1766542550255713">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="The tutorial is about creating a full stack app using angular5 JWT authentication with spring boot security in the server as token provider and HTTPInterceptor implementation. Access of REST API is given to HTTP request having auth token in the header.">
+    <meta name="twitter:title" content="Angular 5 JWT Authentication(Full Stack) | DevGlan">
+    <meta name="twitter:site" content="@devglan">
+    <meta name="twitter:image" content="http://www.devglan.com/style/img/logo.png">
+    <meta name="twitter:creator" content="@devglan">
+    <!--<base href="http://www.devglan.com/">--><base href=".">
+    <meta name="google-site-verification" content="pcGimoh7HVlCiraucWwIZYVgSleXCl0y8uewA50qq9A">
+    <meta name="yandex-verification" content="a0c9dc226b7c4f05">
+    <meta name="msvalidate.01" content="2DD64873692E7643039DF4CF26600A83">
+    <link rel="alternate" type="application/rss+xml" title="DevGlan Feed" href="http://www.devglan.com/feed.xml">
+    <link rel="shortcut icon" href="http://www.devglan.com/style/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/style.css">
+    <script src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/platform.js.Без названия" async="" defer="" gapi_processed="true"></script>
+<link rel="preload" href="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/integrator.js.Без названия" as="script"><script type="text/javascript" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/integrator.js.Без названия"></script><script src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/embed.js.Без названия" data-timestamp="1523790716174"></script><style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.d0448456a5f42b8df8cea2098aa3acf3.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.037f55c32651d22255e90738c195e946.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.a4b9b41a4407e818b0c9293b3b10a99e.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><script src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/alfalfa.4a5fcca1fe50a757044dfd331b660625.js.Без названия" async="" charset="UTF-8"></script></head>
+
+<body ng-app="devStack" ng-controller="dashboardController" class="ng-scope" ng-init="sUrl=&#39;http://www.devglan.com/spring-security/angular-jwt-authentication&#39;;sTitle=&#39;Angular 5 JWT Authentication(Full Stack) | DevGlan&#39;;sDesc=&#39;angular-jwt-authentication&#39;" style="">
+<header id="header">
+    <!-- ngInclude: 'menu1.html' --><div ng-include="&#39;menu1.html&#39;" class="ng-scope"><nav class="navbar navbar-expand-lg bg-dark navbar-dark navbar-fixed-top ng-scope">
+    <a class="navbar-brand" href="http://www.devglan.com/"><img src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/devglan.png" alt="Devglan"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="http://www.devglan.com/#" id="intvQuestionMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Interview Questions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="intvQuestionMenuLink">
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/interviewquestions/corejava">Core Java</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/interviewquestions/servlet">Servlet</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/interviewquestions/spring">Spring</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/interviewquestions/hibernate">Hibernate</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/interviewquestions/rest">REST</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/interviewquestions/soap">SOAP</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/interviewquestions/angularjs">Angular JS</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="http://www.devglan.com/#" id="objQuestionMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Objective Questions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="objQuestionMenuLink">
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/objectivequestions/corejava">Core Java</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/objectivequestions/servlet">Servlet</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/objectivequestions/spring">Spring</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/objectivequestions/hibernate">Hibernate</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/objectivequestions/angularjs">Angular JS</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="http://www.devglan.com/#" id="springMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Spring Framework
+                </a>
+                <div class="dropdown-menu" aria-labelledby="springMenuLink">
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/tutorial/topics/spring-mvc">Spring MVC</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/tutorial/topics/spring-boot">Spring Boot</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/tutorial/topics/spring-security">Spring Security</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/tutorial/topics/spring-cloud">Spring Cloud</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/tutorial/topics/spring-jdbc">Spring Jdbc</a>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="http://www.devglan.com/tutorial/topics/hibernate">Hibernate</a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="http://www.devglan.com/#" id="corejavaMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Core Java
+                </a>
+                <div class="dropdown-menu" aria-labelledby="corejavaMenuLink">
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/tutorial/topics/corejava">Java 7</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/tutorial/topics/java8">Java 8</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/java-programs">Java Program</a>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="http://www.devglan.com/tutorial/topics/artificial-intelligence">AI</a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="http://www.devglan.com/#" id="jsMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    JavaScript
+                </a>
+                <div class="dropdown-menu" aria-labelledby="jsMenuLink">
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/tutorial/topics/node-js">Node Js</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/tutorial/topics/angular">Angular Js</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="http://www.devglan.com/#" id="toolMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Online Tools
+                </a>
+                <div class="dropdown-menu" aria-labelledby="toolMenuLink">
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/online-tools/aes-encryption-decryption">AES Encryption Decryption</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/online-tools/bcrypt-hash-generator">Online Bcrypt Encrypt Decrypt</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/online-tools/jasypt-online-encryption-decryption">Jasypt Online Encrypt Decrypt</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/online-tools/xml-json-xml-conversion">Xml to Json Converter</a>
+                    <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/online-tools/base64-encode-decode">Online Base64 Encoder Decoder</a>
+                </div>
+            </li>
+        </ul>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="http://www.devglan.com/#" id="aboutMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="aboutMenuLink">
+                        <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/about-us">About Us</a>
+                        <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/user/write-for-us">Write for Us</a>
+                        <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/user/suggest">Suggest</a>
+                        <a class="dropdown-item" tabindex="-1" href="http://www.devglan.com/user/contact-us">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="newslettermodal" class="modal fade ng-scope" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-newsletter">
+        <div class="modal-content">
+            <form class="ng-pristine ng-valid-email ng-invalid ng-invalid-required">
+                <div class="modal-header">
+                    <h4>Subscribe to our monthly newsletter</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Join our subscribers list to get the latest updates and articles delivered directly in your inbox.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" placeholder="Enter your email" required="" ng-model="semail">
+                        <span class="input-group-btn">
+							<input type="submit" class="btn btn-primary" ng-click="subscribe(semail)" value="Subscribe">
+						</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div></div>
+    <div class="clearfix"></div>
+</header>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-84736616-2', 'auto');
+    ga('send', 'pageview');
+</script><ins class="adsbygoogle" data-adsbygoogle-status="done" style="display: none;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:NaNpx;margin:0;padding:0;position:relative;visibility:visible;width:NaNpx;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:NaNpx;margin:0;padding:0;position:relative;visibility:visible;width:NaNpx;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:NaNpx;height:NaNpx;" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource.html"></iframe></ins></ins></ins>
+<section class="content-container" style="margin-top: 0px;">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="left-blog">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                        <h1>Angular 5 JWT Authentication(Spring Boot Security)</h1>
+                        <span class="antb">By <a href="http://www.devglan.com/www.linkedin.com/in/dhiraj-ray-devglan" target="_blank">Dhiraj Ray</a>, 01 February,2018&nbsp;&nbsp;
+                </span>
+                        <span class="pull-right"><i class="fa fa-eye" aria-hidden="true"></i> 11K</span>
+                        <hr>
+                        <div class="white-space"><p>Welcome to angular5 jwt authentication with spring security.In this tutorial, we will be creating a full stack app using jwt authentication in an angular5 single page application having backened server supported by spring boot with integration of spring security.Having said that we will have a sample angular5 example application with HttpInterceptor integrated with it to intercept all the HTTP request to add jwt authorization token in the header and in the server we will have some REST endpoints exposed and secured using spring security.The resource will be accessible only if valid jwt token is found in the header.We will be using Mysql DB for persistant storage.<script async="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/adsbygoogle.js.Без названия"></script>
+        <!-- add-unit-top -->
+        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2256439533750580" data-ad-slot="6955723615" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:728px;height:90px;" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(2).html"></iframe></ins></ins></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script></p><p>This article is comprised of 4 sections.In the first section we will be building our single page angular5 application using material design. In the second section we will be creating a spring boot application with sample REST endpoints exposed. In the third section we will have JWT integration with spring security and in the fourth section we will have jwt integration with angular5 using HttpIntrceptor.So, let's get started.Here is an another article of <a href="http://www.devglan.com/spring-security/spring-boot-oauth2-jwt-example">Securing REST API with Spring Boot Security Oauth2 JWT Token.</a></p>
+<h2 class="st">Technologies Used</h2>
+<p>We have frequent version upgrades in angular as well as in spring boot. Hence, let us first confirm the versions of these technologies that we will be using to build this application.</p>
+<p>1. Spring Boot 1.5.8.RELEASE</p><p>2. jjwt 0.6.0</p><p>3. Angular 5.2.0</p><p>4. Angular Material 5.1.0</p><p>5. MySql</p><p>6. Java 1.8</p>
+<h2 class="st">Jwt Authentication</h2>
+<p><a href="https://jwt.io/introduction/" target="_blank" rel="nofollow">JSON Web Token (JWT)</a> is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.a stateless authentication mechanism as the user state is never saved in server memory.A JWT token consists of 3 parts seperated with a dot(.) i.e. <span class="code">Header.payload.signature</span></p><p><span class="str">Header </span> has 2 parts type of token and hashing algorithm used.The JSON structure comprising these two keys are Base64Encoded.</p>
+<pre>{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+</pre>
+<p><span class="str">Payload</span> contains the claims.Primarily, there are three types of claims: reserved, public, and private claims. Reserved claims are predefined claims such as iss (issuer), exp (expiration time), sub (subject), aud (audience).In private claims, we can create some custom claims such as subject, role, and others.</p>
+<pre>{
+  "sub": "Alex123",
+  "scopes": [
+    {
+      "authority": "ROLE_ADMIN"
+    }
+  ],
+  "iss": "<a class="vglnk" href="http://devglan.com/" rel="nofollow"><span>http</span><span>://</span><span>devglan</span><span>.</span><span>com</span></a>",
+  "iat": 1508607322,
+  "exp": 1508625322
+}
+</pre><div class="col-md-offset-1">
+        <script async="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/adsbygoogle.js.Без названия"></script>
+        <!-- responsive -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2256439533750580" data-ad-slot="9358525670" data-ad-format="auto" data-adsbygoogle-status="done"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div><p><span class="str">Signature</span> ensures that the token is not changed on the way.For example if you want to use the HMAC SHA256 algorithm, the signature will be created in the following way:</p>
+<pre>HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  secret)
+</pre>
+<p>The server's protected routes will check for a valid JWT in the Authorization header, and if it's present, the user will be allowed to access protected resources.Whenever the user wants to access a protected route or resource, the user agent should send the JWT, typically in the Authorization header using the Bearer schema. The content of the header should look like the following:</p>
+<pre>Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbGV4MTIzIiwic2N.v9A80eU1VDo2Mm9UqN2FyEpyT79IUmhg
+</pre>
+<h2 class="st">Create Angular5 Application</h2> 
+<p>We already have our angular5 application created in my last article here - <a href="http://www.devglan.com/angular/angular-material-app">Angular5 Material App</a>.This was a very simple application with angular material integrated.In this application, we have 2 modules user and login module with routing integrated.But here the login validation was hard coded in the client application itself and once the user is successfully logged in, he will be redirected to user page where he can see a list of users in a data table.</p><p>Following is the previous project structure and the project structure which we will be building now.</p>
+<a href="https://imgur.com/CY67gYv"><img src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/CY67gYv.jpg" title="angular-jwt-auth-project-strct" alt="angular-jwt-auth-project-strct"></a>
+<p>In this example we need to create a HTTP client first that will be consuming the REST APIs.To do so we will be using <span class="str">HttpClient</span> from <code> @angular/common/http</code>. Following is our <b>app.service.ts</b>.For demo purpose we only have one HTTP call to fetch the user list.</p>
+<pre><span class="kw">import</span> {Injectable} <span class="kw">from</span> <span class="ant">'@angular/core'</span>;
+<span class="kw">import</span> { HttpClient, HttpHeaders } <span class="kw">from</span> <span class="ant">'@angular/common/http'</span>;
+<span class="kw">import</span> {Observable} <span class="kw">from</span> <span class="ant">'rxjs/Observable'</span>;
+<span class="kw">import</span> {User} <span class="kw">from</span> <span class="ant">'./user/user.model'</span>;
+
+
+const httpOptions = {
+  headers: <span class="ant">new</span> HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
+<span class="antb">@Injectable()</span>
+<span class="kw">export class</span> UserService {
+
+  constructor(<span class="kw">private</span> http: HttpClient) {}
+
+  <span class="kw">private</span> userUrl = <span class="ant">'<a class="vglnk" href="http://localhost:8080/" rel="nofollow"><span>http</span><span>://</span><span>localhost</span><span>:</span><span>8080</span><span>/</span></a>'</span>;
+
+  <span class="kw">public </span>getUsers(): Observable<user[]> {
+    <span class="kw">return</span> this.http.get<user[]>(<span class="kw">this</span>.userUrl + <span class="ant">'/users'</span>);
+  }
+
+}
+
+</user[]></user[]></pre>
+<p>Don'st forget to include  userService and HttpClientModule in the providers in <code>app.module.ts</code></p>
+<p>Similarly, in the <code>user.component.ts</code> we have following changes to the service and populate the data table.One more thing to note here is we have disabled the authentication for <span class="str">/users</span> endpoint in spring security config. </p><div class="col-md-offset-1">
+<script async="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/adsbygoogle.js.Без названия"></script>
+<!-- medium-rectangle -->
+<ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-2256439533750580" data-ad-slot="4106313937" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;width:300px;height:250px;" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(3).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><pre><span class="kw">import</span> {Component, OnInit} <span class="kw">from</span> <span class="ant">'@angular/core'</span>;
+<span class="kw">import</span> {MatTableDataSource} <span class="kw">from</span> <span class="ant">'@angular/material'</span>;
+<span class="kw">import</span> {User} <span class="kw">from</span> <span class="ant">'./user.model'</span>;
+<span class="kw">import</span> {UserService} <span class="kw">from</span> <span class="ant">'../app.service'</span>;
+<span class="kw">import</span> {Router} <span class="kw">from</span> <span class="ant">'@angular/router'</span>;
+
+<span class="antb">@Component</span>({
+  <span class="kw">selector</span>: <span class="ant">'app-root'</span>,
+  <span class="kw">templateUrl</span>: <span class="ant">'./user.component.html'</span>,
+  <span class="kw">styleUrls</span>: [<span class="ant">'./user.component.css'</span>]
+})
+<span class="kw">export class</span> UserComponent <span class="kw">implements</span> OnInit {
+  displayedColumns = [<span class="ant">'id', 'username', 'salary', 'age'</span>];
+  dataSource = <span class="kw">new</span> MatTableDataSource<user>();
+  constructor(<span class="kw">private</span> router: Router, <span class="kw">private</span> userService: UserService) {
+  }
+  ngOnInit(): <span class="kw">void</span> {
+    <span class="kw">this</span>.userService.getUsers().subscribe(
+      data =&gt; {
+        <span class="kw">this</span>.dataSource.data = data;
+      }
+    );
+  }
+}
+
+</user></pre>
+<p>Now, with this much implementation, we should be able to display list of users in the data table for url - <a href="http://www.devglan.com/">http://localhost:4200/user</a></p>
+<a href="https://imgur.com/9mOxSFM"><img src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/9mOxSFM.png" title="angular5-app-result" alt="angular5-app-result"></a>
+<h2 class="st">Create Spring Boot Application</h2>
+<p>First of all, checkout the project structure below. it's the same project we built during <a href="http://www.devglan.com/spring-security/spring-boot-jwt-auth">spring boot jwt authentication tutorial</a>.</p>
+<a href="https://imgur.com/gqxIIIv"><img src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/gqxIIIv.png" title="spring-boot-security-jwt-auth" alt="spring-boot-security-jwt-auth"></a>
+<p>The spring boot application has an endpoint exposed at <span class="str">/users</span> from controller class. It's a simple implementation.Also, we have CORS enabled for angular and the user model class has 4 attributes as id, username, age and salary.</p>
+<b>UserController.java</b>
+<pre><span class="kw">package</span> com.devglan.controller;
+
+<span class="kw">import</span> com.devglan.model.User;
+<span class="kw">import</span> com.devglan.service.UserService;
+<span class="kw">import</span> org.springframework.beans.factory.annotation.Autowired;
+<span class="kw">import</span> org.springframework.web.bind.annotation.*;
+
+<span class="kw">import</span> java.util.List;
+
+<span class="antb">@CrossOrigin</span>(origins = <span class="ant">"<a class="vglnk" href="http://localhost:4200/" rel="nofollow"><span>http</span><span>://</span><span>localhost</span><span>:</span><span>4200</span></a>"</span>, maxAge = 3600)
+<span class="antb">@RestController</span>
+<span class="kw">public class</span> UserController {
+
+    <span class="antb">@Autowired</span>
+    <span class="kw">private</span> UserService userService;
+
+    <span class="antb">@RequestMapping</span>(value=<span class="ant">"/users"</span>, method = RequestMethod.GET)
+    <span class="kw">public</span> List<user> listUser(){
+        <span class="kw">return</span> userService.findAll();
+    }
+}	
+</user></pre>
+<h2 class="st">Spring Security Configuration</h2>
+<p>Now we will configure the security to secure our application. For now, we will allow <code>/users</code> endpoint for public access so that we can validate our jwt authentication later and display users list in the data table as in the image above.All this configurations have been discussed in my last article here - <a href="http://www.devglan.com/spring-security/spring-boot-jwt-auth">Spring Boot Security JWT Authentication</a>.Here <code>authenticationTokenFilterBean()</code> has no effect as we have allowed <code>/users</code> endpoint for public access.</p>
+<pre><span class="antb">@Configuration</span>
+<span class="antb">@EnableWebSecurity</span>
+<span class="antb">@EnableGlobalMethodSecurity</span>(prePostEnabled = true)
+<span class="kw">public class</span> WebSecurityConfig <span class="kw">extends</span> WebSecurityConfigurerAdapter {
+
+    <span class="antb">@Resource</span>(name = <span class="ant">"userService"</span>)
+    <span class="kw">private</span> UserDetailsService userDetailsService;
+
+    <span class="antb">@Autowired</span>
+    <span class="kw">private</span> JwtAuthenticationEntryPoint unauthorizedHandler;
+
+    <span class="antb">@Override</span>
+    <span class="antb">@Bean</span>
+    <span class="kw">public</span> AuthenticationManager authenticationManagerBean() <span class="kw">throws</span> Exception {
+        <span class="kw">return super</span>.authenticationManagerBean();
+    }
+
+    <span class="antb">@Autowired</span>
+    <span class="kw">public void</span> globalUserDetails(AuthenticationManagerBuilder auth) <span class="kw">throws</span> Exception {
+        auth.userDetailsService(userDetailsService)
+                .passwordEncoder(encoder());
+    }
+
+    <span class="antb">@Bean</span>
+    <span class="kw">public</span> JwtAuthenticationFilter authenticationTokenFilterBean() <span class="kw">throws</span> Exception {
+        <span class="kw">return new</span> JwtAuthenticationFilter();
+    }
+
+    <span class="antb">@Override</span>
+    <span class="kw">protected void</span> configure(HttpSecurity http) <span class="kw">throws</span> Exception {
+        http.cors().and().csrf().disable().
+                authorizeRequests()
+                .antMatchers(<span class="ant">"/token/*"</span>).permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.<span class="kw">STATELESS</span>);
+        http
+                .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
+    }
+
+    <span class="antb">@Bean</span>
+    <span class="kw">public</span> BCryptPasswordEncoder encoder(){
+        <span class="kw">return new</span> BCryptPasswordEncoder();
+    }
+
+}
+</pre>
+<h2 class="st">Adding JWT Authentication in Spring Security</h2>
+<p>The simple implementation for JWT is to write a filter class that will intercept all the requests and look for JWT Authorization token and if the token is found in the header, it will extract the token, parse it to find the user related information such as username and roles.Once he token is validated, it will prepare the spring security context and forward the request to next filter in the filter chain. </p><div class="col-md-offset-1">
+	<style type="text/css">
+		.ad-unit-body { width: 320px; height: 100px; }
+		@media (min-width:500px) { .ad-unit-body { width: 468px; height: 60px; } }
+		@media (min-width:800px) { .ad-unit-body { width: 728px; height: 90px; } }
+	</style>
+	<ins class="adsbygoogle ad-unit-body" style="display: inline-block; text-align: center; width: 728px; height: 90px;" data-ad-layout="in-article" data-ad-client="ca-pub-2256439533750580" data-ad-slot="9719162916" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;width:728px;height:90px;" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(4).html"></iframe></ins></ins></ins>
+	<script async="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/adsbygoogle.js.Без названия"></script>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><p>So for this purpose, we have spring provided <code>OncePerRequestFilter</code> class that executes once per request. In the filter, we are hard coding the roles but in real time application either we can extract it from custom scopes from JWT token or do a DB lookup in <code>UserDetailsService</code></p>
+<b>JwtAuthenticationFilter.java</b>
+<pre><span class="kw">public class</span> JwtAuthenticationFilter <span class="kw">extends</span> OncePerRequestFilter {
+
+    <span class="antb">@Autowired</span>
+    <span class="kw">private</span> UserDetailsService userDetailsService;
+
+    <span class="antb">@Autowired</span>
+    <span class="kw">private</span> JwtTokenUtil jwtTokenUtil;
+
+    <span class="antb">@Override</span>
+    <span class="kw">protected void</span> doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain) <span class="kw">throws</span> IOException, ServletException {
+        String header = req.getHeader(HEADER_STRING);
+        String username = <span class="kw">null</span>;
+        String authToken = <span class="kw">null</span>;
+        <span class="kw">if</span> (header != <span class="kw">null</span> &amp;&amp; header.startsWith(TOKEN_PREFIX)) {
+            authToken = header.replace(<span class="str">TOKEN_PREFIX</span>,"");
+            <span class="kw">try</span> {
+                username = jwtTokenUtil.getUsernameFromToken(authToken);
+            } <span class="kw">catch</span> (IllegalArgumentException e) {
+                logger.error(<span class="ant">"an error occured during getting username from token"</span>, e);
+            } <span class="kw">catch</span> (ExpiredJwtException e) {
+                logger.warn(<span class="ant">"the token is expired and not valid anymore"</span>, e);
+            } <span class="kw">catch</span>(SignatureException e){
+                logger.error(<span class="ant">"Authentication Failed. Username or Password not valid."</span>);
+            }
+        } <span class="kw">else</span> {
+            logger.warn(<span class="ant">"couldn't find bearer string, will ignore the header"</span>);
+        }
+        <span class="kw">if</span> (username != <span class="kw">null</span> &amp;&amp; SecurityContextHolder.getContext().getAuthentication() == <span class="kw">null</span>) {
+
+            UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+
+            <span class="kw">if</span> (jwtTokenUtil.validateToken(authToken, userDetails)) {
+                UsernamePasswordAuthenticationToken authentication = <span class="kw">new</span> UsernamePasswordAuthenticationToken(userDetails, null, Arrays.asList(new SimpleGrantedAuthority(<span class="ant">"ROLE_ADMIN"</span>)));
+                authentication.setDetails(<span class="kw">new</span> WebAuthenticationDetailsSource().buildDetails(req));
+                logger.info(<span class="ant">"authenticated user "</span> + username + <span class="ant">", setting security context"</span>);
+                SecurityContextHolder.getContext().setAuthentication(authentication);
+            }
+        }
+
+        chain.doFilter(req, res);
+    }
+}
+</pre>
+<p>Once this implementation is done, we can actually remove the <span class="ant">"/users"</span> from <code>WebSecurityConfig.java</code> and validate that we will get 401 while trying to load data in our angular data table. </p>
+<h2 class="st">Create JWT Token in Spring Security</h2>
+<p>We have this controller defined to generate the JWT token.This controller will method will be called from client during login request. It will validate the user from DB with the username and password combination and accordingly generate JWT token. </p>
+<b>AuthenticationController.java</b>
+<pre><span class="antb">@RestController</span>
+<span class="antb">@RequestMapping</span>(<span class="ant">"/token"</span>)
+<span class="kw">public class</span> AuthenticationController {
+
+    <span class="antb">@Autowired</span>
+    <span class="kw">private</span> AuthenticationManager authenticationManager;
+
+    <span class="antb">@Autowired</span>
+    <span class="kw">private</span> JwtTokenUtil jwtTokenUtil;
+
+    <span class="antb">@Autowired</span>
+    <span class="kw">private</span> UserService userService;
+
+    <span class="antb">@RequestMapping</span>(value = <span class="ant">"/generate-token"</span>, method = RequestMethod.<span class="kw">POST</span>)
+    <span class="kw">public</span> ResponseEntity<!--?--> register(<span class="antb">@RequestBody</span> LoginUser loginUser) <span class="kw">throws</span> AuthenticationException {
+
+        <span class="kw">final</span> Authentication authentication = authenticationManager.authenticate(
+                <span class="kw">new</span> UsernamePasswordAuthenticationToken(
+                        loginUser.getUsername(),
+                        loginUser.getPassword()
+                )
+        );
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        <span class="kw">final</span> User user = userService.findOne(loginUser.getUsername());
+        <span class="kw">final</span> String token = jwtTokenUtil.generateToken(user);
+        <span class="kw">return</span> ResponseEntity.ok(new AuthToken(token));
+    }
+
+}
+
+</pre>
+<h2 class="st">Angular5 JWT Authorization</h2>
+<p>Now when coming to JWT authorization integration in angular5 with spring security, first we need to make a POST request for login with username and password. In the response, server will provide you a JWT token after successfull authentication.Once, we get this token, we can cache it in our browser for reuse for further API calls.For now let us define our authservice that will request for JWT token on login.</p>
+<b>auth.service.ts</b>
+<pre><span class="kw">import</span> {Injectable} <span class="kw">from</span> <span class="ant">'@angular/core'</span>;
+<span class="kw">import</span> {Observable} <span class="kw">from</span> <span class="ant">'rxjs/Observable'</span>;
+<span class="kw">import</span> { HttpClient, HttpHeaders } <span class="kw">from</span> <span class="ant">'@angular/common/http'</span>;
+
+<span class="antb">@Injectable()</span>
+<span class="kw">export class</span> AuthService {
+
+  baseUrl: <span class="ant">'<a class="vglnk" href="http://localhost:8080/email2sms/" rel="nofollow"><span>http</span><span>://</span><span>localhost</span><span>:</span><span>8080</span><span>/</span><span>email2sms</span><span>/</span></a>'</span>;
+
+  constructor(<span class="kw">private</span> http: HttpClient) {
+  }
+
+  attemptAuth(ussername: string, password: string): Observable<any> {
+    const credentials = {username: ussername, password: password};
+    console.log(<span class="ant">'attempAuth ::'</span>);
+    <span class="kw">return this</span>.http.post<any>(<span class="ant">'<a class="vglnk" href="http://localhost:8080/token/generate-token" rel="nofollow"><span>http</span><span>://</span><span>localhost</span><span>:</span><span>8080</span><span>/</span><span>token</span><span>/</span><span>generate</span><span>-</span><span>token</span></a>'</span>, credentials);
+  }
+
+}
+
+</any></any></pre>
+<p>Now during login, we will be calling this service to authenticate the user by calling spring security AUTH API.</p>
+<b>login.component.ts</b>
+<pre><span class="kw">import</span> { Component, OnInit } <span class="kw">from</span> <span class="ant">'@angular/core'</span>;
+<span class="kw">import</span> {Router} <span class="kw">from</span> <span class="ant">'@angular/router'</span>;
+<span class="kw">import</span> {MatDialog} <span class="kw">from</span> <span class="ant">'@angular/material'</span>;
+<span class="kw">import</span> {AuthService} <span class="kw">from</span> <span class="ant">'../core/auth.service'</span>;
+<span class="kw">import</span> {TokenStorage} <span class="kw">from</span> <span class="ant">'../core/token.storage'</span>;
+
+<span class="antb">@Component</span>({
+  <span class="kw">selector</span>: <span class="ant">'app-login'</span>,
+  <span class="kw">templateUrl</span>: <span class="ant">'./login.component.html'</span>,
+  <span class="kw">styleUrls</span>: [<span class="ant">'./login.component.css'</span>]
+})
+<span class="kw">export class</span> LoginComponent {
+
+  constructor(<span class="kw">private</span> router: Router, <span class="kw">public</span> dialog: MatDialog, <span class="kw">private</span> authService: AuthService, <span class="kw">private</span> token: TokenStorage) {
+  }
+
+  username: string;
+  password: string;
+
+  login(): <span class="kw">void</span> {
+    <span class="kw">this</span>.authService.attemptAuth(<span class="kw">this</span>.username, <span class="kw">this</span>.password).subscribe(
+      data =&gt; {
+        <span class="kw">this</span>.token.saveToken(data.token);
+        <span class="kw">this</span>.router.navigate([<span class="ant">'user'</span>]);
+      }
+    );
+  }
+
+}
+
+</pre>
+<p>Adding this token manually in the header for all the API requests is not a cleaner way yo do. Hence, we will be implementing a HTTPInterceptor that will intercept all the rquest and add this JWT authorization token in the header. Also, we can intercept the response and for any unauthorized request or expired token we can redirect user to login page.Also, to store this token locally, we can use <a href="https://www.w3schools.com/jsref/prop_win_sessionstorage.asp">sessionstorage</a> - The sessionStorage object stores data for only one session (the data is deleted when the browser tab is closed). The interceptor will implement the <code>HttpInterceptor</code> interface and override <code>intercept()</code>. Here, we are cloning the request to set the headers we want.Following is the interceptor implementation.</p><div class="col-md-offset-1">
+		<script async="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/adsbygoogle.js.Без названия"></script>
+		<!-- add-unit-top-1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2256439533750580" data-ad-slot="5666753719" data-adsbygoogle-status="done"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;width:728px;height:90px;" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(5).html"></iframe></ins></ins></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div><p></p><b>app.interceptor.ts</b>
+<pre><span class="kw">import</span> { Injectable } <span class="kw">from</span> <span class="ant">'@angular/core'</span>;
+<span class="kw">import</span> {HttpInterceptor, HttpRequest, HttpHandler, HttpSentEvent, HttpHeaderResponse, HttpProgressEvent,
+  HttpResponse, HttpUserEvent, HttpErrorResponse} <span class="kw">from</span> <span class="ant">'@angular/common/http'</span>;
+<span class="kw">import</span> { Observable } <span class="kw">from</span> <span class="ant">'rxjs/Observable'</span>;
+<span class="kw">import</span> { Router } <span class="kw">from</span> <span class="ant">'@angular/router'</span>;
+<span class="kw">import</span> {TokenStorage} <span class="kw">from</span> <span class="ant">'./token.storage'</span>;
+<span class="kw">import</span> <span class="ant">'rxjs/add/operator/do'</span>;
+
+const TOKEN_HEADER_KEY = <span class="ant">'Authorization'</span>;
+
+<span class="antb">@Injectable()</span>
+<span class="kw">export class</span> Interceptor <span class="kw">implements</span> HttpInterceptor {
+
+  constructor(<span class="kw">private</span> token: TokenStorage, <span class="kw">private</span> router: Router) { }
+
+  intercept(req: HttpRequest<any>, next: HttpHandler):
+    Observable<httpsentevent |="" httpheaderresponse="" httpprogressevent="" httpresponse<any=""> | HttpUserEvent<any>&gt; {
+    <span class="kw">let</span> authReq = req;
+    <span class="kw">if</span> (<span class="kw">this</span>.token.getToken() != <span class="kw">null</span>) {
+      authReq = req.clone({ headers: req.headers.set(TOKEN_HEADER_KEY, <span class="ant">'Bearer '</span> + <span class="kw">this </span>.token.getToken())});
+    }
+    <span class="kw">return</span> next.handle(authReq).do(
+        (err: any) =&gt; {
+          <span class="kw">if</span> (err <span class="kw">instanceof HttpErrorResponse) {
+           
+            <span class="kw">if</span> (err.status === 401) {
+              <span class="kw">this</span>.router.navigate([<span class="ant">'user'</span>]);
+            }
+          }
+        }
+      );
+  }
+
+}
+
+</span></any></httpsentevent></any></pre>
+<p>Don't miss out to register this interceptor in app.module.ts.</p>
+<p>To store this token in the browser storage, let us define our <b>token.storage.ts</b></p>
+<pre><span class="kw">import</span> { Injectable } <span class="kw">from</span> <span class="ant">'@angular/core'</span>;
+
+
+const TOKEN_KEY = <span class="ant">'AuthToken'</span>;
+
+<span class="antb">@Injectable()</span>
+<span class="kw">export class</span> TokenStorage {
+
+  constructor() { }
+
+  signOut() {
+    window.sessionStorage.removeItem(TOKEN_KEY);
+    window.sessionStorage.clear();
+  }
+
+  <span class="kw">public</span> saveToken(token: string) {
+    window.sessionStorage.removeItem(TOKEN_KEY);
+    window.sessionStorage.setItem(TOKEN_KEY,  token);
+  }
+
+  <span class="kw">public</span> getToken(): string {
+    <span class="kw">return </span>sessionStorage.getItem(TOKEN_KEY);
+  }
+}
+
+</pre>
+<p>There are also client side jwt token validator with which we can check the token expiry. Doing so, we don't have to depend on the server to check for token expiry.</p>
+<h2 class="st">Conclusion</h2>
+<p>In this article, we learned about integrating JWT token with Angular5 application with spring boot security in the backened. If you liked this post, I would love to hear back in the comment section.</p></div>
+                            <script async="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/adsbygoogle.js.Без названия"></script>
+                            <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-2256439533750580" data-ad-slot="3953770960" data-adsbygoogle-status="done"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                            <h4>Further Reading on Spring Security</h4>
+                            
+                                
+                                    <p>1.&nbsp;<a href="http://www.devglan.com/javascript/rxjs-tutorial" class="topic">Rxjs Tutorial</a></p>
+                                
+                            
+                                
+                                    <p>2.&nbsp;<a href="http://www.devglan.com/angular/building-angular-application" class="topic">Building Angular Application</a></p>
+                                
+                            
+                                
+                                    <p>3.&nbsp;<a href="http://www.devglan.com/spring-security/spring-boot-jwt-auth" class="topic">Spring Boot Jwt Auth</a></p>
+                                
+                            
+                                
+                                    <p>4.&nbsp;<a href="http://www.devglan.com/spring-boot/spring-boot-angular-spring-data-example" class="topic">Spring Boot Angular Spring Data Example</a></p>
+                                
+                            
+                                
+                                    <p>5.&nbsp;<a href="http://www.devglan.com/spring-security/spring-boot-security-oauth2-example" class="topic">Spring Boot Security Oauth2 Example</a></p>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                            <div class="row rect-border">
+                                <h4>If You Appreciate What We Do Here On Devglan, You Should Consider:</h4>
+                                <ul class="free-list">
+                                    <li>1. Buy a coffee for us - <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="ng-pristine ng-valid">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="FZ7L5864RYNWC">
+                                        <input type="image" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                                        <img alt="" border="0" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/pixel.gif" width="1" height="1">
+                                    </form></li>
+                                    <li>2. Stay Connected to: <a href="https://goo.gl/sLbAWK">Twitter</a> | <a href="https://goo.gl/YtUNxk">Facebook</a> | <a href="https://goo.gl/DFQNt5">Google Plus</a></li>
+                                    <li class="has-error">We are thankful for your never ending support.</li>
+                                </ul>
+                            </div>
+                                <h4>References</h4>
+                                
+                                    <p><b><a class="atn" href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/filter/OncePerRequestFilter.html" target="_blank" rel="nofollow">OncePerRequestFilter</a></b></p>
+                                
+                                    <p><b><a class="atn" href="https://github.com/szerhusenBC/jwt-spring-security-demo" target="_blank" rel="nofollow">jwt-spring-security-demo</a></b></p>
+                                
+                                    <p><b><a class="atn" href="https://dzone.com/articles/implementing-jwt-authentication-on-spring-boot-api" target="_blank" rel="nofollow">jw authentication/</a></b></p>
+                                
+                                    <p><b><a class="atn" href="https://angular.io/" rel="nofollow" target="_blank">Angular 5</a></b></p>
+                                
+                                    <p><b><a class="atn" href="https://stackoverflow.com/questions/45806277/springboot-jwt-security-how-to" target="_blank" rel="nofollow">How to</a></b></p>
+                                
+                            <div id="disqus_thread"><iframe id="dsq-app3757" name="dsq-app3757" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(6).html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 3298px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="dsq-app3760" name="dsq-app3760" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" sandbox="allow-forms allow-popups allow-same-origin allow-scripts" width="100%" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(7).html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 0px !important;"></iframe><iframe id="indicator-north" name="indicator-north" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 830px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 830px !important; max-width: 830px !important; position: fixed !important; z-index: 2147483646 !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; display: none !important;" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(8).html"></iframe><iframe id="indicator-south" name="indicator-south" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 830px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 830px !important; max-width: 830px !important; position: fixed !important; z-index: 2147483646 !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; display: none !important;" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(9).html"></iframe></div>
+                            <script>
+                                var disqus_config = function () {
+                                    this.page.url = 'http://www.devglan.com/spring-security/angular-jwt-authentication';
+                                    this.page.identifier = 'http://www.devglan.com/spring-security/angular-jwt-authentication';
+                                };
+                                (function () {
+                                    var d = document, s = d.createElement('script');
+
+                                    s.src = '//www-devglan-com.disqus.com/embed.js';
+
+                                    s.setAttribute('data-timestamp', +new Date());
+                                    (d.head || d.body).appendChild(s);
+                                })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the &lt;a href="<a class="vglnk" href="https://disqus.com/?ref_noscript" rel="nofollow"><span>https</span><span>://</span><span>disqus</span><span>.</span><span>com</span><span>/?</span><span>ref</span><span>_</span><span>noscript</span></a>" rel="nofollow"&gt;comments
+                                powered by Disqus.&lt;/a&gt;</noscript>
+                            <div class="clearfix"></div>
+                    </div>
+                    </div>
+                    <!-- ngInclude: 'social.html' --><div class="sticky-container ng-scope" ng-include="&#39;social.html&#39;"><ul class="sticky ng-scope">
+    <li>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.devglan.com/spring-security/angular-jwt-authentication" class="popup" onclick="window.open(this.href); return false;">
+            <img width="32" height="32" title="" alt="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/fb1.png">Facebook</a>
+    </li>
+    <li>
+        <a href="https://twitter.com/intent/tweet?text=http://www.devglan.com/spring-security/angular-jwt-authentication" class="popup" onclick="window.open(this.href); return false;">
+            <img width="32" height="32" title="" alt="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/tw1.png">
+            Twitter</a>
+    </li>
+    <li>
+        <a href="http://pinterest.com/pin/create/button/?url=http://www.devglan.com/spring-security/angular-jwt-authentication&amp;media=http://www.devglan.com/style/img/logo.png&amp;description=angular-jwt-authentication" class="popup" onclick="window.open(this.href); return false;">
+            <img width="32" height="32" title="" alt="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/pin1.png">
+            Pinterest</a>
+    </li>
+    <li>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.devglan.com/spring-security/angular-jwt-authentication&amp;title=Angular%205%20JWT%20Authentication(Full%20Stack)%20|%20DevGlan&amp;summary=angular-jwt-authentication" class="popup" onclick="window.open(this.href); return false;">
+            <img width="32" height="32" title="" alt="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/li1.png">
+            Linkedin</a>
+    </li>
+    <li>
+        <a href="http://tumblr.com/share/link?url=http://www.devglan.com/spring-security/angular-jwt-authentication" class="popup" onclick="window.open(this.href); return false;">
+            <img width="32" height="32" title="" alt="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/tm1.png">
+            Tumblr</a>
+    </li>
+    <li>
+        <a href="http://www.reddit.com/submit?url=http://www.devglan.com/spring-security/angular-jwt-authentication&amp;title=Angular%205%20JWT%20Authentication(Full%20Stack)%20|%20DevGlan&amp;text=angular-jwt-authentication" class="popup" onclick="window.open(this.href); return false;">
+            <img width="32" height="32" title="" alt="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/reddit.png">
+            Reddit</a>
+    </li>
+</ul></div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 row-off d-sm-none d-md-block">
+                <script async="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/adsbygoogle.js.Без названия"></script>
+                <!-- large-rect -->
+                <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-2256439533750580" data-ad-slot="7126457467" data-adsbygoogle-status="done"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_5_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;width:336px;height:280px;" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(10).html"></iframe></ins></ins></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <div class="row">
+                    <div class="right-blog">
+                        <div>
+                            <div><h3>Recommended</h3></div>
+                            <ul>
+                                
+                                    <li><a href="http://www.devglan.com/javascript/rxjs-tutorial">Rxjs Tutorial</a></li>
+                                
+                                    <li><a href="http://www.devglan.com/angular/building-angular-application">Building Angular Application</a></li>
+                                
+                                    <li><a href="http://www.devglan.com/spring-security/spring-boot-jwt-auth">Spring Boot Jwt Auth</a></li>
+                                
+                                    <li><a href="http://www.devglan.com/spring-boot/spring-boot-angular-spring-data-example">Spring Boot Angular Spring Data Example</a></li>
+                                
+                                    <li><a href="http://www.devglan.com/spring-security/spring-boot-security-oauth2-example">Spring Boot Security Oauth2 Example</a></li>
+                                
+                                    <li><a href="http://www.devglan.com/angular/angular-material-dialog">Angular Material Dialog</a></li>
+                                
+                                    <li><a href="http://www.devglan.com/angular/angular-material-app">Angular Material App</a></li>
+                                
+                                    <li><a href="http://www.devglan.com/typescript/typescript-tutorial">Typescript Tutorial</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="google_ad" style="position: fixed; width: auto; top: 20px;"><script async="" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/adsbygoogle.js.Без названия"></script>
+                    <!-- ad-unit-right -->
+                    <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2256439533750580" data-ad-slot="5806293478" data-adsbygoogle-status="done"><ins id="aswift_6_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_6_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_6" name="aswift_6" style="left:0;position:absolute;top:0;width:300px;height:600px;" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(11).html"></iframe></ins></ins></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div id="downloadModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Download the Source</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal ng-pristine ng-invalid ng-invalid-required" ng-submit="reset()">
+                        <fieldset>
+                            <p ng-show="validEmail" class="text-center has-error ng-hide">Download link has been sent to your email. Be sure to check your spam folder.</p>
+                            <p ng-show="error" class="has-error ng-binding ng-hide"></p>
+
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <div class="controls">
+                                    <input id="name" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" type="text" placeholder="name" ng-model="userName" required="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <div class="controls">
+                                    <input id="email" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" type="text" placeholder="email" ng-model="downloadEmail" required="">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" ng-click="downloadSource(&#39;angular-jwt-authentication&#39;)">Get Source</button>
+                        <button type="button" class="btn btn-danger ng-hide" data-dismiss="modal" ng-show="showCloseButton">Close</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</section>
+<footer>
+    <div class="copyright-policy">
+        <p>©2018, DevGlan. All Rights Reserved.&nbsp;&nbsp;<a href="http://www.devglan.com/privacy">Privacy Policy</a></p>
+        <p>Contact us: <a href="mailto:hello@devglan.com">hello@devglan.com</a></p>
+    </div>
+</footer>
+<link rel="stylesheet" href="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/font-awesome.css">
+<script src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/jquery.min.js.Без названия"></script>
+<script src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/bootstrap.min.js.Без названия"></script>
+<script type="text/javascript" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/angular.min.js.Без названия"></script>
+<script>var App = angular.module('devStack', []);</script>
+<script src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/dashboard.js.Без названия"></script>
+
+<iframe style="display: none;" src="./Angular 5 JWT Authentication(Full Stack) _ DevGlan_files/saved_resource(12).html"></iframe></body></html>

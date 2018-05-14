@@ -1,0 +1,67 @@
+
+
+document.write(' \
+<style type="text/css" media="screen">\
+	 .dsq-widget ul.dsq-widget-list {\
+	 padding: 0;\
+	 margin: 0;\
+	 text-align: left;\
+	 }\
+	 img.dsq-widget-avatar {\
+	 width: 32px;\
+	 height: 32px;\
+	 border: 0px;\
+	 margin: 0px;\
+	 padding: 0px 3px 3px 0px;\
+	 float: left;\
+	 }\
+	 a.dsq-widget-user {\
+	 font-weight: bold;\
+	 }\
+	 a.dsq-widget-thread {\
+	 font-weight: bold;\
+	 }\
+	 p.dsq-widget-meta {\
+	 clear: both;\
+	 font-size: 80%;\
+	 padding: 0;\
+	 margin: 0;\
+	 }\
+	 li.dsq-widget-item {\
+	 margin: 15px 0;\
+	 list-style-type: none;\
+	 clear: both;\
+	 }\
+	 span.dsq-widget-clout {\
+	 padding: 0 2px;\
+	 background-color: #ff7300;\
+	 color: #fff;\
+	 }\
+	 table.dsq-widget-horiz td {\
+	 padding-right: 15px;\
+	 }\
+	 .dsq-widget-comment p {\
+	 display: inline;\
+	 }\
+	 </style>\
+	 <ul class="dsq-widget-list">\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/disqus_JhLRW8V5kZ/"><img class="dsq-widget-avatar" src="//a.disquscdn.com/1523321660/images/noavatar92.png"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_JhLRW8V5kZ/">Lalit Garg</a>\
+	 <span class="dsq-widget-comment"><p>hel...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://blog.netgloo.com/2016/04/16/drupal-8-creating-a-new-custom-field-type/">Drupal 8: creating a custom Field Type</a>&nbsp;&middot;&nbsp;<a href="http://blog.netgloo.com/2016/04/16/drupal-8-creating-a-new-custom-field-type/#comment-3853091873">2 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/mathew_teague/"><img class="dsq-widget-avatar" src="//a.disquscdn.com/1523321660/images/noavatar92.png"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/mathew_teague/">Mathew Teague</a>\
+	 <span class="dsq-widget-comment"><p>...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://blog.netgloo.com/2016/10/04/grav-creating-user-with-editor-role/">Grav: creating a user with editor role</a>&nbsp;&middot;&nbsp;<a href="http://blog.netgloo.com/2016/10/04/grav-creating-user-with-editor-role/#comment-3849678623">3 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/disqus_PPT8xF9SKF/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/22352/4848/avatar92.jpg?1474132872"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_PPT8xF9SKF/">Alexander Kim</a>\
+	 <span class="dsq-widget-comment"><p>Ni...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://blog.netgloo.com/2016/10/02/grav-custom-fields-on-pages/">Grav: adding custom fields on pages</a>&nbsp;&middot;&nbsp;<a href="http://blog.netgloo.com/2016/10/02/grav-custom-fields-on-pages/#comment-3826630755">2 weeks ago</a></p>\
+	 </li>\
+	 </ul>\
+');

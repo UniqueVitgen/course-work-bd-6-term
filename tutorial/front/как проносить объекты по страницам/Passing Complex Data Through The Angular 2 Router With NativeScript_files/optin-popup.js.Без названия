@@ -1,0 +1,42 @@
+$(document).ready(() => {
+
+	var delay = 15000; // milliseconds
+	var cookie_expire = 7; // days
+
+    var cookie = localStorage.getItem("optin-popup");
+    if(cookie == undefined || cookie == null) {
+        cookie = 0;
+    }
+
+    if(((new Date()).getTime() - cookie) / (1000 * 60 * 60 * 24) > cookie_expire) {
+		$("#optin-popup-background").delay(delay).fadeIn("fast", () => {
+            $("#optin-popup-box").fadeIn("fast", () => {});
+		});
+
+		$("#optin-popup-form-submit").click(() => {
+			if($("#optin-popup-form-email").val() != "" && $("#optin-popup-form-name").val() != "") {
+				$("#optin-popup-background, #optin-popup-box").hide();
+	            localStorage.setItem("optin-popup", (new Date()).getTime());
+				$("#optin-popup-form").submit();
+			}
+		});
+
+        $("#optin-popup-form").submit((e) => {
+			/*if($("#optin-popup-form-email").val()) {
+				$.post($("#optin-popup-form").attr("action"), $("#optin-popup-form").serialize(), (data) => {});
+				$("#optin-popup-box-content").html("<p style='text-align: center; margin-bottom: 0'>Thank you for subscribing to The Polyglot Developer newsletter!</p>");
+			}
+			return false;*/
+			/*if($("#optin-popup-form-email").val() != "" && $("#optin-popup-form-name").val() != "") {
+				$("#optin-popup-background, #optin-popup-box").hide();
+	            localStorage.setItem("optin-popup", (new Date()).getTime());
+			}*/
+        });
+
+		$("#optin-popup-close").click(() => {
+			$("#optin-popup-background, #optin-popup-box").hide();
+            localStorage.setItem("optin-popup", (new Date()).getTime());
+		});
+	}
+
+});

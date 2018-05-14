@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!-- saved from url=(1012)https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2256439533750580&output=html&h=250&slotname=4106313937&adk=1670147731&adf=1754401029&w=300&lmt=1523790717&loeid=10583695&format=300x250&url=http%3A%2F%2Fwww.devglan.com%2Fspring-security%2Fangular-jwt-authentication&flash=0&avail_w=0&wgl=1&adsid=NT&dt=1523790715855&bpp=19&bdt=526&fdt=1748&idt=1753&shv=r20180411&cbv=r20170110&saldr=aa&prev_fmts=0x0%2C728x90&correlator=8560750363407&frm=20&ga_vid=477994216.1523272142&ga_sid=1523790716&ga_hid=1289131570&ga_fc=0&pv=1&iag=3&icsg=2&nhd=1&dssz=3&mdo=0&mso=0&u_tz=180&u_his=1&u_java=0&u_h=768&u_w=1366&u_ah=728&u_aw=1366&u_cd=24&u_nplug=4&u_nmime=5&adx=116&ady=3367&biw=1349&bih=662&abxe=1&scr_x=0&scr_y=0&eid=10593695%2C21061122%2C33895412%2C20040069&oid=3&ref=https%3A%2F%2Fwww.google.by%2F&rx=0&eae=0&fc=784&brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C662&vis=1&rsz=%7C%7CpeEbr%7C&abl=CS&ppjl=f&pfx=0&fu=8208&bc=5&jar=2018-4-15-7&ifi=2&fsb=1&xpc=MQ1dovAesb&p=http%3A//www.devglan.com&dtd=1768 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./V6zvOIoD.js.Без названия"></script><script type="text/javascript" async="" src="./lidar.js.Без названия"></script><script>var google_casm=[];</script><style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" class="jar"><div style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./gen_204" border="0" width="1" height="1" alt="" style="display:none"></div><iframe src="./pixel(1).html" style="display:none"></iframe><div><div style="position:relative; display:inline-block;"><script>(function(){var h=this;var k=Array.prototype.forEach?function(a,b){Array.prototype.forEach.call(a,b,void 0)}:function(a,b){for(var d=a.length,c="string"==typeof a?a.split(""):a,e=0;e<d;e++)e in c&&b.call(void 0,c[e],e,a)},l=Array.prototype.map?function(a,b){return Array.prototype.map.call(a,b,void 0)}:function(a,b){for(var d=a.length,c=Array(d),e="string"==typeof a?a.split(""):a,f=0;f<d;f++)f in e&&(c[f]=b.call(void 0,e[f],f,a));return c},m=Array.prototype.reduce?function(a,b,d){return Array.prototype.reduce.call(a,b,d)}:function(a,b,d){var c=d;k(a,function(d,f){c=b.call(void 0,c,d,f,a)});return c},p=function(a){for(var b=[],d=0;d<a;d++)b[d]="";return b};var q=function(a){q[" "](a);return a};q[" "]=function(){};var r=function(a,b){if(a)for(var d in a)Object.prototype.hasOwnProperty.call(a,d)&&b.call(void 0,a[d],d,a)},t=/https?:\/\/[^\/]+/,u=function(a){return(a=t.exec(a))&&a[0]||""};var v=/^https?:\/\/(\w|-)+\.cdn\.ampproject\.(net|org)(\?|\/|$)/,z=function(a){a=a||w();for(var b=new x(h.location.href,!1),d=null,c=a.length-1,e=c;0<=e;--e){var f=a[e];!d&&v.test(f.url)&&(d=f);if(f.url&&!f.h){b=f;break}}e=null;f=a.length&&a[c].url;0!=b.depth&&f&&(e=a[c]);return new y(b,e,d)},w=function(){var a=h,b=[],d=null;do{var c=a;try{var e;if(e=!!c&&null!=c.location.href)b:{try{q(c.foo);e=!0;break b}catch(n){}e=!1}var f=e}catch(n){f=!1}if(f){var g=c.location.href;d=c.document&&c.document.referrer||null}else g=d,d=null;b.push(new x(g||""));try{a=c.parent}catch(n){a=null}}while(a&&c!=a);c=0;for(a=b.length-1;c<=a;++c)b[c].depth=a-c;c=h;if(c.location&&c.location.ancestorOrigins&&c.location.ancestorOrigins.length==b.length-1)for(a=1;a<b.length;++a)g=b[a],g.url||(g.url=c.location.ancestorOrigins[a-1]||"",g.h=!0);return b},y=function(a,b,d){this.i=a;this.j=b;this.g=d},x=function(a,b){this.url=a;this.h=!!b;this.depth=null};var B=function(a,b,d,c,e){var f=[];r(a,function(a,n){(a=A(a,b,d,c,e))&&f.push(n+"="+a)});return f.join(b)},A=function(a,b,d,c,e){if(null==a)return"";b=b||"&";d=d||",$";"string"==typeof d&&(d=d.split(""));if(a instanceof Array){if(c=c||0,c<d.length){for(var f=[],g=0;g<a.length;g++)f.push(A(a[g],b,d,c+1,e));return f.join(d[c])}}else if("object"==typeof a)return e=e||0,2>e?encodeURIComponent(B(a,b,d,c,e+1)):"...";return encodeURIComponent(String(a))};var C=function(a,b){this.g=a;this.depth=b},E=function(){var a=w(),b=Math.max(a.length-1,0),d=z(a);a=d.i;var c=d.j,e=d.g,f=[];d=function(a,b){return null==a?b:a};e&&f.push(new C([e.url,e.h?2:0],d(e.depth,1)));c&&c!=e&&f.push(new C([c.url,2],0));a.url&&a!=e&&f.push(new C([a.url,0],d(a.depth,b)));var g=l(f,function(a,b){return f.slice(0,f.length-b)});!a.url||(e||c)&&a!=e||(c=u(a.url))&&g.push([new C([c,1],d(a.depth,b))]);g.push([]);return l(g,function(a){return D(b,a)})};function D(a,b){var d=m(b,function(a,b){return Math.max(a,b.depth)},-1),c=p(d+2);c[0]=a;k(b,function(a){return c[a.depth+1]=a.g});return c}var F=function(){var a=E();return l(a,function(a){return A(a)})};var G=function(a){try{var b=F();b.pop();for(var d=2083-a.length-5,c=0;c<b.length;c++){var e=encodeURIComponent(b[c]);if(e.length<=d)return a+"&rfl="+e}return 0<b.length?a+"&rfl="+encodeURIComponent(b[0]):a}catch(f){}return a},H=["rfl"],I=h;H[0]in I||"undefined"==typeof I.execScript||I.execScript("var "+H[0]);for(var J;H.length&&(J=H.shift());){var K;if(K=!H.length)K=void 0!==G;K?I[J]=G:I[J]&&I[J]!==Object.prototype[J]?I=I[J]:I=I[J]={}};}).call(this);</script><script>var url = 'https://googleads.g.doubleclick.net/dbm/ad?dbm_c=AKAmf-BzlfFlF42QoOk4GVrHh_E8HAB3PYGUSVJoBHro7ldpQ--UKwIOigdQedbjGuOKrQDqbGpl&dbm_d=AKAmf-A6X-nRlkqrFdLnKhjPO-6wCt1AJ-TlmVHvmVfR693_EyzkVVUV8FUHQUet9scx280S9W54tswPlUn7_6xJKq3LGSb0vauY3W-LcgAvYXwXiwIVvMGF5XI520zcRCMDmYrVjFdVXhz-WCjYdxTxYZuonvKhVYsATRygGIBMoEKpCr9bbc-oxME-hnGpkY6W27wJRIOfGFpXhlWIUoFAoKFeIrJctr5S6BKX8FPZ7k9P5pdXUUT4PcRenqXJPIPMfC1_9ozNrlKorXSwk_eKpZeQDRIwgpFVtmKQS1-gATnh-fZLV1plcAEPUuKB65-gSj1gqoyDy5ol32z7Mr5U_Tw58lFPdiRkb2s_l6CWaN6uPHwSEA3LKHT38TImFggLcoo9w4KnJzLIs5a5q13O5LEnxiXYwkuyosMWSUrzY1FwgLxTgBDIFSXCa-hQI_vV5fKfG36QibxZ1Lf3mMb-Adb1bxpeGIXk0_Jzw-FJSj3HSjqdRjzbX062Qonz0jmgzYYwURngB-7LdTje3KYe_qRZsjob0wEQ5k4Gh3VE6cSL_kHbXPIaInj4L6fXyjbo5PykOWfWMOjsohWIb0rAOchAE03TOatigk_jqyYCtT8rRsWR5xGPwSgMIGDC2qpgXlTmKiludkVV9wemigAH_748nTv-gOEDIL2zb-5Ru2dBT4BuEs17jFsXIlG77DI_Q4k0OMUj_r_uL5mCvKFuNHwBX5hokK3CZGOovGoBHeixFXcPjAsZSxBmyR6Dm966tfUeVhxuJ8jDnINNuXZflfVCG2Ou_FcMqxFK-z-u82VSCCShV2Y9pr1RfDLJ2T87bmJnW8sPxt49QFH_EiyVGtQTfN7CTRbX1_TPA0OnilngQkKumJKr6zIhMm0vIiA2U-9doZDH71TIJ8H6GLrfOStUvNCbDO7AMxk-Gttx2DLCQrkzndxTJY4hD6goEvQ8dsqQJ_lVpwEh5CCu-Oh4ykN4zpibgAxCQ3tIuItg1fLrb4H3YovByb3eilnHBasKk64suP3d2qCdbjrSStTnj5_Hh8Bw4Fwdw7ad2TCoZxXNdp9O1llZe8d516wsVxyRrT1fnZOpE-c8Qvn7JGVsuwCT3nrfScxFZTXlgitcrv9JOe2RCmlC_rZr8TBDfhXF9S5wVCoeGV4X8BV1xVlW0YTDw8LKHsTH4MecWwd8HmtnEx99xBRaVLyuL2rKRqNiYVBzqnLpO9H18PC83T3LUxy96x1fniaVp7dTPNksCQ7pO2TO_FIg4ZylzEj-oXZN96eY0iZJrVihVy-CsyFrQx-5TehazsBLTTrPxNKx3ZpL1_hjd_AM5C0T-MBNWaCMoqVoqtKdxJf-qll1wY3ycR-n2rASmd8nJcQJZsPTPf-5Pv9r7y2VAZUm7BpsZjH_54f3yR7O9jwDdWi-NWGvRu7sPLP1KUtxpfNfvBp8qILnkVCOIrtd10RArVJbHMfmRlzeOvIx9DeCbxNXT8-w5w1-upc8YtH93lI3s53f3Y_TqOjvIPkimoymqcShjLEWic4Ii7QF_EacZuTpjko0gRKgxgLBF38DdKTWA0InPoF9XKbQQ7-1KML-O2YLxTTJH3iKeOM2pcCmxemJWZwbwJ2uhtERd9ya8oDg8hZCssxSXkIRj6InRn7Eud4IuvP4KHBQgH3jKcpDxNIEW7tu303LvbuyyJ8LNknK1P9YxEtNEwH3mtbVo6avzstS5ykivHX8_GH0jZUL2G9lCRLDhvEBLrAqWv-W6hLan4nLCuGkdu0D70pL3VtsvFD5jzbocAG66KMuE25zq9lFjIR39PoJs7ol65Bj_oOB_5qiA18yTo-xQ25fMmf9Op7gGQhIOB5ixiVG9QjwsKKwVm8cctLSg16Y6DHmhV0bdaohCtcdqvvMZ-VMCfxISzZdkiDR11eqohGGq2x6RsbudXkxoTNYu_tprpFxQH418Oybo2b_MuOm_O2NRLOOp88gwtSbyWf9qAZ5OHxkESZfmsS7rqLuMo-jHxYWRch08nf48tPaxt6LGFg3XLR8yT6maIjRPEqnP8vNzHB7eld_vnItkaxTFdylmImUEnYdipvKCjZeNPdq-HPj0N7SNb8yTQkkrDAbjdAkbeonuoSQ69uUHy3gViDq-PSMbZFHu27VngvUbD62YyaJk9pEeuV4QsJXgasesxiuDqjZ4xQSIW9a4WbIPM-P1g&cid=CAMSeQClSFh3y6eFyyFIGOamm7ywgMVb46P-0WG0Swf1mKGgP1mi7u_OAFZqG3t-T-SnQDIECHwYS8JPgseHrLVxckPlqcPuMrOecbcInSLgNPxFIwGdLLqeea3r58eFC5Ad3VfJvuvhVACCGE6GpEursY-qzXQs5Y7tH0U';document.write('<script src="' + (window.rfl ? window.rfl(url) : url) + '"></s' + 'cript>');</script><script src="./ad"></script><div id="ad_unit"><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_2258541896"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjssFvXviE105fltDeLPmqfMACWpLA3Z2dy_UXPrwPm05WtVSocf4qHwm21uHxWeJa-EYNbVDBZrvJV7fYHHUAPpGrNe0CnRPgqy06QzsFuddxAJYPNGRXwFbBJsmwLpJpMAO0rRt0DAJsyijAmmqDg65oU0EQhV9_H3-SmZfKYnaq-1I7qheJcL3mU61pRuVfvD8adlfTFPvgwM5S_L5r_9RLxqUTWWAmrzZi8tiY-H2wSYv9Hx9e4SA6COKxhVP36U99RdlrQRjDlCKJnfa3802s3AIevBb7BsSgO_lK9f9GydTWeMdXWnU50jid3LumqF9v9I-WHIiptJErEOEqKeplUN0RxesCXIqQHYFYNiirJUBRmVKC9zi9TLol5O98fTUSOBNwYqANFjKCCR9lfkuUqa7UKjy_P3sdvxdgCp-UIZAaDsbZJ7tVcubhEaktujox8tY1nmDOtjGt0MMm6NZ8pqrDdGjzKzyImW1zKTWGOMD1F5pot1OeseLe7ds4GSPrHjeJ2UGqtrLTuxC64tLPHh3RhwuZjeBrDMV3hGmicRqEvs17gk9K1fwuDmI0MzkHMtmf7acP--nnjpRNLJiAOhfWOjBlyXa20yPWMiSjUoGSax1qHH4Jwqv9SaPlJMZaYKejKLAdFlhO8cMGcNt5L1zVdqSe_Z73BTldvOYemda9Lekm0XTXkMG47xe5STwGas41HEUJcB5ZG7peJuzYGzTRv7tVXksC0p6bhp6K-fyAXAOXS39qzMN6t2mULGPdk-ZjOCG8RafUFa4fwlVP1DF0in0es3ZwzpR3jaHUPmSWlE&amp;sai=AMfl-YTWAiZDI_YshBlaHCHTkLEKNnMatR7pGMCGDFqOodKRGzxGwHfPQy0GFOKShLWQ3x5pXc9Cw8S7_pTP07dFVei4y9cjyD2f6K4Ss_PAYAnmTKsL20PpV3rYukaPsBSBdS_Gl9lM8PacG9xiDXl_IkBgksDh0KJ-r8k2LOl_kiVz_B9NkeNcHZt7ibobsWrQXtr1tETkWVligU8DXxloEPYMNb8sLLs4cRvqpWpczU5wHy13U23sC3NnxLfGpWxP9I-SNAHjwd4G-qbdhrMH8IA2Qg0TqQ5slMxCozFKBDJGYWZzkIfapOehR0XbVmhBdvi1rFPRoR9yKKYGda4fCfOrKW3dNzcZmzeY7DnXiIly3Q&amp;sig=Cg0ArKJSzGR_mwgRr9JS&amp;urlfix=1&amp;adurl=https://www.jetbrains.com/idea/specials/idea/idea.html%3Fdclid%3D%25edclid!"><img src="./10_300x250_IJ_Gen_Set1_Btn1_En_2017_2_.jpg" alt="Advertisement" border="0" width="300" height="250"></a></div><style>div,ul,li{margin:0;padding:0;}.abgc{display:block;height:15px;overflow:hidden;position:absolute;right:17px;top:1px;text-rendering:geometricPrecision;width:15px;z-index:9020;}.abgb{display:block;width:15px;height:15px;}.abgc,.abgcp,.cbb{opacity:0;}.jar .abgc,.jar .abgcp,.jar .cbb{opacity:1;}.jaa .abgc,.jaa .abgcp,.jaa .cbb{display:none;}.mute_panel{z-index:9020;}.abgc{cursor:pointer;}.cbb{cursor:pointer;height:15px;width:15px;z-index:9020;background-color:#ffffff;}.cbb svg{position:absolute;top:0;right:0;height:15px;width:15px;stroke:#00aecd;stroke-width:1.25;}.cbb:hover{cursor:pointer;}.cbb:hover{background-color:#58585a;}.cbb:hover svg{stroke:#ffffff;}.abgb{position:absolute;right:0px;top:0px;}.cbb{position:absolute;right:1px;top:1px;}.abgc img{display:block;}.abgc svg{display:block;}.abgs{display:none;height:100%;}.abgl{text-decoration:none;}.abgi{fill-opacity:1.0;fill:#00aecd;stroke:none;}.abgbg{fill-opacity:1.0;fill:#ffffff;stroke:none;}.abgtxt{fill:black;font-family:'Arial';font-size:100px;overflow:visible;stroke:none;}.abgac{position:fixed;left:0px;top:0px;z-index:9100;display:none;width:100%;height:100%;background-color:#FAFAFA;}</style><div id="abgc" class="abgc" dir="ltr" aria-hidden="true"><div id="abgb" class="abgb"><svg width="100%" height="100%"><rect class="abgbg" width="100%" height="100%"></rect><svg class="abgi" x="0px"><path d="M7.5,1.5a6,6,0,1,0,0,12a6,6,0,1,0,0,-12m0,1a5,5,0,1,1,0,10a5,5,0,1,1,0,-10ZM6.625,11l1.75,0l0,-4.5l-1.75,0ZM7.5,3.75a1,1,0,1,0,0,2a1,1,0,1,0,0,-2Z"></path></svg></svg></div><div id="abgs" class="abgs"><a id="abgl" class="abgl" href="https://www.google.com/url?ct=abg&amp;q=https://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.devglan.com/spring-security/angular-jwt-authentication%26gl%3DBY%26hl%3Den%26ai0%3D&amp;usg=AFQjCNHQ-OTtly2Qw1NLN2vD1s6NVt-6Sw" target="_blank"><svg width="100%" height="100%"><path class="abgbg" d="M0,0L96,0L96,15L4,15s-4,0,-4,-4z"></path><svg class="abgtxt" x="5px" y="11px" width="34px"><text>Ads by</text></svg><svg class="abgtxt" x="41px" y="11px" width="38px"><text>Google</text></svg><svg class="abgi" x="81px"><path d="M7.5,1.5a6,6,0,1,0,0,12a6,6,0,1,0,0,-12m0,1a5,5,0,1,1,0,10a5,5,0,1,1,0,-10ZM6.625,11l1.75,0l0,-4.5l-1.75,0ZM7.5,3.75a1,1,0,1,0,0,2a1,1,0,1,0,0,-2Z"></path></svg></svg></a></div></div><div id="cbb" class="cbb" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15"><path d="M3.25,3.25l8.5,8.5M11.75,3.25l-8.5,8.5"></path></svg></div><div id="mute_panel" class="mute_panel" aria-hidden="true"></div><div id="abgac" class="abgac" aria-hidden="true"></div><script>document.write('\n\x3cscript\x3evar abgp={hw:15,sw:96,hh:15,sh:15,himg:\'https://pagead2.googlesyndication.com\'+\'/pagead/images/abg/icon.png\',simg:\'https://pagead2.googlesyndication.com\'+\'/pagead/images/abg/en.png\',alt:\'Реклама от Google\',t:\'Ads by\',tw:34,t2:\'Google\',t2w:38,tbo:0,att:\'adsbygoogle\',ff:\'\',halign:\'right\',fe:false,iba:false,lttp:false,ci:\'\',nc:1,ufdj:{\x22creatives\x22:[],\x22height\x22:250,\x22width\x22:300,\x22attribution\x22:{\x22user_feedback_data\x22:{\x22mute_icon_url\x22:\x22https://googleads.g.doubleclick.net/pagead/images/mtad/x_blue.png\x22,\x22pub_feedback_icon_url\x22:\x22https://googleads.g.doubleclick.net/pagead/images/mtad/x_blue.png\x22,\x22conversion_url\x22:\x22https://googleads.g.doubleclick.net/pagead/conversion/?ai\x3dCfq_DfDPTWu_BK4Ok6wS0yqmgBN728ZdR6OnNxswEo5X0_QgQASDWz7c2YPGwXaAB9ZX7owPIAQmoAwHIAwKqBKABT9ASYIbZiI6kkXu1zE0WHf-M0kY1W1AiQsV-Q7q233YWZUWpLIreUn6sIYK-_ZBWgbFzDYx59s-PyiGtO15-dzaG5XkMQF7y_n7cpK9mooDAWyzfPkn2rC99QHELHMtDq62peLOggLhx2PNmlQ1M2VrB48VQ905ZrNnekaYTkMGFdAfyHeS9as7hVGvRYrOgi2YCyK7oIJYwgjdn_GaiA-AEA5AGAaAGTIAH8-mEXIgHAZAHAqgHjs4bqAfVyRuoB6a-G9gHANIIBggAEAIYAoAKAdATANgTDQ\\u0026sigh\x3d1-m9FjaPr2o\\u0026cid\x3dCAMSeQClSFh3y6eFyyFIGOamm7ywgMVb46P-0WG0Swf1mKGgP1mi7u_OAFZqG3t-T-SnQDIECHwYS8JPgseHrLVxckPlqcPuMrOecbcInSLgNPxFIwGdLLqeea3r58eFC5Ad3VfJvuvhVACCGE6GpEursY-qzXQs5Y7tH0U\x22,\x22close_button_token\x22:\x22nwhRsMS0rFgI6OnNxswEEOCZ2tECGMmNo1xCAEgAWABwAQ\x22,\x22interaction_conversion\x22:{\x22label\x22:\x22user_feedback_menu_interaction\x22,\x22label_instance\x22:\x22\x22,\x22include_close_button_token\x22:false},\x22survey_header\x22:\x22What was wrong with this ad?\x22,\x22back_icon_url\x22:\x22https://googleads.g.doubleclick.net/pagead/images/mtad/back_blue.png\x22,\x22mute_confirmation_header\x22:\x22Thanks for the feedback!\x22,\x22mute_confirmation_text\x22:\x22We’ll review this ad to improve the experience in the future.\x22,\x22pub_feedback_confirmation_header\x22:\x22Thanks for the feedback!\x22,\x22pub_feedback_confirmation_text\x22:\x22We’ll use your feedback to review ads on this site.\x22,\x22closing_countdown_text\x22:\x22Closing ad: %1$d\x22,\x22attribution_text\x22:\x22Реклама от Google\x22,\x22attribution_icon_url\x22:\x22https://googleads.g.doubleclick.net/pagead/images/mtad/abg_blue.png\x22,\x22attribution_destination_url\x22:\x22https://www.google.com/url?ct\x3dabg\\u0026q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.devglan.com/spring-security/angular-jwt-authentication%26gl%3DBY%26hl%3Den%26ai0%3D\\u0026usg\x3dAFQjCNHQ-OTtly2Qw1NLN2vD1s6NVt-6Sw\x22,\x22ad_feedback_icon_url\x22:\x22https://googleads.g.doubleclick.net/pagead/images/mtad/x_blue.png\x22,\x22is_rtl_language\x22:false,\x22feedback_options\x22:[{\x22text\x22:\x22Report this ad\x22,\x22conversion\x22:{\x22label\x22:\x22user_feedback_menu_option\x22,\x22label_instance\x22:\x221\x22,\x22include_close_button_token\x22:true},\x22survey\x22:{\x22header\x22:\x22What was wrong with this ad?\x22,\x22options\x22:[{\x22text\x22:\x22Not interested in this ad\x22,\x22conversion\x22:{\x22label\x22:\x22mute_survey_option\x22,\x22label_instance\x22:\x227\x22,\x22include_close_button_token\x22:true}},{\x22text\x22:\x22Seen this ad multiple times\x22,\x22conversion\x22:{\x22label\x22:\x22mute_survey_option\x22,\x22label_instance\x22:\x222\x22,\x22include_close_button_token\x22:true}},{\x22text\x22:\x22Ad covered content\x22,\x22conversion\x22:{\x22label\x22:\x22mute_survey_option\x22,\x22label_instance\x22:\x223\x22,\x22include_close_button_token\x22:true}},{\x22text\x22:\x22Ad was inappropriate\x22,\x22conversion\x22:{\x22label\x22:\x22mute_survey_option\x22,\x22label_instance\x22:\x228\x22,\x22include_close_button_token\x22:true}}]},\x22undo_conversion\x22:{\x22label\x22:\x22user_feedback_undo\x22,\x22label_instance\x22:\x221\x22,\x22include_close_button_token\x22:true}}],\x22mute_panel_data\x22:{\x22adchoices_icon_url\x22:\x22https://googleads.g.doubleclick.net/pagead/images/adchoices/iconx2-000000.png\x22,\x22adchoices_button_text\x22:\x22AdChoices\x22,\x22closed_message_text\x22:\x22Ad closed by %1$s\x22,\x22enable_lightbox\x22:false,\x22google_logo_url\x22:\x22https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_dark_color_84x28dp.png\x22,\x22report_ad_button_text\x22:\x22Report this ad\x22,\x22confirmation_text\x22:\x22We\x27ll try not to show that ad again\x22,\x22ads_by_google_icon_url\x22:\x22https://googleads.g.doubleclick.net/pagead/images/abg/iconx2-000000.png\x22,\x22ads_by_google_button_text\x22:\x22Ads by Google\x22,\x22see_my_google_ad_settings_text\x22:\x22See my Google ad settings\x22,\x22protocol_gstatic_host\x22:\x22https://www.gstatic.com\x22,\x22jake_mta_context\x22:\x22\x22,\x22overlay_message_text\x22:\x22Ads by %1$s\x22},\x22why_this_ad_token\x22:\x22AB3afGEAAAEMeyJ0YXJnZXRpbmdfcmVhc29ucyI6eyJhZF9yZWFzb24iOlsyXSwiZXhwbGFuYXRpb24iOnsiaW50cm9kdWN0aW9uIjoiVGhpcyBpcyBhIGxpc3Qgb2YgdGhlIGluZm9ybWF0aW9uIHNvdXJjZXMgdXNlZCB0byBkZXRlcm1pbmUgdGhhdCB0aGlzIGFkIGJlIHNob3duIHRvIHlvdToiLCJpdGVtIjpbeyJkZXNjcmlwdGlvbiI6IlRoZSBpbmZvcm1hdGlvbiBvbiB0aGUgd2Vic2l0ZSB5b3Ugd2VyZSB2aWV3aW5nLiJ9XX19LCJyZW5kZXJfYWRfaW5fd3RhX3BhZ2UiOmZhbHNlfR-Gh_XGcUvjAhYp4vLYlIoYEbmhl_F7KVap36xqqs1uz4S75ol_E377F7x_kfLaK5p9qZ7nrv-3HizqH0pgC4z1PZL5TWy3ehBJo3JFBC2NybWA7zTsbb62VB88NgRJdz7F_4Ha3nnXsLjLnSix0baYSCux_AcAfSXhT_d50HzmRPzufqYmQ49V1eyb2dKFTOeB-6SPf0c5akMmYRxnmV6WExHGkzr_t7D74M1BmNUd3dgZz5N-H9QGDnokkxki3PFhwoo52GWPKDikMZe6u8Olc91cLz4uxWczjvoWpXobpXb52J4hD56DHJSUyIhc34GOmAfnl4RC6v2jJ4ZDWFE,eEnPfPHv46P7G0jp_Q7pBA\x22,\x22why_this_ad_url\x22:\x22https://www.google.com/ads/preferences/whythisad/en-US/RoOyDD7L4IWn5ZfI/#/AB3afGEAAAEMeyJ0YXJnZXRpbmdfcmVhc29ucyI6eyJhZF9yZWFzb24iOlsyXSwiZXhwbGFuYXRpb24iOnsiaW50cm9kdWN0aW9uIjoiVGhpcyBpcyBhIGxpc3Qgb2YgdGhlIGluZm9ybWF0aW9uIHNvdXJjZXMgdXNlZCB0byBkZXRlcm1pbmUgdGhhdCB0aGlzIGFkIGJlIHNob3duIHRvIHlvdToiLCJpdGVtIjpbeyJkZXNjcmlwdGlvbiI6IlRoZSBpbmZvcm1hdGlvbiBvbiB0aGUgd2Vic2l0ZSB5b3Ugd2VyZSB2aWV3aW5nLiJ9XX19LCJyZW5kZXJfYWRfaW5fd3RhX3BhZ2UiOmZhbHNlfR-Gh_XGcUvjAhYp4vLYlIoYEbmhl_F7KVap36xqqs1uz4S75ol_E377F7x_kfLaK5p9qZ7nrv-3HizqH0pgC4z1PZL5TWy3ehBJo3JFBC2NybWA7zTsbb62VB88NgRJdz7F_4Ha3nnXsLjLnSix0baYSCux_AcAfSXhT_d50HzmRPzufqYmQ49V1eyb2dKFTOeB-6SPf0c5akMmYRxnmV6WExHGkzr_t7D74M1BmNUd3dgZz5N-H9QGDnokkxki3PFhwoo52GWPKDikMZe6u8Olc91cLz4uxWczjvoWpXobpXb52J4hD56DHJSUyIhc34GOmAfnl4RC6v2jJ4ZDWFE,eEnPfPHv46P7G0jp_Q7pBA\\u0026nwhRsMS0rFgI6OnNxswEEOCZ2tECGMmNo1xCAEgAWABwAQ\\u0026https://googleads.g.doubleclick.net/pagead/conversion/?ai\x3dCfq_DfDPTWu_BK4Ok6wS0yqmgBN728ZdR6OnNxswEo5X0_QgQASDWz7c2YPGwXaAB9ZX7owPIAQmoAwHIAwKqBKABT9ASYIbZiI6kkXu1zE0WHf-M0kY1W1AiQsV-Q7q233YWZUWpLIreUn6sIYK-_ZBWgbFzDYx59s-PyiGtO15-dzaG5XkMQF7y_n7cpK9mooDAWyzfPkn2rC99QHELHMtDq62peLOggLhx2PNmlQ1M2VrB48VQ905ZrNnekaYTkMGFdAfyHeS9as7hVGvRYrOgi2YCyK7oIJYwgjdn_GaiA-AEA5AGAaAGTIAH8-mEXIgHAZAHAqgHjs4bqAfVyRuoB6a-G9gHANIIBggAEAIYAoAKAdATANgTDQ\\u0026sigh\x3d1-m9FjaPr2o\\u0026cid\x3dCAMSeQClSFh3y6eFyyFIGOamm7ywgMVb46P-0WG0Swf1mKGgP1mi7u_OAFZqG3t-T-SnQDIECHwYS8JPgseHrLVxckPlqcPuMrOecbcInSLgNPxFIwGdLLqeea3r58eFC5Ad3VfJvuvhVACCGE6GpEursY-qzXQs5Y7tH0U\x22,\x22why_this_ad_text\x22:\x22Why this ad?\x22}},\x22flags\x22:[{\x22name\x22:\x22jake_ui_extension\x22,\x22value\x22:\x22jake_default_ui\x22}]},opi:false,ti:false,mob:false,il:false,eaca:false,eda:false,eisa:false,ulf:false};\x3c/script\x3e');</script>
+<script>var abgp={hw:15,sw:96,hh:15,sh:15,himg:'https://pagead2.googlesyndication.com'+'/pagead/images/abg/icon.png',simg:'https://pagead2.googlesyndication.com'+'/pagead/images/abg/en.png',alt:'Реклама от Google',t:'Ads by',tw:34,t2:'Google',t2w:38,tbo:0,att:'adsbygoogle',ff:'',halign:'right',fe:false,iba:false,lttp:false,ci:'',nc:1,ufdj:{"creatives":[],"height":250,"width":300,"attribution":{"user_feedback_data":{"mute_icon_url":"https://googleads.g.doubleclick.net/pagead/images/mtad/x_blue.png","pub_feedback_icon_url":"https://googleads.g.doubleclick.net/pagead/images/mtad/x_blue.png","conversion_url":"https://googleads.g.doubleclick.net/pagead/conversion/?ai=Cfq_DfDPTWu_BK4Ok6wS0yqmgBN728ZdR6OnNxswEo5X0_QgQASDWz7c2YPGwXaAB9ZX7owPIAQmoAwHIAwKqBKABT9ASYIbZiI6kkXu1zE0WHf-M0kY1W1AiQsV-Q7q233YWZUWpLIreUn6sIYK-_ZBWgbFzDYx59s-PyiGtO15-dzaG5XkMQF7y_n7cpK9mooDAWyzfPkn2rC99QHELHMtDq62peLOggLhx2PNmlQ1M2VrB48VQ905ZrNnekaYTkMGFdAfyHeS9as7hVGvRYrOgi2YCyK7oIJYwgjdn_GaiA-AEA5AGAaAGTIAH8-mEXIgHAZAHAqgHjs4bqAfVyRuoB6a-G9gHANIIBggAEAIYAoAKAdATANgTDQ\u0026sigh=1-m9FjaPr2o\u0026cid=CAMSeQClSFh3y6eFyyFIGOamm7ywgMVb46P-0WG0Swf1mKGgP1mi7u_OAFZqG3t-T-SnQDIECHwYS8JPgseHrLVxckPlqcPuMrOecbcInSLgNPxFIwGdLLqeea3r58eFC5Ad3VfJvuvhVACCGE6GpEursY-qzXQs5Y7tH0U","close_button_token":"nwhRsMS0rFgI6OnNxswEEOCZ2tECGMmNo1xCAEgAWABwAQ","interaction_conversion":{"label":"user_feedback_menu_interaction","label_instance":"","include_close_button_token":false},"survey_header":"What was wrong with this ad?","back_icon_url":"https://googleads.g.doubleclick.net/pagead/images/mtad/back_blue.png","mute_confirmation_header":"Thanks for the feedback!","mute_confirmation_text":"We’ll review this ad to improve the experience in the future.","pub_feedback_confirmation_header":"Thanks for the feedback!","pub_feedback_confirmation_text":"We’ll use your feedback to review ads on this site.","closing_countdown_text":"Closing ad: %1$d","attribution_text":"Реклама от Google","attribution_icon_url":"https://googleads.g.doubleclick.net/pagead/images/mtad/abg_blue.png","attribution_destination_url":"https://www.google.com/url?ct=abg\u0026q=https://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.devglan.com/spring-security/angular-jwt-authentication%26gl%3DBY%26hl%3Den%26ai0%3D\u0026usg=AFQjCNHQ-OTtly2Qw1NLN2vD1s6NVt-6Sw","ad_feedback_icon_url":"https://googleads.g.doubleclick.net/pagead/images/mtad/x_blue.png","is_rtl_language":false,"feedback_options":[{"text":"Report this ad","conversion":{"label":"user_feedback_menu_option","label_instance":"1","include_close_button_token":true},"survey":{"header":"What was wrong with this ad?","options":[{"text":"Not interested in this ad","conversion":{"label":"mute_survey_option","label_instance":"7","include_close_button_token":true}},{"text":"Seen this ad multiple times","conversion":{"label":"mute_survey_option","label_instance":"2","include_close_button_token":true}},{"text":"Ad covered content","conversion":{"label":"mute_survey_option","label_instance":"3","include_close_button_token":true}},{"text":"Ad was inappropriate","conversion":{"label":"mute_survey_option","label_instance":"8","include_close_button_token":true}}]},"undo_conversion":{"label":"user_feedback_undo","label_instance":"1","include_close_button_token":true}}],"mute_panel_data":{"adchoices_icon_url":"https://googleads.g.doubleclick.net/pagead/images/adchoices/iconx2-000000.png","adchoices_button_text":"AdChoices","closed_message_text":"Ad closed by %1$s","enable_lightbox":false,"google_logo_url":"https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_dark_color_84x28dp.png","report_ad_button_text":"Report this ad","confirmation_text":"We'll try not to show that ad again","ads_by_google_icon_url":"https://googleads.g.doubleclick.net/pagead/images/abg/iconx2-000000.png","ads_by_google_button_text":"Ads by Google","see_my_google_ad_settings_text":"See my Google ad settings","protocol_gstatic_host":"https://www.gstatic.com","jake_mta_context":"","overlay_message_text":"Ads by %1$s"},"why_this_ad_token":"AB3afGEAAAEMeyJ0YXJnZXRpbmdfcmVhc29ucyI6eyJhZF9yZWFzb24iOlsyXSwiZXhwbGFuYXRpb24iOnsiaW50cm9kdWN0aW9uIjoiVGhpcyBpcyBhIGxpc3Qgb2YgdGhlIGluZm9ybWF0aW9uIHNvdXJjZXMgdXNlZCB0byBkZXRlcm1pbmUgdGhhdCB0aGlzIGFkIGJlIHNob3duIHRvIHlvdToiLCJpdGVtIjpbeyJkZXNjcmlwdGlvbiI6IlRoZSBpbmZvcm1hdGlvbiBvbiB0aGUgd2Vic2l0ZSB5b3Ugd2VyZSB2aWV3aW5nLiJ9XX19LCJyZW5kZXJfYWRfaW5fd3RhX3BhZ2UiOmZhbHNlfR-Gh_XGcUvjAhYp4vLYlIoYEbmhl_F7KVap36xqqs1uz4S75ol_E377F7x_kfLaK5p9qZ7nrv-3HizqH0pgC4z1PZL5TWy3ehBJo3JFBC2NybWA7zTsbb62VB88NgRJdz7F_4Ha3nnXsLjLnSix0baYSCux_AcAfSXhT_d50HzmRPzufqYmQ49V1eyb2dKFTOeB-6SPf0c5akMmYRxnmV6WExHGkzr_t7D74M1BmNUd3dgZz5N-H9QGDnokkxki3PFhwoo52GWPKDikMZe6u8Olc91cLz4uxWczjvoWpXobpXb52J4hD56DHJSUyIhc34GOmAfnl4RC6v2jJ4ZDWFE,eEnPfPHv46P7G0jp_Q7pBA","why_this_ad_url":"https://www.google.com/ads/preferences/whythisad/en-US/RoOyDD7L4IWn5ZfI/#/AB3afGEAAAEMeyJ0YXJnZXRpbmdfcmVhc29ucyI6eyJhZF9yZWFzb24iOlsyXSwiZXhwbGFuYXRpb24iOnsiaW50cm9kdWN0aW9uIjoiVGhpcyBpcyBhIGxpc3Qgb2YgdGhlIGluZm9ybWF0aW9uIHNvdXJjZXMgdXNlZCB0byBkZXRlcm1pbmUgdGhhdCB0aGlzIGFkIGJlIHNob3duIHRvIHlvdToiLCJpdGVtIjpbeyJkZXNjcmlwdGlvbiI6IlRoZSBpbmZvcm1hdGlvbiBvbiB0aGUgd2Vic2l0ZSB5b3Ugd2VyZSB2aWV3aW5nLiJ9XX19LCJyZW5kZXJfYWRfaW5fd3RhX3BhZ2UiOmZhbHNlfR-Gh_XGcUvjAhYp4vLYlIoYEbmhl_F7KVap36xqqs1uz4S75ol_E377F7x_kfLaK5p9qZ7nrv-3HizqH0pgC4z1PZL5TWy3ehBJo3JFBC2NybWA7zTsbb62VB88NgRJdz7F_4Ha3nnXsLjLnSix0baYSCux_AcAfSXhT_d50HzmRPzufqYmQ49V1eyb2dKFTOeB-6SPf0c5akMmYRxnmV6WExHGkzr_t7D74M1BmNUd3dgZz5N-H9QGDnokkxki3PFhwoo52GWPKDikMZe6u8Olc91cLz4uxWczjvoWpXobpXb52J4hD56DHJSUyIhc34GOmAfnl4RC6v2jJ4ZDWFE,eEnPfPHv46P7G0jp_Q7pBA\u0026nwhRsMS0rFgI6OnNxswEEOCZ2tECGMmNo1xCAEgAWABwAQ\u0026https://googleads.g.doubleclick.net/pagead/conversion/?ai=Cfq_DfDPTWu_BK4Ok6wS0yqmgBN728ZdR6OnNxswEo5X0_QgQASDWz7c2YPGwXaAB9ZX7owPIAQmoAwHIAwKqBKABT9ASYIbZiI6kkXu1zE0WHf-M0kY1W1AiQsV-Q7q233YWZUWpLIreUn6sIYK-_ZBWgbFzDYx59s-PyiGtO15-dzaG5XkMQF7y_n7cpK9mooDAWyzfPkn2rC99QHELHMtDq62peLOggLhx2PNmlQ1M2VrB48VQ905ZrNnekaYTkMGFdAfyHeS9as7hVGvRYrOgi2YCyK7oIJYwgjdn_GaiA-AEA5AGAaAGTIAH8-mEXIgHAZAHAqgHjs4bqAfVyRuoB6a-G9gHANIIBggAEAIYAoAKAdATANgTDQ\u0026sigh=1-m9FjaPr2o\u0026cid=CAMSeQClSFh3y6eFyyFIGOamm7ywgMVb46P-0WG0Swf1mKGgP1mi7u_OAFZqG3t-T-SnQDIECHwYS8JPgseHrLVxckPlqcPuMrOecbcInSLgNPxFIwGdLLqeea3r58eFC5Ad3VfJvuvhVACCGE6GpEursY-qzXQs5Y7tH0U","why_this_ad_text":"Why this ad?"}},"flags":[{"name":"jake_ui_extension","value":"jake_default_ui"}]},opi:false,ti:false,mob:false,il:false,eaca:false,eda:false,eisa:false,ulf:false};</script><script src="./abg.js(1).Без названия"></script></div></div></div><iframe src="./6uQTKQJz.html" width="0" height="0" style="display: none;"></iframe><script src="./m_window_focus_non_hydra.js.Без названия" async=""></script><script>function initWindowFocus() {window['window_focus_for_click'] =wfocusnhinit("https://googleads.g.doubleclick.net/pagead/conversion/?ai\x3dCfq_DfDPTWu_BK4Ok6wS0yqmgBN728ZdR6OnNxswEo5X0_QgQASDWz7c2YPGwXaAB9ZX7owPIAQmoAwHIAwKqBKABT9ASYIbZiI6kkXu1zE0WHf-M0kY1W1AiQsV-Q7q233YWZUWpLIreUn6sIYK-_ZBWgbFzDYx59s-PyiGtO15-dzaG5XkMQF7y_n7cpK9mooDAWyzfPkn2rC99QHELHMtDq62peLOggLhx2PNmlQ1M2VrB48VQ905ZrNnekaYTkMGFdAfyHeS9as7hVGvRYrOgi2YCyK7oIJYwgjdn_GaiA-AEA5AGAaAGTIAH8-mEXIgHAZAHAqgHjs4bqAfVyRuoB6a-G9gHANIIBggAEAIYAoAKAdATANgTDQ\x26sigh\x3d1-m9FjaPr2o","fDPTWum-KoGE6gS8ioPgCA","CO_vhuOSvNoCFQPSmgodNGUKRA",true,false,false,0);}if (window.wfocusnhinit) {initWindowFocus();} else {window['google_wf_async'] = initWindowFocus;}</script><script src="./osd_listener.js.Без названия"></script><script type="text/javascript">osdlfm(-1,'','BWjgefDPTWu_BK4Ok6wS0yqmgBADo6c3GzAQAABABOAHIAQnIAwLgBAOgBkyIBwHSCAQIABACwhMGGPWV-6MD','',1670147731,true,'ud\x3d1\x26la\x3d0\x26alp\x3dai\x26alh\x3d2066534851\x26',3,'CAMSeQClSFh3y6eFyyFIGOamm7ywgMVb46P-0WG0Swf1mKGgP1mi7u_OAFZqG3t-T-SnQDIECHwYS8JPgseHrLVxckPlqcPuMrOecbcInSLgNPxFIwGdLLqeea3r58eFC5Ad3VfJvuvhVACCGE6GpEursY-qzXQs5Y7tH0U','//pagead2.googlesyndication.com/activeview?avi\x3dBWjgefDPTWu_BK4Ok6wS0yqmgBADo6c3GzAQAABABOAHIAQnIAwLgBAOgBkyIBwHSCAQIABACwhMGGPWV-6MD\x26cid\x3dCAMSeQClSFh3y6eFyyFIGOamm7ywgMVb46P-0WG0Swf1mKGgP1mi7u_OAFZqG3t-T-SnQDIECHwYS8JPgseHrLVxckPlqcPuMrOecbcInSLgNPxFIwGdLLqeea3r58eFC5Ad3VfJvuvhVACCGE6GpEursY-qzXQs5Y7tH0U','');</script><script src="./m_qs_click_protection.js.Без названия"></script><script>googqscp.init([[[[null,500,99,2,8,null,null,null,1]]],null,null,null,null,0,null,null,0]);</script><div style="display: none; position: absolute; z-index: 2147483647; width: 100%; height: 100%; top: 0px; left: 0px;"></div><script>if (window.top && window.top.postMessage) {window.top.postMessage('{"googMsgType":"adpnt"}','*');}</script><div style="display:none" data-google-query-id="CO_vhuOSvNoCFQPSmgodNGUKRA"></div></body></html>
